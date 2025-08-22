@@ -1,11 +1,166 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>My Portfolio</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Your Name | Portfolio</title>
+  <meta name="description" content="Cloud computing student portfolio and projects." />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Welcome to My Portfolio!</h1>
-  <p>Hi, I’m Devin Som. I’m Cloud Computing and building self-made projects.</p>
+  <header class="site-header">
+    <div class="container">
+      <h1>Your Name</h1>
+      <p class="tagline">Cloud Computing Student • Project Builder • Lifelong Learner</p>
+      <nav class="nav">
+        <a href="#about">About</a>
+        <a href="#interests">Interests</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact" class="cta">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <!-- About -->
+    <section id="about" class="section">
+      <div class="container grid-2">
+        <div>
+          <h2>About Me</h2>
+          <p>
+            I’m a Cloud Computing student at George Mason University focused on
+            serverless architectures, automation, and cloud security. I like
+            turning ideas into practical, deployable projects.
+          </p>
+          <p>
+            This portfolio is a living lab—each project includes code, a short write-up,
+            and (whenever possible) a live demo.
+          </p>
+          <div class="buttons">
+            <a class="btn" href="#projects">See Projects</a>
+            <a class="btn outline" href="resume.pdf" target="_blank">Download Resume</a>
+          </div>
+        </div>
+        <div class="card photo">
+          <!-- Replace with your own headshot in /assets/me.jpg -->
+          <img src="assets/me.jpg" alt="Your headshot" />
+        </div>
+      </div>
+    </section>
+
+    <!-- Interests -->
+    <section id="interests" class="section alt">
+      <div class="container">
+        <h2>My Interests</h2>
+        <div class="chips">
+          <span class="chip">Serverless (AWS Lambda / Azure Functions)</span>
+          <span class="chip">Infrastructure as Code (Terraform)</span>
+          <span class="chip">Cloud Security & IAM</span>
+          <span class="chip">Kubernetes Basics</span>
+          <span class="chip">Monitoring & Observability</span>
+          <span class="chip">Fitness & Music</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Portfolio Website (This Site)</h3>
+            <p>
+              Static site hosted via GitHub Pages (or S3 + CloudFront). Clean,
+              responsive layout with semantic HTML and simple CSS.
+            </p>
+            <div class="meta">
+              <span>HTML</span><span>CSS</span><span>GitHub Pages</span>
+            </div>
+            <div class="links">
+              <a href="#" target="_blank">Live Demo</a>
+              <a href="#" target="_blank">GitHub Repo</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Mini Dropbox (Cloud File Storage)</h3>
+            <p>
+              File upload/download app using AWS S3 with basic auth. Practiced IAM
+              policies, pre-signed URLs, and secure object storage.
+            </p>
+            <div class="meta">
+              <span>AWS S3</span><span>Python/Flask</span><span>IAM</span>
+            </div>
+            <div class="links">
+              <a href="#" target="_blank">Live Demo</a>
+              <a href="#" target="_blank">GitHub Repo</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Serverless To-Do App</h3>
+            <p>
+              API with AWS Lambda + API Gateway, data in DynamoDB, simple
+              frontend. Learned event-driven design and NoSQL modeling.
+            </p>
+            <div class="meta">
+              <span>AWS Lambda</span><span>DynamoDB</span><span>API Gateway</span>
+            </div>
+            <div class="links">
+              <a href="#" target="_blank">Live Demo</a>
+              <a href="#" target="_blank">GitHub Repo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="section alt">
+      <div class="container grid-2">
+        <div>
+          <h2>Skills</h2>
+          <ul class="list">
+            <li><strong>Cloud:</strong> AWS (S3, Lambda, DynamoDB, CloudFront), Azure (basics)</li>
+            <li><strong>Dev:</strong> Python, JavaScript, Java, Bash</li>
+            <li><strong>Tools:</strong> Git/GitHub, Docker, Terraform (beginner)</li>
+            <li><strong>Concepts:</strong> Networking, IAM, Serverless, Monitoring</li>
+          </ul>
+        </div>
+        <div class="card note">
+          <h4>Certifications & Coursework</h4>
+          <p>• AWS Cloud Practitioner (in progress)</p>
+          <p>• CompTIA Cloud+ (planned), Security+ (planned)</p>
+          <p>• Relevant courses: Cloud Security, Networks, OS</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>
+          Email: <a href="mailto:you@example.com">you@example.com</a> •
+          <a href="https://github.com/YOUR-USERNAME" target="_blank">GitHub</a> •
+          <a href="https://linkedin.com/in/YOUR-USERNAME" target="_blank">LinkedIn</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container small">
+      © <span id="year"></span> Your Name — Built with 💻 + ☁️
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
