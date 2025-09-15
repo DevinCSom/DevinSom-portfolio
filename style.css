@@ -76,3 +76,18 @@ a:hover{text-decoration:underline}
 .list li{margin:.35rem 0}
 
 .site-footer{padding:24px 0;border-top:1px solid rgba(255,255,255,.06);text-align:center}
+/* === Prevent headshot blur (don’t upscale tiny image) === */
+.card.photo{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card.photo img{
+  width: 110px;       /* smaller than your ~130px source */
+  height: 110px;      /* square avatar */
+  object-fit: cover;  /* crop nicely if not square */
+  border-radius: 50%; /* circle; change to 12px for rounded square */
+  display: block;
+  margin: 0 auto;
+}
