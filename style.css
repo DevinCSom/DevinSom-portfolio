@@ -38,11 +38,13 @@ a:hover{text-decoration:underline}
   background:var(--card); border:1px solid rgba(255,255,255,.06);
   border-radius:16px; padding:1.1rem; box-shadow: 0 8px 24px rgba(0,0,0,.25);
 }
-.card.photo img{width:100%;height:auto;border-radius:12px;display:block}
-.card.note h4{margin-bottom:.4rem}
-
-.buttons{display:flex;gap:.75rem;margin-top:1rem}
-.btn{
+.card.photo img{
+  width: 120px;        /* <= smaller than 130px native width */
+  height: 120px;       /* make it a square avatar */
+  object-fit: cover;   /* crop nicely */
+  border-radius: 50%;  /* circle; remove if you want a square */
+  display: block;
+}
   display:inline-block; padding:.65rem 1rem; border-radius:12px;
   background:var(--brand); color:#0b1020; font-weight:700;
   box-shadow:0 6px 18px var(--ring);
