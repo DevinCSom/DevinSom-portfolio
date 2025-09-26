@@ -110,14 +110,22 @@ a:hover{text-decoration:underline}
   width: 110px; height: 110px;
   object-fit: cover; border-radius: 50%;
 }
-/* Keep two columns in About until small phones */
+/* About: make right column a fixed width and the photo card snug */
 @media (min-width: 641px){
-  #about .grid-2 { grid-template-columns: 1.2fr .8fr; }
+  #about .grid-2{
+    grid-template-columns: 1fr 300px; /* text grows, photo column ~300px */
+    align-items: start;
+  }
+  .card.photo{
+    width: max-content;     /* shrink to fit the image */
+    padding: 12px;          /* small padding around the circle */
+    justify-self: end;      /* push to the right edge */
+    align-self: start;      /* align with top of text */
+  }
+  .card.photo img{
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 }
-@media (max-width: 640px){
-  #about .grid-2 { grid-template-columns: 1fr; }
-}
-
-/* Top-align the columns so the photo lines up with the heading */
-#about .grid-2 { align-items: start; }
-.card.photo { align-self: start; }
