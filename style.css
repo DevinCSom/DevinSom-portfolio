@@ -51,15 +51,19 @@ a:hover{text-decoration:underline}
   background:transparent; color:var(--ink); border:1px solid rgba(255,255,255,.18)
 }
 
+/* Chips */
 .chips{display:flex;flex-wrap:wrap;gap:.5rem}
 .chip{
   background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08);
   padding:.45rem .65rem; border-radius:999px; font-size:.9rem; color:var(--ink)
 }
 
-.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:1rem}
-@media (max-width:900px){.cards{grid-template-columns:repeat(2,1fr)}}
-@media (max-width:620px){.cards{grid-template-columns:1fr}}
+/* Project cards grid */
+.cards{
+  display:grid;
+  gap:1rem;
+  grid-template-columns:repeat(auto-fit, minmax(260px, 1fr));
+}
 
 .card .meta{display:flex;gap:.5rem;flex-wrap:wrap;margin:.6rem 0}
 .card .meta span{
@@ -74,58 +78,30 @@ a:hover{text-decoration:underline}
 
 .site-footer{padding:24px 0;border-top:1px solid rgba(255,255,255,.06);text-align:center}
 
-/* === Prevent headshot blur (don't upscale tiny image) === */
-.card.photo{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.card.photo img{
-  width:110px;          /* smaller than your ~130px source */
-  height:110px;         /* square avatar */
-  object-fit:cover;     /* crop nicely */
-  border-radius:50%;    /* circle */
-  display:block;
-  margin:0 auto;
-}
-/* Top-align the two columns in the About section */
-#about .grid-2 { align-items: start; }
-
-/* Make the projects grid auto-fit so there are no phantom columns */
-.cards { 
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-}
-/* Put this at the BOTTOM of style.css */
-#about .grid-2 { align-items: start; }        /* top-align the two columns */
-.card.photo{ 
-  background: transparent;
-  border: 0;
-  box-shadow: none;
-  padding: 0;
-  align-self: start;                           /* prevent stretch */
-  display: flex; justify-content: center;
-}
-.card.photo img{
-  width: 110px; height: 110px;
-  object-fit: cover; border-radius: 50%;
-}
-/* About: make right column a fixed width and the photo card snug */
+/* === About layout: keep photo on the right, remove big empty space === */
 @media (min-width: 641px){
   #about .grid-2{
-    grid-template-columns: 1fr 300px; /* text grows, photo column ~300px */
-    align-items: start;
+    grid-template-columns: 1fr 180px; /* text grows, photo column ~180px */
+    align-items: start;               /* top-align both columns */
   }
   .card.photo{
-    width: max-content;     /* shrink to fit the image */
-    padding: 12px;          /* small padding around the circle */
-    justify-self: end;      /* push to the right edge */
-    align-self: start;      /* align with top of text */
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+    padding: 12px;
+    width: max-content;   /* shrink to fit the image */
+    justify-self: end;    /* sit on the right edge */
+    align-self: start;    /* align with top of text */
   }
   .card.photo img{
-    width: 110px;
-    height: 110px;
-    object-fit: cover;
-    border-radius: 50%;
+    width:110px;
+    height:110px;
+    object-fit:cover;
+    border-radius:50%;
+    display:block;
   }
+}
+/* Stack on small phones only */
+@media (max-width: 640px){
+  #about .grid-2{ grid-template-columns:1fr; }
 }
