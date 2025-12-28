@@ -129,5 +129,37 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
+  <h2>Leave Feedback</h2>
+
+<form id="feedbackForm">
+  <input type="text" id="name" placeholder="Your name" required><br><br>
+  <textarea id="message" placeholder="Your message" required></textarea><br><br>
+  <button type="submit">Send Feedback</button>
+</form>
+
+<p id="response"></p>
+
+<script>
+document.getElementById('feedbackForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value;
+  const message = document.getElementById('message').value;
+
+  try {
+    const res = await fetch('https://9qi9mbdms6.execute-api.us-east-1.amazonaws.com/dev/feedback', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ name, message })
+    });
+
+    const data = await res.json();
+    document.getElementById('response').innerText = data.message;
+  } catch (error) {
+    document.getElementById('response').innerText = 'Error sending feedback.';
+    console.error(error);
+  }
+});
+</script>
 </body>
 </html>
