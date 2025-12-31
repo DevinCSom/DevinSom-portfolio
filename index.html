@@ -62,3 +62,131 @@
             Hands-on with <strong>AWS (Lambda, CloudWatch, EventBridge)</strong> and modern web tech (HTML/CSS/JS).
           </p>
 
+          <div class="buttons">
+            <a class="btn" href="#projects">See Projects</a>
+            <a class="btn outline" href="assets/Devin_Som_Resume.pdf" target="_blank" rel="noopener">View Resume (PDF)</a>
+          </div>
+
+          <div class="socials">
+            <a class="social" href="https://www.linkedin.com/in/devin-som-53064621a/" target="_blank" aria-label="LinkedIn">
+              <i class="uil uil-linkedin-alt"></i>
+            </a>
+            <a class="social" href="https://github.com/DevinCSom" target="_blank" aria-label="GitHub">
+              <i class="uil uil-github-alt"></i>
+            </a>
+            <a class="social" href="mailto:devinsom07@gmail.com" aria-label="Email">
+              <i class="uil uil-envelope"></i>
+            </a>
+          </div>
+        </div>
+
+        <!-- Right: photo card -->
+        <div class="card photo">
+          <img src="assets/me.jpg" alt="Devin Som headshot" loading="lazy" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container grid-2">
+        <div>
+          <h2>About Me</h2>
+          <p>
+            I’m a tech-driven, detail-oriented IT student at GMU, building projects that connect to real-world
+            cloud solutions. I enjoy automating things in AWS and crafting tidy, accessible web UIs.
+          </p>
+          <ul class="list">
+            <li><strong>AWS Academy:</strong> Cloud Developing <em>(badge earned)</em></li>
+            <li><strong>Studying:</strong> AWS Cloud Practitioner</li>
+            <li><strong>Interests:</strong> Serverless, FinOps basics, modern front-end</li>
+          </ul>
+          <div class="buttons">
+            <a class="btn" href="#projects">Projects</a>
+            <a class="btn outline" href="assets/Devin_Som_Resume.pdf" target="_blank" rel="noopener">Download Resume</a>
+          </div>
+        </div>
+
+        <div class="card note">
+          <h4>Tech Snapshot</h4>
+          <p>HTML, CSS, JavaScript, Python • AWS (Lambda, CloudWatch, EventBridge, S3) • Git/GitHub</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section alt">
+      <div class="container grid-2">
+        <div>
+          <h2>Skills</h2>
+          <ul class="list">
+            <li><strong>Cloud:</strong> AWS (Lambda, S3, EventBridge, CloudWatch)</li>
+            <li><strong>Dev:</strong> HTML, CSS, JavaScript, Python</li>
+            <li><strong>Tools:</strong> Git/GitHub</li>
+            <li><strong>Concepts:</strong> Serverless, FinOps basics, Monitoring</li>
+          </ul>
+        </div>
+        <div class="card note">
+          <h4>Certifications & Coursework</h4>
+          <p>• AWS Academy Graduate — Cloud Developing<br/>• AWS Cloud Practitioner — <em>in progress</em></p>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="cards">
+          <!-- Project 1 -->
+          <article class="card">
+            <h3>Website Development</h3>
+            <p>Built and debugged a multi-page site using HTML/CSS/JS. Deployed on GitHub Pages.</p>
+            <div class="meta">
+              <span>HTML</span><span>CSS</span><span>GitHub Pages</span>
+            </div>
+            <div class="links">
+              <a href="https://mason.gmu.edu/~dsom/Project%205/index.html" target="_blank" rel="noopener">View Project</a>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="card">
+            <h3>Cloud Automation for Cost Savings</h3>
+            <p>Serverless workflow using <strong>Lambda</strong>, <strong>CloudWatch</strong>, and <strong>EventBridge</strong> to detect idle AWS resources and demonstrate FinOps ideas.</p>
+            <div class="meta">
+              <span>AWS Lambda</span><span>CloudWatch</span><span>EventBridge</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/DevinCSom/DevinSom-CloudAutomationCostSavings" target="_blank" rel="noopener">View Repo</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section">
+      <div class="container">
+        <h2>Contact</h2>
+        <p>
+          Email: <a href="mailto:devinsom07@gmail.com">devinsom07@gmail.com</a> •
+          <a href="https://github.com/DevinCSom" target="_blank" rel="noopener">GitHub</a> •
+          <a href="https://www.linkedin.com/in/devin-som-53064621a/" target="_blank" rel="noopener">LinkedIn</a>
+        </p>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container small">
+      © <span id="year"></span> Devin Som — Built with 💻 + ☁️
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
