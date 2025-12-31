@@ -1,165 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Devin Som — Portfolio</title>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <title>Landing page responsive portfolio</title>
+    </head>
+    <body>
+        <!-- OVERLAY -->
+        <div class="overlay first"></div>
+        <div class="overlay second"></div>
+        <div class="overlay third"></div>
 
-    <!-- Main stylesheet (rename to match your file if needed) -->
-    <link rel="stylesheet" href="assets/css/styles.css" />
+        <!-- HEADER -->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="#" class="nav__logo">Bedimcode</a>
+                </div>
 
-    <!-- Meta basics -->
-    <meta name="description" content="Devin Som — IT student at GMU focused on cloud computing, AWS, and web projects." />
-    <meta name="theme-color" content="#0b2f2f" />
-  </head>
-  <body>
-    <!-- OVERLAY (for intro animation) -->
-    <div class="overlay first"></div>
-    <div class="overlay second"></div>
-    <div class="overlay third"></div>
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+                        <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+                    </ul>
+                </div>
 
-    <!-- HEADER -->
-    <header class="l-header">
-      <nav class="nav bd-grid">
-        <div>
-          <a href="#" class="nav__logo">Devin</a>
-        </div>
+                <div class="nav__toggle" id="nav-toggle">
+                    <ion-icon name="menu"></ion-icon>
+                </div>
+            </nav>
+        </header>
 
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
-            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-          </ul>
-        </div>
+        <!-- MAIN -->
+        <main class="l-main bd-grid">
+            <div class="home">
+                <div class="home__information">
+                    <span class="home__pressent anime-text">Hello, My name is</span>
+                    <h1 class="home__title anime-text">John Doe</h1>
+                    <span class="home__skill anime-text">Web Developer</span>
+                    
+                    <div>
+                        <a href="#" class="home__button anime-text">DOWNLOAD CV</a>
+                    </div>
+                </div>
 
-        <div class="nav__toggle" id="nav-toggle">
-          <ion-icon name="menu"></ion-icon>
-        </div>
-      </nav>
-    </header>
+                <div class="home__img">
+                    <img src="assets/img/img.jpg" alt="">
+                </div>
+                
+                <div class="home__social">
+                    <ion-icon name="logo-facebook" class="home__social-icon"></ion-icon>
+                    <ion-icon name="logo-instagram" class="home__social-icon"></ion-icon>
+                    <ion-icon name="logo-twitter" class="home__social-icon"></ion-icon>
+                </div>
 
-    <!-- MAIN -->
-    <main class="l-main bd-grid">
-      <!-- HERO -->
-      <section class="home" id="home">
-        <div class="home__information">
-          <span class="home__pressent anime-text">Hello, my name is</span>
-          <h1 class="home__title anime-text">Devin Som</h1>
-          <span class="home__skill anime-text">Cloud & Web Developer</span>
-
-          <div class="home__actions">
-            <a href="Devin_Som_Resume.pdf" class="home__button anime-text" target="_blank" rel="noopener">
-              DOWNLOAD CV
-            </a>
-          </div>
-        </div>
-
-        <div class="home__img">
-          <!-- Put your headshot at assets/img/me.jpg -->
-          <img src="assets/img/me.jpg" alt="Devin Som" />
-        </div>
-
-        <div class="home__social">
-          <a href="https://www.linkedin.com/in/devin-som-53064621a/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <ion-icon name="logo-linkedin" class="home__social-icon"></ion-icon>
-          </a>
-          <a href="https://github.com/DevinCSom" target="_blank" rel="noopener" aria-label="GitHub">
-            <ion-icon name="logo-github" class="home__social-icon"></ion-icon>
-          </a>
-          <a href="mailto:devinsom07@gmail.com" aria-label="Email">
-            <ion-icon name="mail" class="home__social-icon"></ion-icon>
-          </a>
-        </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section class="section" id="about">
-        <h2 class="section__title">About</h2>
-        <p class="section__text">
-          I'm an IT student at George Mason University focused on cloud computing (AWS) and practical web projects.
-          I enjoy building small products end-to-end—front end, serverless back end, and automation to keep costs down.
-        </p>
-      </section>
-
-      <!-- PROJECTS -->
-      <section class="section" id="projects">
-        <h2 class="section__title">Projects</h2>
-
-        <div class="cards">
-          <article class="card">
-            <h3>Website Development</h3>
-            <p>Debugged and supported a site using HTML, CSS, and JavaScript. Deployed via GitHub Pages.</p>
-            <div class="links">
-              <a href="https://devincsom.github.io" target="_blank" rel="noopener">View Project →</a>
-              <a href="https://github.com/DevinCSom" target="_blank" rel="noopener">Repo →</a>
             </div>
-          </article>
+        </main>
 
-          <article class="card">
-            <h3>Cloud Automation for Cost Savings</h3>
-            <p>Serverless workflow using Lambda + CloudWatch + EventBridge to detect idle resources and reduce cost.</p>
-            <div class="links">
-              <a href="https://github.com/DevinCSom" target="_blank" rel="noopener">View Repo →</a>
-            </div>
-          </article>
-        </div>
-      </section>
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
 
-      <!-- SKILLS -->
-      <section class="section" id="skills">
-        <h2 class="section__title">Skills</h2>
-        <div class="grid-2d">
-          <div class="note">
-            <h4>Languages</h4>
-            <ul class="list">
-              <li>Java</li>
-              <li>Python</li>
-              <li>JavaScript</li>
-            </ul>
-          </div>
-          <div class="note">
-            <h4>Cloud & Tools</h4>
-            <ul class="list">
-              <li>AWS (Lambda, API Gateway, DynamoDB, S3, CloudWatch)</li>
-              <li>Git & GitHub</li>
-              <li>HTML / CSS</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <!-- CONTACT -->
-      <section class="section" id="contact">
-        <h2 class="section__title">Contact</h2>
-        <form class="feedback" action="https://formspree.io/f/xyyozeaq" method="POST">
-          <input type="text" name="name" placeholder="Your name" required />
-          <input type="email" name="email" placeholder="Your email" required />
-          <textarea name="message" placeholder="Your message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      © <span id="y"></span> Devin Som. All rights reserved.
-    </footer>
-
-    <!-- GSAP (for overlay / text animations, if your main.js uses it) -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
-
-    <!-- Your main JS (handles menu toggle + animations) -->
-    <script src="assets/js/main.js"></script>
-
-    <!-- Icons -->
-    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-
-    <script>
-      // simple current year for footer
-      document.getElementById('y').textContent = new Date().getFullYear();
-    </script>
-  </body>
+        <!-- MAIN -->
+        <script src="assets/js/main.js"></script>
+    
+        <!-- ICONS -->
+        <script  type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
+    </body>
 </html>
