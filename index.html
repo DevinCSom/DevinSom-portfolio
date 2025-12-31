@@ -4,108 +4,96 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Devin Som | Portfolio</title>
+  <meta name="description" content="Devin Som — Web & Cloud portfolio. Skills, projects, education, and contact." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
-  <!-- cache-busted CSS so changes take effect -->
-  <link rel="stylesheet" href="style.css?v=8" />
 
-  <!-- Inline override: keep photo on the right, no big empty space -->
-  <style>
-    /* Force photo on the right and remove big empty space in About */
-    #about .grid-2{ grid-template-columns:1fr 180px !important; align-items:start !important; }
-    .card.photo{
-      background:transparent !important; border:0 !important; box-shadow:none !important;
-      padding:12px !important; width:max-content !important; justify-self:end !important; align-self:start !important;
-    }
-    .card.photo img{
-      width:110px !important; height:110px !important; object-fit:cover !important; border-radius:50% !important; display:block !important;
-    }
-    /* Only stack on very small screens */
-    @media (max-width:480px){
-      #about .grid-2{ grid-template-columns:1fr !important; }
-    }
-  </style>
+  <!-- load the new theme styles -->
+  <link rel="stylesheet" href="style.css?v=9" />
 </head>
 <body>
+  <!-- Header -->
   <header class="site-header">
-    <div class="container">
-      <h1>Devin Som</h1>
-      <p class="tagline"></p>
-      <nav class="nav">
-        <a href="#about">About</a>
+    <div class="nav-wrap">
+      <div class="brand">
+        <span class="brand-badge">{ DEV }</span>
+        <span>Devin&nbsp;Som</span>
+      </div>
+      <nav aria-label="Primary">
+        <a href="#skills">Skills &amp; Experience</a>
+        <a href="#education">Education</a>
         <a href="#projects">Projects</a>
-        <a href="#skills">Skills</a>
-        <a href="#contact" class="cta">Contact</a>
+        <a href="#open-source">Open Source</a>
+        <a href="#extra">Extra Curricular</a>
+        <a class="nav-cta" href="#contact">Contact Me</a>
       </nav>
     </div>
   </header>
 
   <main>
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="container grid-2">
-        <!-- LEFT column: text -->
-        <div>
-          <h2>About Me</h2>
-          <p>
-            Hello, Im Devin Som and I'm tech-driven and detailed-oriented Information Technology student at George Mason University
-            with a strong interest in Cloud Computing. Skilled in HTML, CSS, SQL, Microsoft Excel, AWS, and
-            Azure. Enjoy building hands-on projects that connect with real-world cloud solutions.
+    <!-- HERO (restyled About) -->
+    <section id="about" class="hero">
+      <div class="container hero-grid">
+        <div class="hero-left">
+          <div class="eyebrow">Portfolio</div>
+          <h1 class="hero-title">
+            <span class="hi">Hi, there!</span>
+            <span class="iam">I am</span>
+            <span class="name">Devin Som</span>
+          </h1>
+
+          <p class="lead">
+            Student web-developer who’s either improving his craft or pondering the next big idea.
+            Building on AWS (S3, Lambda, API Gateway, DynamoDB, CloudFront) and modern web tech.
           </p>
-          <div class="buttons">
-            <a class="btn" href="#projects">See Projects</a>
-            <a class="btn outline" href="assets/Devin_Som_Resume.pdf" target="_blank" rel="noopener">
-              View Resume (PDF)
-            </a>
+
+          <div class="hero-actions">
+            <a class="connect-ring" href="mailto:devinsom07@gmail.com" aria-label="Email Devin">Let’s ↗<br/>Connect</a>
+            <a class="cta-link" href="assets/Devin_Som_Resume.pdf" target="_blank" rel="noopener">View Resume (PDF)</a>
           </div>
         </div>
 
-        <!-- RIGHT column: photo -->
-        <div class="card photo">
-          <img src="assets/me.jpg" alt="Devin Som headshot" loading="lazy">
+        <div class="hero-art">
+          <!-- Upload an illustration to assets/hero-illustration.png -->
+          <img src="assets/hero-illustration.png" alt="Developer at desk illustration">
         </div>
       </div>
     </section>
-<!-- Projects -->
-<section id="projects" class="section">
-  <div class="container">
-    <h2>Projects</h2>
-    <div class="cards">
 
-      <!-- Project 1 -->
-      <article class="card">
-        <h3>Website Development</h3>
-        <p>Debugged and supported website using HTML, CSS, and Javascript</p>
-        <div class="meta">
-          <span>HTML</span><span>CSS</span><span>GitHub Pages</span>
-        </div>
-        <div class="links">
-          <a href="https://mason.gmu.edu/~dsom/Project%205/index.html" target="_blank" rel="noopener">View Project</a>
-        </div>
-      </article>
+    <!-- Projects (kept your content) -->
+    <section id="projects" class="section">
+      <div class="container">
+        <h2>Projects</h2>
+        <div class="cards">
 
-      <!-- Project 2 -->
-      <article class="card">
-        <h3>Cloud Automation for Cost Savings ☁️</h3>
-        <p>
-          Automated detection of idle AWS resources using <strong>Lambda</strong>, 
-          <strong>CloudWatch</strong>, and <strong>EventBridge</strong> to reduce 
-          monthly costs and demonstrate <strong>FinOps</strong> principles.
-        </p>
-        <div class="meta">
-          <span>AWS Lambda</span><span>CloudWatch</span><span>EventBridge</span>
-        </div>
-        <div class="links">
-          <a href="https://github.com/DevinCSom/DevinSom-CloudAutomationCostSavings" target="_blank" rel="noopener">View Project</a>
-        </div>
-      </article>
+          <!-- Project 1 -->
+          <article class="card">
+            <h3>Website Development</h3>
+            <p>Debugged and supported website using HTML, CSS, and Javascript</p>
+            <div class="meta">
+              <span>HTML</span><span>CSS</span><span>GitHub Pages</span>
+            </div>
+            <div class="links">
+              <a href="https://mason.gmu.edu/~dsom/Project%205/index.html" target="_blank" rel="noopener">View Project</a>
+            </div>
+          </article>
 
-    </div> <!-- closes .cards -->
-  </div> <!-- closes .container -->
-</section>
-
-
+          <!-- Project 2 -->
+          <article class="card">
+            <h3>Cloud Automation for Cost Savings ☁️</h3>
+            <p>
+              Automated detection of idle AWS resources using <strong>Lambda</strong>,
+              <strong>CloudWatch</strong>, and <strong>EventBridge</strong> to reduce
+              monthly costs and demonstrate <strong>FinOps</strong> principles.
+            </p>
+            <div class="meta">
+              <span>AWS Lambda</span><span>CloudWatch</span><span>EventBridge</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/DevinCSom/DevinSom-CloudAutomationCostSavings" target="_blank" rel="noopener">View Project</a>
+            </div>
+          </article>
 
         </div>
       </div>
@@ -125,11 +113,16 @@
         </div>
         <div class="card note">
           <h4>Certifications & Coursework</h4>
-          <p> AWS Academy Graduate - Cloud Developing
+          <p>AWS Academy Graduate — Cloud Developing</p>
           <p>• AWS Cloud Practitioner (in progress)</p>
         </div>
       </div>
     </section>
+
+    <!-- (optional placeholders to mirror the navbar) -->
+    <section id="education" class="section placeholder"><div class="container"></div></section>
+    <section id="open-source" class="section placeholder alt"><div class="container"></div></section>
+    <section id="extra" class="section placeholder"><div class="container"></div></section>
 
     <!-- Contact -->
     <section id="contact" class="section">
@@ -153,37 +146,38 @@
   <script>
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
-  <h2>Leave Feedback</h2>
 
-<form id="feedbackForm">
-  <input type="text" id="name" placeholder="Your name" required><br><br>
-  <textarea id="message" placeholder="Your message" required></textarea><br><br>
-  <button type="submit">Send Feedback</button>
-</form>
+  <!-- Feedback (kept) -->
+  <section class="section">
+    <div class="container">
+      <h2>Leave Feedback</h2>
+      <form id="feedbackForm" class="feedback">
+        <input type="text" id="name" placeholder="Your name" required>
+        <textarea id="message" placeholder="Your message" required></textarea>
+        <button type="submit">Send Feedback</button>
+      </form>
+      <p id="response"></p>
+    </div>
+  </section>
 
-<p id="response"></p>
-
-<script>
-document.getElementById('feedbackForm').addEventListener('submit', async (e) => {
-  e.preventDefault();
-
-  const name = document.getElementById('name').value;
-  const message = document.getElementById('message').value;
-
-  try {
-    const res = await fetch('https://9qi9mbdms6.execute-api.us-east-1.amazonaws.com/dev/feedback', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ name, message })
-    });
-
-    const data = await res.json();
-    document.getElementById('response').innerText = data.message;
-  } catch (error) {
-    document.getElementById('response').innerText = 'Error sending feedback.';
-    console.error(error);
-  }
-});
-</script>
+  <script>
+  document.getElementById('feedbackForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const name = document.getElementById('name').value;
+    const message = document.getElementById('message').value;
+    try {
+      const res = await fetch('https://9qi9mbdms6.execute-api.us-east-1.amazonaws.com/dev/feedback', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, message })
+      });
+      const data = await res.json();
+      document.getElementById('response').innerText = data.message;
+    } catch (error) {
+      document.getElementById('response').innerText = 'Error sending feedback.';
+      console.error(error);
+    }
+  });
+  </script>
 </body>
 </html>
