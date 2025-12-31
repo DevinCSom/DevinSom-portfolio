@@ -1,155 +1,111 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <!-- Favicons (optional: point to your own headshot/icon) -->
-  <link rel="shortcut icon" href="assets/me.jpg" type="image/jpeg">
-  <link rel="icon" href="assets/me.jpg" type="image/jpeg">
-
-  <!-- Meta -->
-  <meta name="description"
-    content="Devin Som — IT student at George Mason University focused on Cloud Computing and hands-on projects (AWS, HTML/CSS/JS)." />
-  <meta name="keywords"
-    content="Devin Som, portfolio, GMU, cloud computing, AWS, AWS Academy, Lambda, CloudWatch, EventBridge, HTML, CSS, JavaScript, Python" />
-  <meta name="author" content="Devin Som">
-  <meta property="og:title" content="Devin Som" />
-  <meta property="og:url" content="https://YOUR-GITHUB-PAGES-URL" />
-  <meta property="og:description"
-    content="Cloud & web projects by Devin Som — IT student at George Mason University (AWS, HTML/CSS/JS)." />
-  <meta property="og:image:secure_url" content="assets/me.jpg" />
-  <meta property="og:image" content="assets/me.jpg" />
-  <meta property="profile:username" content="DevinCSom" />
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Devin Som" />
-  <meta name="twitter:image" content="assets/me.jpg" />
-  <meta name="twitter:url" content="https://YOUR-GITHUB-PAGES-URL" />
-  <meta name="theme-color" content="#7d6bd6">
-  <link rel="canonical" href="https://YOUR-GITHUB-PAGES-URL" />
-
-  <!-- Theme assets (keep these if you’re using this template’s CSS/JS) -->
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-
   <title>Devin Som</title>
-  <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon" />
-  <script src="https://kit.fontawesome.com/4bf48f78b4.js" crossorigin="anonymous"></script>
+  <meta name="description" content="Devin Som — IT student at George Mason University focused on Cloud Computing and modern web development (AWS, HTML/CSS/JS)." />
+  <meta name="author" content="Devin Som" />
+  <meta name="theme-color" content="#7d6bd6" />
 
-  <!-- Google Analytics (optional; remove if not needed)
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX');
-  </script>
-  -->
+  <!-- Icons & fonts -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+
+  <!-- Vendor CSS (swiper) -->
+  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+
+  <!-- Your site CSS -->
+  <link rel="stylesheet" href="./assets/css/style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon" />
+
+  <!-- Optional icon kit for some brand icons -->
+  <script src="https://kit.fontawesome.com/4bf48f78b4.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
-  <!-- Header -->
+  <!-- ===================== HEADER ===================== -->
   <header class="header" id="header">
     <nav class="nav container">
       <a href="#" class="nav_logo">Devin</a>
 
       <div class="nav_menu" id="nav-menu">
         <ul class="nav_list grid">
-          <li class="nav_item">
-            <a href="#home" class="nav_link active-link">
-              <i class="uil uil-estate nav_icon"></i> Home
-            </a>
-          </li>
-          <li class="nav_item">
-            <a href="#about" class="nav_link">
-              <i class="uil uil-user nav_icon"></i> About
-            </a>
-          </li>
-          <li class="nav_item">
-            <a href="#skills" class="nav_link">
-              <i class="uil uil-file-alt nav_icon"></i> Skills
-            </a>
-          </li>
-          <li class="nav_item">
-            <a href="#qualification" class="nav_link">
-              <i class="uil uil-graduation-cap nav_icon"></i> Qualifications
-            </a>
-          </li>
-          <li class="nav_item">
-            <a href="#projects" class="nav_link">
-              <i class="uil uil-scenery nav_icon"></i> Projects
-            </a>
-          </li>
-          <li class="nav_item">
-            <a href="#contact" class="nav_link">
-              <i class="uil uil-message nav-icon nav_icon"></i> Contact Me
-            </a>
-          </li>
+          <li class="nav_item"><a href="#home" class="nav_link active-link"><i class="uil uil-estate nav_icon"></i> Home</a></li>
+          <li class="nav_item"><a href="#about" class="nav_link"><i class="uil uil-user nav_icon"></i> About</a></li>
+          <li class="nav_item"><a href="#skills" class="nav_link"><i class="uil uil-file-alt nav_icon"></i> Skills</a></li>
+          <li class="nav_item"><a href="#qualification" class="nav_link"><i class="uil uil-graduation-cap nav_icon"></i> Qualifications</a></li>
+          <li class="nav_item"><a href="#projects" class="nav_link"><i class="uil uil-scenery nav_icon"></i> Projects</a></li>
+          <li class="nav_item"><a href="#contact" class="nav_link"><i class="uil uil-message nav_icon"></i> Contact</a></li>
         </ul>
-        <i class="uil uil-times nav_close" id="nav-close"></i>
+        <i class="uil uil-times nav_close" id="nav-close" aria-label="Close menu"></i>
       </div>
 
       <div class="nav_btns">
-        <!-- Change Theme -->
-        <i class="uil uil-moon change-theme" id="theme-button"></i>
-
-        <div class="nav_toggle" id="nav-toggle">
+        <i class="uil uil-moon change-theme" id="theme-button" aria-label="Toggle theme"></i>
+        <div class="nav_toggle" id="nav-toggle" aria-label="Open menu">
           <i class="uil uil-apps"></i>
         </div>
       </div>
     </nav>
   </header>
 
-  <!-- Main -->
+  <!-- ===================== MAIN ===================== -->
   <main class="main">
-    <!-- Home -->
+    <!-- ===================== HOME ===================== -->
     <section class="home section" id="home">
       <div class="home_container container grid">
         <div class="home_content grid">
+          <!-- Socials -->
           <div class="home_social">
-            <a href="https://www.linkedin.com/in/devin-som-53064621a/" class="home_social-icon" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/in/devin-som-53064621a/" class="home_social-icon" target="_blank" rel="noopener" aria-label="LinkedIn">
               <i class="uil uil-linkedin-alt"></i>
             </a>
-            <a href="https://github.com/DevinCSom" class="home_social-icon" target="_blank" rel="noopener">
+            <a href="https://github.com/DevinCSom" class="home_social-icon" target="_blank" rel="noopener" aria-label="GitHub">
               <i class="uil uil-github-alt"></i>
+            </a>
+            <a href="mailto:devinsom07@gmail.com" class="home_social-icon" aria-label="Email">
+              <i class="uil uil-envelope"></i>
             </a>
           </div>
 
+          <!-- Hero blob / avatar -->
           <div class="home_img">
-            <svg class="home_blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" data-tilt>
+            <svg class="home_blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" data-tilt>
               <mask id="mask0" mask-type="alpha">
                 <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
+                  130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                  97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                  0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
               </mask>
               <g mask="url(#mask0)">
                 <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                <!-- Swap this to your headshot -->
-                <image class="home_blob-img" x="12" y="8" href="assets/me.jpg" />
+                  165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                  129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                  -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                <!-- Use your headshot here -->
+                <image class="home_blob-img" x="12" y="8" href="./assets/img/me.jpg" />
               </g>
             </svg>
           </div>
 
+          <!-- Headline -->
           <div class="home_data">
             <h1 class="home_title">Hi, I'm Devin</h1>
-            <h3 class="home_subtitle">IT Student • Cloud Enthusiast</h3>
+            <h3 class="home_subtitle">I am <span class="type"></span></h3>
+            <p class="home_description">IT student @ George Mason University focused on Cloud Computing (AWS) and building real-world projects.</p>
 
-            <p class="home_description">
-              I build practical cloud & web projects — AWS (S3, Lambda, DynamoDB, CloudFront) and HTML/CSS/JS.
-            </p>
-            <a href="#contact" class="button button--flex">
-              Contact Me
-              <i class="uil uil-message"></i>
-            </a>
+            <div class="home_cta">
+              <a href="#contact" class="button button--flex">Contact Me <i class="uil uil-message"></i></a>
+              <a href="./assets/Devin_Som_Resume.pdf" target="_blank" rel="noopener" class="button button--flex button--ghost">
+                View Resume (PDF) <i class="uil uil-file-download-alt"></i>
+              </a>
+            </div>
           </div>
         </div>
 
@@ -163,117 +119,95 @@
       </div>
     </section>
 
-    <!-- About -->
+    <!-- ===================== ABOUT ===================== -->
     <section class="about section" id="about">
       <h2 class="section_title">About Me</h2>
       <span class="section_subtitle">My introduction</span>
+
       <div class="about_container container grid">
-        <img src="assets/me.jpg" alt="Devin Som headshot" class="about_img" data-tilt />
+        <img src="./assets/img/about.png" alt="Devin headshot" class="about_img" data-tilt />
         <div class="about_data">
           <p class="about_description">
-            I'm <strong>Devin Som</strong>, a tech-driven, detail-oriented IT student at <strong>George Mason University</strong> with a strong interest in
-            <strong>Cloud Computing</strong>. I like shipping hands-on projects that connect to real-world solutions—especially on <strong>AWS</strong>.
-            I recently earned my <strong>AWS Academy Graduate – Cloud Developing</strong> badge and I'm currently studying for the
-            <strong>AWS Cloud Practitioner</strong> certification.
+            I'm a detail-oriented IT student who enjoys turning cloud concepts into working solutions.
+            I’ve built websites with HTML/CSS/JS and automated AWS clean-ups with Lambda + CloudWatch + EventBridge to save cost.
           </p>
+          <ul class="about_highlights">
+            <li>GMU — B.S. Information Technology (2024—Present)</li>
+            <li>AWS Academy Graduate — <strong>Cloud Developing</strong></li>
+            <li>Studying for <strong>AWS Cloud Practitioner</strong> (in progress)</li>
+          </ul>
           <div class="about_button">
-            <!-- Update this file path if your resume is named differently -->
-            <a download href="assets/Devin_Som_Resume.pdf" class="button button--flex" target="_blank" rel="noopener">
-              View Resume <i class="uil uil-file-download-alt button_icon"></i>
+            <a href="./assets/Devin_Som_Resume.pdf" class="button button--flex" target="_blank" rel="noopener">
+              Resume <i class="uil uil-file-download-alt button_icon"></i>
             </a>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Skills -->
+    <!-- ===================== SKILLS ===================== -->
     <section class="skills section" id="skills">
-      <h1 class="section_title">Skills</h1>
+      <h2 class="section_title">Skills</h2>
       <span class="section_subtitle">My Technical Skills</span>
+
       <div class="skills_container container grid">
         <!-- Languages -->
         <div class="skill skills_content skills_open">
           <div class="skills_header">
             <i class="uil uil-arrow skills_icon"></i>
             <div>
-              <h1 class="skills_title">Languages</h1>
-              <span class="skills_subtitle">What I use most</span>
+              <h3 class="skills_title">Languages</h3>
+              <span class="skills_subtitle">Core programming & scripting</span>
             </div>
             <i class="uil uil-angle-down skills_arrow"></i>
           </div>
-
           <div class="skills_list grid">
-            <div class="skills_data">
-              <div class="skills_titles"><span class="single_skill_icon"><i class="fab fa-python"></i></span><h3 class="skills_name">Python</h3></div>
-              <div class="skills_bar"></div>
-            </div>
-            <div class="skills_data">
-              <div class="skills_titles"><span class="single_skill_icon"><i class="fab fa-js-square"></i></span><h3 class="skills_name">JavaScript</h3></div>
-              <div class="skills_bar"></div>
-            </div>
-            <div class="skills_data">
-              <div class="skills_titles"><span class="single_skill_icon"><i class="fab fa-java"></i></span><h3 class="skills_name">Java</h3></div>
-              <div class="skills_bar"></div>
-            </div>
-            <div class="skills_data">
-              <div class="skills_titles"><span class="single_skill_icon"><i class="fab fa-sass"></i></span><h3 class="skills_name">HTML/CSS</h3></div>
-              <div class="skills_bar"></div>
-            </div>
+            <div class="skills_data"><div class="skills_titles"><i class="fab fa-python single_skill_icon"></i><h4 class="skills_name">Python</h4></div><div class="skills_bar"></div></div>
+            <div class="skills_data"><div class="skills_titles"><i class="fab fa-js-square single_skill_icon"></i><h4 class="skills_name">JavaScript</h4></div><div class="skills_bar"></div></div>
+            <div class="skills_data"><div class="skills_titles"><i class="fab fa-java single_skill_icon"></i><h4 class="skills_name">Java</h4></div><div class="skills_bar"></div></div>
+            <div class="skills_data"><div class="skills_titles"><i class="uil uil-brackets-curly single_skill_icon"></i><h4 class="skills_name">Bash</h4></div><div class="skills_bar"></div></div>
           </div>
         </div>
 
-        <!-- Cloud & Frameworks -->
+        <!-- Frameworks -->
         <div class="skill skills_content">
           <div class="skills_header">
             <i class="uil uil-brackets-curly skills_icon"></i>
             <div>
-              <h1 class="skills_title">Cloud & Frameworks</h1>
-              <span class="skills_subtitle">Platforms and tools</span>
+              <h3 class="skills_title">Libraries & Frameworks</h3>
+              <span class="skills_subtitle">What I prefer to work with</span>
             </div>
             <i class="uil uil-angle-down skills_arrow"></i>
           </div>
-
           <div class="skills_list grid">
-            <div class="skills_data">
-              <div class="skills_titles">
-                <span class="single_skill_icon external-logo"><img src="./assets/img/aws.svg" alt="aws icon"></span>
-                <h3 class="skills_name">AWS (S3, Lambda, DynamoDB, CloudFront)</h3>
-              </div>
-              <div class="skills_bar"></div>
-            </div>
-            <div class="skills_data">
-              <div class="skills_titles"><span class="single_skill_icon"><i class="fab fa-react"></i></span><h3 class="skills_name">React (basics)</h3></div>
-              <div class="skills_bar"></div>
-            </div>
-            <div class="skills_data">
-              <div class="skills_titles"><span class="single_skill_icon"><i class="fab fa-node-js"></i></span><h3 class="skills_name">Node.js (basics)</h3></div>
-              <div class="skills_bar"></div>
-            </div>
+            <div class="skills_data"><div class="skills_titles"><i class="fab fa-react single_skill_icon"></i><h4 class="skills_name">React</h4></div><div class="skills_bar"></div></div>
+            <div class="skills_data"><div class="skills_titles"><img src="./assets/img/next-js.svg" class="single_skill_icon external-logo" alt="Next.js"><h4 class="skills_name">Next.js</h4></div><div class="skills_bar"></div></div>
+            <div class="skills_data"><div class="skills_titles"><img src="./assets/img/tailwind.svg" class="single_skill_icon external-logo" alt="Tailwind"><h4 class="skills_name">Tailwind CSS</h4></div><div class="skills_bar"></div></div>
+            <div class="skills_data"><div class="skills_titles"><i class="fab fa-node-js single_skill_icon"></i><h4 class="skills_name">Node.js</h4></div><div class="skills_bar"></div></div>
           </div>
         </div>
 
-        <!-- Tools -->
+        <!-- Tools / Cloud -->
         <div class="skill skills_content">
           <div class="skills_header">
             <i class="uil uil-wrench skills_icon"></i>
             <div>
-              <h1 class="skills_title">Tools</h1>
-              <span class="skills_subtitle">Day-to-day helpers</span>
+              <h3 class="skills_title">Cloud & Tools</h3>
+              <span class="skills_subtitle">Daily drivers</span>
             </div>
             <i class="uil uil-angle-down skills_arrow"></i>
           </div>
-
           <div class="skills_list grid">
-            <div class="skills_data"><div class="skills_titles"><span class="single_skill_icon"><i class="fab fa-git-alt"></i></span><h3 class="skills_name">Git</h3></div><div class="skills_bar"></div></div>
-            <div class="skills_data"><div class="skills_titles"><span class="single_skill_icon"><i class="fab fa-github"></i></span><h3 class="skills_name">GitHub</h3></div><div class="skills_bar"></div></div>
-            <div class="skills_data"><div class="skills_titles"><span class="single_skill_icon"><i class="fas fa-terminal"></i></span><h3 class="skills_name">Bash/CLI</h3></div><div class="skills_bar"></div></div>
+            <div class="skills_data"><div class="skills_titles"><img src="./assets/img/aws.svg" class="single_skill_icon external-logo" alt="AWS"><h4 class="skills_name">AWS (S3, Lambda, CloudWatch, DynamoDB, CloudFront)</h4></div><div class="skills_bar"></div></div>
+            <div class="skills_data"><div class="skills_titles"><i class="fab fa-git-alt single_skill_icon"></i><h4 class="skills_name">Git & GitHub</h4></div><div class="skills_bar"></div></div>
+            <div class="skills_data"><div class="skills_titles"><i class="uil uil-database-alt single_skill_icon"></i><h4 class="skills_name">SQL / Excel</h4></div><div class="skills_bar"></div></div>
+            <div class="skills_data"><div class="skills_titles"><img src="./assets/img/docker.svg" class="single_skill_icon external-logo" alt="Docker"><h4 class="skills_name">Docker (basics)</h4></div><div class="skills_bar"></div></div>
           </div>
         </div>
-
       </div>
     </section>
 
-    <!-- Qualifications -->
+    <!-- ===================== QUALIFICATIONS ===================== -->
     <section class="qualification section" id="qualification">
       <h2 class="section_title">Qualifications</h2>
       <span class="section_subtitle">Education & Certifications</span>
@@ -283,9 +217,8 @@
           <div class="qualification_button button-flex" id="educationheader">
             <i class="uil uil-graduation-cap qualification_icon"></i>Education
           </div>
-
           <div class="qualification_button button-flex" id="workheader">
-            <i class="uil uil-certificate qualification_icon"></i>Certifications
+            <i class="uil uil-award qualification_icon"></i>Certs
           </div>
         </div>
 
@@ -296,15 +229,9 @@
               <div>
                 <h3 class="qualification_title">B.S. Information Technology</h3>
                 <span class="qualification_subtitle">George Mason University</span>
-                <div class="qualification_calendar">
-                  <i class="uil uil-calendar-alt"></i>
-                  2024 — Present
-                </div>
+                <div class="qualification_calendar"><i class="uil uil-calendar-alt"></i> 2024 — Present</div>
               </div>
-              <div>
-                <span class="qualification_circle"></span>
-                <span class="qualification_line"></span>
-              </div>
+              <div><span class="qualification_circle"></span><span class="qualification_line"></span></div>
             </div>
           </div>
 
@@ -314,87 +241,74 @@
               <div>
                 <h3 class="qualification_title">AWS Academy Graduate — Cloud Developing</h3>
                 <span class="qualification_subtitle">AWS Academy</span>
+                <div class="qualification_calendar"><i class="uil uil-calendar-alt"></i> 2024</div>
               </div>
-              <div>
-                <span class="qualification_circle"></span>
-                <span class="qualification_line"></span>
-              </div>
+              <div><span class="qualification_circle"></span><span class="qualification_line"></span></div>
             </div>
 
             <div class="qualification_data">
               <div></div>
+              <div><span class="qualification_circle"></span><span class="qualification_line"></span></div>
               <div>
-                <span class="qualification_circle"></span>
-              </div>
-              <div>
-                <h3 class="qualification_title">AWS Cloud Practitioner (in progress)</h3>
-                <span class="qualification_subtitle">Self-study</span>
+                <h3 class="qualification_title">AWS Cloud Practitioner</h3>
+                <span class="qualification_subtitle">In progress</span>
+                <div class="qualification_calendar"><i class="uil uil-calendar-alt"></i> 2025</div>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </section>
 
-    <!-- Portfolio -->
+    <!-- ===================== PROJECTS ===================== -->
     <section class="portfolio section" id="projects">
       <h2 class="section_title">Projects</h2>
       <span class="section_subtitle">Most recent work</span>
 
-      <div class="portfolio_container container swiper-container swiper mySwiper">
+      <div class="portfolio_container container swiper-container mySwiper">
         <div class="swiper-wrapper">
 
-          <!-- Project 1 -->
+          <!-- Project: Website Development -->
           <div class="portfolio_content grid swiper-slide">
-            <img src="./assets/img/portfolio-preview.gif" alt="Website project" class="portfolio_img">
+            <img src="./assets/img/project-web.webp" alt="Website project" class="portfolio_img" />
             <div class="portfolio_data">
               <h3 class="portfolio_title">Website Development</h3>
               <p class="portfolio_description">
                 Debugged and supported a site using HTML, CSS, and JavaScript. Deployed via GitHub Pages.
               </p>
-              <a href="https://mason.gmu.edu/~dsom/Project%205/index.html" class="button button-flex button-small portfolio_button"
-                target="_blank" rel="noopener">
-                View Project
-                <i class="uil uil-arrow-right button_icon"></i>
+              <a href="https://mason.gmu.edu/~dsom/Project%205/index.html" class="button button-flex button-small portfolio_button" target="_blank" rel="noopener">
+                View Project <i class="uil uil-arrow-right button_icon"></i>
               </a>
             </div>
           </div>
 
-          <!-- Project 2 -->
+          <!-- Project: AWS Automation -->
           <div class="portfolio_content grid swiper-slide">
-            <img src="./assets/img/aws-serverless.png" alt="AWS automation" class="portfolio_img">
+            <img src="./assets/img/project-aws.webp" alt="AWS automation" class="portfolio_img" />
             <div class="portfolio_data">
               <h3 class="portfolio_title">Cloud Automation for Cost Savings</h3>
               <p class="portfolio_description">
                 Serverless workflow using Lambda + CloudWatch + EventBridge to detect idle resources and reduce cost.
               </p>
-              <a href="https://github.com/DevinCSom/DevinSom-CloudAutomationCostSavings"
-                 class="button button-flex button-small portfolio_button" target="_blank" rel="noopener">
-                View Repo
-                <i class="uil uil-arrow-right button_icon"></i>
+              <a href="https://github.com/DevinCSom/DevinSom-CloudAutomationCostSavings" class="button button-flex button-small portfolio_button" target="_blank" rel="noopener">
+                View Repo <i class="uil uil-arrow-right button_icon"></i>
               </a>
             </div>
           </div>
 
         </div>
 
-        <!-- Arrows -->
-        <div class="swiper-button-next">
-          <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-        </div>
-        <div class="swiper-button-prev">
-          <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-        </div>
-        <!-- Pagination -->
+        <!-- Swiper arrows & pagination -->
+        <div class="swiper-button-next"><i class="uil uil-angle-right-b swiper-portfolio-icon"></i></div>
+        <div class="swiper-button-prev"><i class="uil uil-angle-left-b swiper-portfolio-icon"></i></div>
         <div class="swiper-pagination"></div>
       </div>
     </section>
 
-    <!-- Contact Me -->
+    <!-- ===================== CONTACT ===================== -->
     <section class="contact section" id="contact">
-      <h1 class="section_title">Contact Me</h1>
-      <span class="section_subtitle">
-        Want to connect? My inbox is always open!
-      </span>
+      <h2 class="section_title">Contact Me</h2>
+      <span class="section_subtitle">Want to connect? My inbox is always open!</span>
 
       <div class="contact_container container grid">
         <div>
@@ -427,80 +341,114 @@
           </a>
         </div>
 
-        <!-- If you already wired up Formspree, keep the form -->
-        <form action="https://formspree.io/f/xyyozeaq" class="contact_form grid" id="contact-form" method="POST">
+        <!-- Contact form (Formspree example; replace with your own endpoint if needed) -->
+        <form action="https://formspree.io/f/xyyozeaq" method="POST" class="contact_form grid" id="contact-form">
           <div id="alert" class="alert_style"></div>
+
           <div class="contact_inputs grid">
             <div class="contact_content">
-              <label class="contact_label">Name</label>
-              <input type="text" name="name" class="contact_input" id="name" required>
+              <label for="name" class="contact_label">Name</label>
+              <input type="text" name="name" id="name" class="contact_input" required />
             </div>
             <div class="contact_content">
               <label for="email" class="contact_label">Email</label>
-              <input type="email" name="email" class="contact_input" id="email" required>
+              <input type="email" name="email" id="email" class="contact_input" required />
             </div>
           </div>
+
           <div class="contact_content">
             <label for="subject" class="contact_label">Subject</label>
-            <input type="text" name="subject" class="contact_input" id="subject" required>
+            <input type="text" name="subject" id="subject" class="contact_input" required />
           </div>
+
           <div class="contact_content">
             <label for="message" class="contact_label">Message</label>
-            <textarea name="message" cols="0" rows="7" class="contact_input message" id="message"
-              style="resize: vertical;" required></textarea>
+            <textarea name="message" id="message" rows="7" class="contact_input message" style="resize: vertical;" required></textarea>
           </div>
 
           <div>
             <button type="submit" class="button button-flex">
-              Send Message
-              <i class="uil uil-message button_icon"></i>
+              Send Message <i class="uil uil-message button_icon"></i>
             </button>
           </div>
         </form>
-
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
+  <!-- ===================== FOOTER ===================== -->
   <footer class="footer">
     <div class="footer_bg">
       <div class="footer_container container grid">
         <div>
           <h1 class="footer_title">Devin Som</h1>
-          <span class="footer_subtitle">IT Student • Cloud</span>
+          <span class="footer_subtitle">Cloud & Web Development</span>
         </div>
 
         <ul class="footer_links">
           <li><a href="#about" class="footer_link">About</a></li>
           <li><a href="#projects" class="footer_link">Projects</a></li>
-          <li><a href="#contact" class="footer_link">Contact Me</a></li>
+          <li><a href="#contact" class="footer_link">Contact</a></li>
         </ul>
 
         <div class="footer_socials">
-          <a href="https://www.linkedin.com/in/devin-som-53064621a/" target="_blank" class="footer_social" rel="noopener">
-            <i class="uil uil-linkedin-alt"></i>
-          </a>
-          <a href="https://github.com/DevinCSom" target="_blank" class="footer_social" rel="noopener">
-            <i class="uil uil-github-alt"></i>
-          </a>
+          <a href="https://www.linkedin.com/in/devin-som-53064621a/" target="_blank" class="footer_social" rel="noopener"><i class="uil uil-linkedin-alt"></i></a>
+          <a href="https://github.com/DevinCSom" target="_blank" class="footer_social" rel="noopener"><i class="uil uil-github-alt"></i></a>
+          <a href="mailto:devinsom07@gmail.com" class="footer_social"><i class="uil uil-envelope"></i></a>
         </div>
       </div>
-
-      <p class="footer_copy">&#169; Devin Som. All rights reserved</p>
+      <p class="footer_copy">© <span id="year"></span> Devin Som. All rights reserved.</p>
     </div>
   </footer>
 
-  <!-- Scroll Top -->
-  <a href="#" class="scrollup" id="scroll-up">
+  <!-- ===================== SCROLL-UP ===================== -->
+  <a href="#" class="scrollup" id="scroll-up" aria-label="Scroll to top">
     <i class="uil uil-arrow-up scrollup_icon"></i>
   </a>
 
-  <!-- JS (keep if you’re using this theme’s assets) -->
+  <!-- ===================== SCRIPTS ===================== -->
+  <script>
+    // current year
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <!-- Vendors -->
   <script src="./assets/js/jquery.min.js"></script>
   <script src="./assets/js/swiper-bundle.min.js"></script>
   <script src="./assets/js/typed.js"></script>
   <script src="./assets/js/tilt.jquery.min.js"></script>
-  <script src="./assets/js/main.js"></script>
+
+  <!-- Site JS: basic init for Typed + Swiper (ensure these IDs/classes exist in your CSS/JS) -->
+  <script>
+    // Typed headline
+    if (window.Typed) {
+      new Typed('.type', {
+        strings: ['a Cloud', 'a Web', 'a Problem-Solving'],
+        typeSpeed: 60,
+        backSpeed: 35,
+        backDelay: 1500,
+        loop: true
+      });
+    }
+
+    // Swiper projects
+    if (window.Swiper) {
+      const swiper = new Swiper('.mySwiper', {
+        loop: true,
+        spaceBetween: 24,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev',
+        },
+        pagination: { el: '.swiper-pagination', clickable: true },
+        breakpoints: { 568: { slidesPerView: 2 }, 968: { slidesPerView: 2 } }
+      });
+    }
+
+    // Mobile nav toggles
+    const navMenu = document.getElementById('nav-menu');
+    document.getElementById('nav-toggle')?.addEventListener('click', () => navMenu.classList.add('show-menu'));
+    document.getElementById('nav-close')?.addEventListener('click', () => navMenu.classList.remove('show-menu'));
+  </script>
 </body>
 </html>
