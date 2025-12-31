@@ -2,12 +2,19 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <title>Devin Som — Portfolio</title>
+    <title>Devin Som | Portfolio</title>
+
+    <!-- Use your single stylesheet -->
+    <link rel="stylesheet" href="./style.css" />
+
+    <!-- Favicon (optional) -->
+    <link rel="icon" href="./me.jpg" />
+    <meta name="description" content="Devin Som — IT student & cloud-focused developer. Web projects, cloud automation, and coursework highlights." />
   </head>
   <body>
-    <!-- OVERLAY -->
+    <!-- OVERLAYS (intro panels) -->
     <div class="overlay first"></div>
     <div class="overlay second"></div>
     <div class="overlay third"></div>
@@ -22,10 +29,10 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
-            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
+            <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
           </ul>
         </div>
 
@@ -37,52 +44,123 @@
 
     <!-- MAIN -->
     <main class="l-main bd-grid">
-      <div class="home">
+      <!-- HOME -->
+      <div class="home" id="home">
         <div class="home__information">
           <span class="home__pressent anime-text">Hello, my name is</span>
           <h1 class="home__title anime-text">Devin Som</h1>
-          <span class="home__skill anime-text">Cloud &amp; Web Developer</span>
+          <span class="home__skill anime-text">IT Student • Cloud & Web</span>
 
-          <!-- optional tagline/summary under the title -->
           <p class="home__description anime-text">
             High level experience in web design and development knowledge, producing quality work.
           </p>
 
           <div>
-            <!-- TODO: replace with your actual resume file path -->
-            <a href="assets/files/Devin_Som_Resume.pdf" class="home__button anime-text" target="_blank" rel="noopener">
+            <a href="./Devin_Som_Resume.pdf" class="home__button anime-text" target="_blank" rel="noopener">
               DOWNLOAD CV
             </a>
           </div>
         </div>
 
         <div class="home__img">
-          <!-- TODO: replace with your actual headshot image -->
-          <img src="assets/img/devin.jpg" alt="Portrait of Devin Som" />
+          <!-- You have me.jpg at repo root -->
+          <img src="./me.jpg" alt="Devin Som headshot" />
         </div>
 
         <div class="home__social">
-          <!-- TODO: replace # with your real profile URLs -->
-          <a href="#" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <a href="https://www.linkedin.com/in/devin-som-53064621a/" target="_blank" rel="noopener" aria-label="LinkedIn">
             <ion-icon name="logo-linkedin" class="home__social-icon"></ion-icon>
           </a>
-          <a href="#" target="_blank" rel="noopener" aria-label="Dribbble">
-            <ion-icon name="logo-dribbble" class="home__social-icon"></ion-icon>
-          </a>
-          <a href="#" target="_blank" rel="noopener" aria-label="GitHub">
+          <a href="https://github.com/DevinCSom" target="_blank" rel="noopener" aria-label="GitHub">
             <ion-icon name="logo-github" class="home__social-icon"></ion-icon>
+          </a>
+          <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter">
+            <ion-icon name="logo-twitter" class="home__social-icon"></ion-icon>
           </a>
         </div>
       </div>
+
+      <!-- ABOUT -->
+      <section id="about" class="section about">
+        <h2 class="section__title">About</h2>
+        <p class="about__description">
+          Web developer, with extensive knowledge and years of experience, working in web technologies and
+          UI/UX design, delivering quality work.
+        </p>
+        <div class="about__info">
+          <div class="about__info-name">Years <br />experience</div>
+          <div class="about__info-name">Completed <br />project</div>
+          <div class="about__info-name">Companies <br />worked</div>
+        </div>
+      </section>
+
+      <!-- SERVICES -->
+      <section id="services" class="section services">
+        <h2 class="section__title">Services</h2>
+        <ul class="services__modal-service">
+          <li>I develop the user interface.</li>
+          <li>Web page development.</li>
+          <li>I create UX element interactions.</li>
+          <li>I position your company brand.</li>
+        </ul>
+      </section>
+
+      <!-- PROJECTS / PORTFOLIO -->
+      <section id="projects" class="section portfolio">
+        <h2 class="section__title">Portfolio</h2>
+        <p class="portfolio__description">
+          Website adaptable to all devices, with UI components and animated interactions.
+        </p>
+        <!-- Add your project cards here later -->
+      </section>
+
+      <!-- CTA PROJECT -->
+      <section class="section project">
+        <h2 class="section__title">Let’s Build</h2>
+        <p class="project__description">
+          Contact me now and get a 30% discount on your new project.
+        </p>
+      </section>
+
+      <!-- TESTIMONIAL -->
+      <section class="section testimonial">
+        <h2 class="section__title">Testimonial</h2>
+        <p class="testimonial__description">
+          I get a good impression, I carry out my project with all the possible quality and attention and
+          support 24 hours a day.
+        </p>
+      </section>
+
+      <!-- CONTACT -->
+      <section id="contact" class="section contact">
+        <h2 class="section__title">Contact</h2>
+        <p>Email: devinsom07@gmail.com</p>
+        <p>
+          LinkedIn:
+          <a href="https://www.linkedin.com/in/devin-som-53064621a/" target="_blank" rel="noopener">/in/devin-som-53064621a/</a>
+        </p>
+        <p>
+          GitHub:
+          <a href="https://github.com/DevinCSom" target="_blank" rel="noopener">github.com/DevinCSom</a>
+        </p>
+      </section>
     </main>
 
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="footer__social">
+        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
+          <ion-icon name="logo-facebook"></ion-icon>
+        </a>
+        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
+          <ion-icon name="logo-instagram"></ion-icon>
+        </a>
+        <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter">
+          <ion-icon name="logo-twitter"></ion-icon>
+        </a>
+      </div>
+      <p>© <span id="y"></span> Devin Som. All rights reserved.</p>
+    </footer>
 
-    <!-- MAIN -->
-    <script src="assets/js/main.js"></script>
+    <!-- GSAP (for overlay
 
-    <!-- ICONS -->
-    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-  </body>
-</html>
