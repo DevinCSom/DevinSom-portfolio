@@ -1,166 +1,325 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Devin Som | Portfolio</title>
 
-    <!-- Use your single stylesheet -->
-    <link rel="stylesheet" href="./style.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <!-- Favicon (optional) -->
-    <link rel="icon" href="./me.jpg" />
-    <meta name="description" content="Devin Som — IT student & cloud-focused developer. Web projects, cloud automation, and coursework highlights." />
-  </head>
-  <body>
-    <!-- OVERLAYS (intro panels) -->
-    <div class="overlay first"></div>
-    <div class="overlay second"></div>
-    <div class="overlay third"></div>
+  <!-- Favicon & SEO -->
+  <link rel="icon" href="./me.jpg" type="image/jpeg" />
+  <meta name="description"
+        content="Devin Som — IT student at GMU focused on cloud, web, and automation. Portfolio, projects, and contact." />
+  <meta name="keywords"
+        content="Devin Som, DevinSom portfolio, GMU, IT student, web developer, cloud, AWS, Java, JavaScript, HTML, CSS" />
+  <meta name="author" content="Devin Som">
+  <meta name="theme-color" content="#0b3f3e">
 
-    <!-- HEADER -->
-    <header class="l-header">
-      <nav class="nav bd-grid">
-        <div>
-          <a href="#" class="nav__logo">Devin</a>
+  <!-- Icons (safe to keep) -->
+  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+  <script src="https://kit.fontawesome.com/4bf48f78b4.js" crossorigin="anonymous"></script>
+
+  <!-- Your stylesheet -->
+  <link rel="stylesheet" href="./style.css" />
+
+  <title>Devin Som</title>
+</head>
+
+<body>
+  <!-- Header -->
+  <header class="header" id="header">
+    <nav class="nav container">
+      <a href="#" class="nav_logo">Devin</a>
+
+      <div class="nav_menu" id="nav-menu">
+        <ul class="nav_list grid">
+          <li class="nav_item"><a href="#home" class="nav_link active-link"><i class="uil uil-estate nav_icon"></i> Home</a></li>
+          <li class="nav_item"><a href="#about" class="nav_link"><i class="uil uil-user nav_icon"></i> About</a></li>
+          <li class="nav_item"><a href="#skills" class="nav_link"><i class="uil uil-file-alt nav_icon"></i> Skills</a></li>
+          <li class="nav_item"><a href="#qualification" class="nav_link"><i class="uil uil-graduation-cap nav_icon"></i> Qualifications</a></li>
+          <li class="nav_item"><a href="#projects" class="nav_link"><i class="uil uil-scenery nav_icon"></i> Projects</a></li>
+          <li class="nav_item"><a href="#contact" class="nav_link"><i class="uil uil-message nav_icon"></i> Contact</a></li>
+        </ul>
+        <i class="uil uil-times nav_close" id="nav-close"></i>
+      </div>
+
+      <div class="nav_btns">
+        <i class="uil uil-moon change-theme" id="theme-button"></i>
+        <div class="nav_toggle" id="nav-toggle"><i class="uil uil-apps"></i></div>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main class="main">
+    <!-- Home -->
+    <section class="home section" id="home">
+      <div class="home_container container grid">
+        <div class="home_content grid">
+          <div class="home_social">
+            <a href="https://www.linkedin.com/in/devin-som-53064621a/" class="home_social-icon" target="_blank" rel="noopener"><i class="uil uil-linkedin-alt"></i></a>
+            <a href="https://github.com/DevinCSom" class="home_social-icon" target="_blank" rel="noopener"><i class="uil uil-github-alt"></i></a>
+            <a href="mailto:devinsom07@gmail.com" class="home_social-icon"><i class="uil uil-envelope-alt"></i></a>
+          </div>
+
+          <div class="home_img">
+            <!-- simple circular blob replacement: your photo -->
+            <img src="./me.jpg" alt="Devin Som headshot" class="home_blob-img" />
+          </div>
+
+          <div class="home_data">
+            <h1 class="home_title">Hi, I'm Devin</h1>
+            <h3 class="home_subtitle">IT Student • Cloud & Web</h3>
+            <p class="home_description">
+              High-level experience in web design and development, plus hands-on cloud projects and automation.
+            </p>
+            <a href="#contact" class="button button--flex">
+              Contact Me <i class="uil uil-message"></i>
+            </a>
+            <a href="./Devin_Som_Resume.pdf" class="button button--flex" style="margin-left:.5rem" target="_blank" rel="noopener">
+              Resume <i class="uil uil-file-download-alt"></i>
+            </a>
+          </div>
         </div>
+      </div>
+    </section>
 
-        <div class="nav__menu" id="nav-menu">
-          <ul class="nav__list">
-            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
-            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-            <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
-            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-          </ul>
-        </div>
-
-        <div class="nav__toggle" id="nav-toggle">
-          <ion-icon name="menu"></ion-icon>
-        </div>
-      </nav>
-    </header>
-
-    <!-- MAIN -->
-    <main class="l-main bd-grid">
-      <!-- HOME -->
-      <div class="home" id="home">
-        <div class="home__information">
-          <span class="home__pressent anime-text">Hello, my name is</span>
-          <h1 class="home__title anime-text">Devin Som</h1>
-          <span class="home__skill anime-text">IT Student • Cloud & Web</span>
-
-          <p class="home__description anime-text">
-            High level experience in web design and development knowledge, producing quality work.
+    <!-- About -->
+    <section class="about section" id="about">
+      <h2 class="section_title">About Me</h2>
+      <span class="section_subtitle">My introduction</span>
+      <div class="about_container container grid">
+        <img src="./me.jpg" alt="Devin portrait" class="about_img" />
+        <div class="about_data">
+          <p class="about_description">
+            I'm an Information Technology student at George Mason University focused on cloud computing and web
+            development. I enjoy building practical projects (Lambda, API Gateway, DynamoDB, and static sites on
+            GitHub Pages) and making clean, simple UIs.
           </p>
+          <div class="about_button">
+            <a download href="./Devin_Som_Resume.pdf" class="button button--flex" target="_blank" rel="noopener">
+              Download Resume <i class="uil uil-file-download-alt button_icon"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
 
-          <div>
-            <a href="./Devin_Som_Resume.pdf" class="home__button anime-text" target="_blank" rel="noopener">
-              DOWNLOAD CV
+    <!-- Skills -->
+    <section class="skills section" id="skills">
+      <h1 class="section_title">Skills</h1>
+      <span class="section_subtitle">My Technical Skills</span>
+
+      <div class="skills_container container grid">
+        <!-- Languages -->
+        <div class="skill skills_content skills_open">
+          <div class="skills_header">
+            <i class="uil uil-arrow skills_icon"></i>
+            <div>
+              <h1 class="skills_title">Languages</h1>
+              <span class="skills_subtitle">What I use most</span>
+            </div>
+            <i class="uil uil-angle-down skills_arrow"></i>
+          </div>
+          <div class="skills_list grid">
+            <div class="skills_data"><div class="skills_titles"><i class="fab fa-java single_skill_icon"></i><h3 class="skills_name">Java</h3></div></div>
+            <div class="skills_data"><div class="skills_titles"><i class="fab fa-js-square single_skill_icon"></i><h3 class="skills_name">JavaScript</h3></div></div>
+            <div class="skills_data"><div class="skills_titles"><i class="fab fa-python single_skill_icon"></i><h3 class="skills_name">Python</h3></div></div>
+            <div class="skills_data"><div class="skills_titles"><h3 class="skills_name">HTML/CSS</h3></div></div>
+          </div>
+        </div>
+
+        <!-- Libraries & Frameworks -->
+        <div class="skill skills_content">
+          <div class="skills_header">
+            <i class="uil uil-brackets-curly skills_icon"></i>
+            <div>
+              <h1 class="skills_title">Libraries & Frameworks</h1>
+              <span class="skills_subtitle">What I build with</span>
+            </div>
+            <i class="uil uil-angle-down skills_arrow"></i>
+          </div>
+          <div class="skills_list grid">
+            <div class="skills_data"><div class="skills_titles"><i class="fab fa-react single_skill_icon"></i><h3 class="skills_name">React</h3></div></div>
+            <div class="skills_data"><div class="skills_titles"><h3 class="skills_name">Node.js</h3></div></div>
+            <div class="skills_data"><div class="skills_titles"><h3 class="skills_name">Tailwind CSS</h3></div></div>
+          </div>
+        </div>
+
+        <!-- Tools -->
+        <div class="skill skills_content">
+          <div class="skills_header">
+            <i class="uil uil-wrench skills_icon"></i>
+            <div>
+              <h1 class="skills_title">Tools</h1>
+              <span class="skills_subtitle">Daily drivers</span>
+            </div>
+            <i class="uil uil-angle-down skills_arrow"></i>
+          </div>
+          <div class="skills_list grid">
+            <div class="skills_data"><div class="skills_titles"><i class="fab fa-git-alt single_skill_icon"></i><h3 class="skills_name">Git</h3></div></div>
+            <div class="skills_data"><div class="skills_titles"><i class="fab fa-github single_skill_icon"></i><h3 class="skills_name">GitHub</h3></div></div>
+            <div class="skills_data"><div class="skills_titles"><h3 class="skills_name">AWS (Lambda, CloudWatch, EventBridge)</h3></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Qualifications -->
+    <section class="qualification section" id="qualification">
+      <h2 class="section_title">Qualifications</h2>
+      <span class="section_subtitle">Education & Work</span>
+
+      <div class="qualification_container container">
+        <div class="qualification_tabs">
+          <div class="qualification_button button-flex" id="educationheader">
+            <i class="uil uil-graduation-cap qualification_icon"></i>Education
+          </div>
+          <div class="qualification_button button-flex" id="workheader">
+            <i class="uil uil-briefcase-alt qualification_icon"></i>Work
+          </div>
+        </div>
+
+        <div class="qualification_sections">
+          <!-- Education -->
+          <div class="qualification_content qualification_active" data-content id="education">
+            <div class="qualification_data">
+              <div>
+                <h3 class="qualification_title">B.S. Information Technology</h3>
+                <span class="qualification_subtitle">George Mason University</span>
+                <div class="qualification_calendar"><i class="uil uil-calendar-alt"></i> 2024 — Present</div>
+              </div>
+              <div><span class="qualification_circle"></span><span class="qualification_line"></span></div>
+            </div>
+
+            <div class="qualification_data">
+              <div></div>
+              <div><span class="qualification_circle"></span><span class="qualification_line"></span></div>
+              <div>
+                <h3 class="qualification_title">AWS Academy Graduate — Cloud Developing</h3>
+                <span class="qualification_subtitle">AWS Academy</span>
+                <div class="qualification_calendar"><i class="uil uil-calendar-alt"></i> 2025</div>
+              </div>
+            </div>
+
+            <div class="qualification_data">
+              <div>
+                <h3 class="qualification_title">AWS Cloud Practitioner (in progress)</h3>
+                <span class="qualification_subtitle">Self-study</span>
+                <div class="qualification_calendar"><i class="uil uil-calendar-alt"></i> 2025</div>
+              </div>
+              <div><span class="qualification_circle"></span></div>
+            </div>
+          </div>
+
+          <!-- Work -->
+          <div class="qualification_content qualification-inactive" data-content id="work">
+            <div class="qualification_data">
+              <div>
+                <h3 class="qualification_title">Sales Generalist</h3>
+                <span class="qualification_subtitle">Best Buy</span>
+                <div class="qualification_calendar"><i class="uil uil-calendar-alt"></i> 2025 — Present</div>
+              </div>
+              <div><span class="qualification_circle"></span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section class="portfolio section" id="projects">
+      <h2 class="section_title">Projects</h2>
+      <span class="section_subtitle">Most recent work</span>
+
+      <div class="portfolio_container container">
+        <!-- Project 1 -->
+        <div class="portfolio_content grid">
+          <img src="./me.jpg" alt="Website project" class="portfolio_img" />
+          <div class="portfolio_data">
+            <h3 class="portfolio_title">Website Development</h3>
+            <p class="portfolio_description">
+              Debugged and supported a site using HTML, CSS, and JavaScript. Deployed via GitHub Pages.
+            </p>
+            <a href="https://devincsom.github.io" class="button button-flex button-small portfolio_button" target="_blank" rel="noopener">
+              View Project <i class="uil uil-arrow-right button_icon"></i>
             </a>
           </div>
         </div>
 
-        <div class="home__img">
-          <!-- You have me.jpg at repo root -->
-          <img src="./me.jpg" alt="Devin Som headshot" />
-        </div>
-
-        <div class="home__social">
-          <a href="https://www.linkedin.com/in/devin-som-53064621a/" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <ion-icon name="logo-linkedin" class="home__social-icon"></ion-icon>
-          </a>
-          <a href="https://github.com/DevinCSom" target="_blank" rel="noopener" aria-label="GitHub">
-            <ion-icon name="logo-github" class="home__social-icon"></ion-icon>
-          </a>
-          <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter">
-            <ion-icon name="logo-twitter" class="home__social-icon"></ion-icon>
-          </a>
+        <!-- Project 2 -->
+        <div class="portfolio_content grid">
+          <img src="./me.jpg" alt="AWS automation" class="portfolio_img" />
+          <div class="portfolio_data">
+            <h3 class="portfolio_title">Cloud Automation for Cost Savings</h3>
+            <p class="portfolio_description">
+              Serverless workflow using Lambda + CloudWatch + EventBridge to detect idle resources and reduce cost.
+            </p>
+            <a href="https://github.com/DevinCSom" class="button button-flex button-small portfolio_button" target="_blank" rel="noopener">
+              View Repo <i class="uil uil-arrow-right button_icon"></i>
+            </a>
+          </div>
         </div>
       </div>
+    </section>
 
-      <!-- ABOUT -->
-      <section id="about" class="section about">
-        <h2 class="section__title">About</h2>
-        <p class="about__description">
-          Web developer, with extensive knowledge and years of experience, working in web technologies and
-          UI/UX design, delivering quality work.
-        </p>
-        <div class="about__info">
-          <div class="about__info-name">Years <br />experience</div>
-          <div class="about__info-name">Completed <br />project</div>
-          <div class="about__info-name">Companies <br />worked</div>
+    <!-- Contact -->
+    <section class="contact section" id="contact">
+      <h1 class="section_title">Contact Me</h1>
+      <span class="section_subtitle">Want to connect? My inbox is always open!</span>
+
+      <div class="contact_container container grid">
+        <div class="contact_info">
+          <i class="uil uil-envelope-alt contact_icon"></i>
+          <div>
+            <h3 class="contact_title">Email</h3>
+            <span class="contact_subtitle">devinsom07@gmail.com</span>
+          </div>
         </div>
-      </section>
 
-      <!-- SERVICES -->
-      <section id="services" class="section services">
-        <h2 class="section__title">Services</h2>
-        <ul class="services__modal-service">
-          <li>I develop the user interface.</li>
-          <li>Web page development.</li>
-          <li>I create UX element interactions.</li>
-          <li>I position your company brand.</li>
+        <div class="contact_info">
+          <i class="uil uil-linkedin-alt contact_icon"></i>
+          <div>
+            <h3 class="contact_title">LinkedIn</h3>
+            <a class="contact_subtitle" href="https://www.linkedin.com/in/devin-som-53064621a/" target="_blank" rel="noopener">
+              /in/devin-som-53064621a/
+            </a>
+          </div>
+        </div>
+
+        <div class="contact_info">
+          <i class="uil uil-github-alt contact_icon"></i>
+          <div>
+            <h3 class="contact_title">GitHub</h3>
+            <a class="contact_subtitle" href="https://github.com/DevinCSom" target="_blank" rel="noopener">
+              github.com/DevinCSom
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer_bg">
+      <div class="footer_container container grid">
+        <div>
+          <h1 class="footer_title">Devin Som</h1>
+          <span class="footer_subtitle">IT • Cloud • Web</span>
+        </div>
+
+        <ul class="footer_links">
+          <li><a href="#about" class="footer_link">About</a></li>
+          <li><a href="#projects" class="footer_link">Projects</a></li>
+          <li><a href="#contact" class="footer_link">Contact</a></li>
         </ul>
-      </section>
 
-      <!-- PROJECTS / PORTFOLIO -->
-      <section id="projects" class="section portfolio">
-        <h2 class="section__title">Portfolio</h2>
-        <p class="portfolio__description">
-          Website adaptable to all devices, with UI components and animated interactions.
-        </p>
-        <!-- Add your project cards here later -->
-      </section>
-
-      <!-- CTA PROJECT -->
-      <section class="section project">
-        <h2 class="section__title">Let’s Build</h2>
-        <p class="project__description">
-          Contact me now and get a 30% discount on your new project.
-        </p>
-      </section>
-
-      <!-- TESTIMONIAL -->
-      <section class="section testimonial">
-        <h2 class="section__title">Testimonial</h2>
-        <p class="testimonial__description">
-          I get a good impression, I carry out my project with all the possible quality and attention and
-          support 24 hours a day.
-        </p>
-      </section>
-
-      <!-- CONTACT -->
-      <section id="contact" class="section contact">
-        <h2 class="section__title">Contact</h2>
-        <p>Email: devinsom07@gmail.com</p>
-        <p>
-          LinkedIn:
-          <a href="https://www.linkedin.com/in/devin-som-53064621a/" target="_blank" rel="noopener">/in/devin-som-53064621a/</a>
-        </p>
-        <p>
-          GitHub:
-          <a href="https://github.com/DevinCSom" target="_blank" rel="noopener">github.com/DevinCSom</a>
-        </p>
-      </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="footer__social">
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
-          <ion-icon name="logo-facebook"></ion-icon>
-        </a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a>
-        <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter">
-          <ion-icon name="logo-twitter"></ion-icon>
-        </a>
+        <div class="footer_socials">
+          <a href="https://www.linkedin.com/in/devin-som-53064621a/" target="_blank" class="footer_social" rel="noopener"><i class="uil uil-linkedin-alt"></i></a>
+          <a href="https://github.com/DevinCSom" target="_blank" class="footer_social" rel="noopener"><i class="uil uil-github-alt"></i></a>
+          <a href="mailto:devinsom07@gmail.com" class="footer_social"><i class="uil uil-envelope-alt"></i></a>
+        </div>
       </div>
-      <p>© <span id="y"></span> Devin Som. All rights reserved.</p>
-    </footer>
 
-    <!-- GSAP (for overlay
-
+      <p class="footer_copy">© <_
