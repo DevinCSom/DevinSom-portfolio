@@ -3,10 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Devin Som — Portfolio</title>
-
-    <!-- Match your stylesheet path/name -->
     <link rel="stylesheet" href="assets/css/styles.css" />
+    <title>Devin Som — Portfolio</title>
   </head>
   <body>
     <!-- OVERLAY -->
@@ -23,13 +21,11 @@
 
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
-            <li class="nav__item"><a href="#home" class="nav__link">Home</a></li>
-            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
-            <li class="nav__item"><a href="#services" class="nav__link">Services</a></li>
-            <li class="nav__item"><a href="#portfolio" class="nav__link">Portfolio</a></li>
-            <li class="nav__item"><a href="#project" class="nav__link">Project</a></li>
-            <li class="nav__item"><a href="#testimonial" class="nav__link">Testimonial</a></li>
-            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Services</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Blog</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Contact</a></li>
           </ul>
         </div>
 
@@ -41,30 +37,27 @@
 
     <!-- MAIN -->
     <main class="l-main bd-grid">
-      <!-- HOME -->
-      <section class="home" id="home">
+      <div class="home">
         <div class="home__information">
           <span class="home__pressent anime-text">Hello, my name is</span>
           <h1 class="home__title anime-text">Devin Som</h1>
           <span class="home__skill anime-text">Cloud & Web Developer</span>
 
-          <p class="home__description">
-            High level experience in web design and development knowledge, producing quality work.
-          </p>
-
           <div>
-            <a href="Devin_Som_Resume.pdf" class="home__button anime-text" target="_blank" rel="noopener">
+            <!-- TODO: replace with your actual resume file path -->
+            <a href="assets/files/Devin_Som_Resume.pdf" class="home__button anime-text" target="_blank" rel="noopener">
               DOWNLOAD CV
             </a>
           </div>
         </div>
 
         <div class="home__img">
-          <!-- Replace with your image path -->
-          <img src="assets/img/me.jpg" alt="Devin Som" />
+          <!-- TODO: replace with your actual headshot image -->
+          <img src="assets/img/devin.jpg" alt="Devin Som" />
         </div>
 
         <div class="home__social">
+          <!-- TODO: replace # with your real profile URLs -->
           <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn">
             <ion-icon name="logo-linkedin" class="home__social-icon"></ion-icon>
           </a>
@@ -75,116 +68,17 @@
             <ion-icon name="logo-github" class="home__social-icon"></ion-icon>
           </a>
         </div>
-      </section>
-
-      <!-- ABOUT -->
-      <section class="section" id="about">
-        <h2 class="section__title">About</h2>
-        <p class="about__description">
-          Web developer, with extensive knowledge and years of experience, working in web technologies and Ui / Ux design, delivering quality work.
-        </p>
-
-        <div class="about__info">
-          <div class="about__info-name">
-            Years <br /> experience
-          </div>
-          <div class="about__info-name">
-            Completed <br /> project
-          </div>
-          <div class="about__info-name">
-            Companies <br /> worked
-          </div>
-        </div>
-      </section>
-
-      <!-- SERVICES -->
-      <section class="section" id="services">
-        <h2 class="section__title">Services</h2>
-        <ul class="services__modal-service">
-          <li>I develop the user interface.</li>
-          <li>Web page development.</li>
-          <li>I create ux element interactions.</li>
-          <li>I position your company brand.</li>
-        </ul>
-      </section>
-
-      <!-- PORTFOLIO -->
-      <section class="section" id="portfolio">
-        <h2 class="section__title">Portfolio</h2>
-        <p class="portfolio__description">
-          Website adaptable to all devices, with ui components and animated interactions.
-        </p>
-
-        <!-- Example cards (optional; adjust to your content) -->
-        <div class="cards">
-          <article class="card">
-            <h3>Responsive Site</h3>
-            <p>Fully responsive layout with reusable UI components and smooth animations.</p>
-            <a href="#" target="_blank" rel="noopener">View →</a>
-          </article>
-          <article class="card">
-            <h3>UI Component Kit</h3>
-            <p>Buttons, modals, and nav systems engineered for accessibility and polish.</p>
-            <a href="#" target="_blank" rel="noopener">View →</a>
-          </article>
-        </div>
-      </section>
-
-      <!-- PROJECT (CTA) -->
-      <section class="section cta" id="project">
-        <h2 class="section__title">Start a Project</h2>
-        <p class="project__description">
-          Contact me now and get a 30% discount on your new project.
-        </p>
-        <a href="#contact" class="btn">Get Started</a>
-      </section>
-
-      <!-- TESTIMONIAL -->
-      <section class="section" id="testimonial">
-        <h2 class="section__title">Testimonial</h2>
-        <blockquote class="testimonial__description">
-          I get a good impression, I carry out my project with all the possible quality and attention and support 24 hours a day.
-        </blockquote>
-      </section>
-
-      <!-- CONTACT -->
-      <section class="section" id="contact">
-        <h2 class="section__title">Contact</h2>
-        <form class="feedback" action="https://formspree.io/f/xyyozeaq" method="POST">
-          <input type="text" name="name" placeholder="Your name" required />
-          <input type="email" name="email" placeholder="Your email" required />
-          <textarea name="message" placeholder="Your message" required></textarea>
-          <button type="submit">Send Message</button>
-        </form>
-      </section>
+      </div>
     </main>
 
-    <!-- FOOTER -->
-    <footer class="site-footer">
-      <div class="footer__social">
-        <a href="https://www.facebook.com/" target="_blank" rel="noopener" aria-label="Facebook">
-          <ion-icon name="logo-facebook"></ion-icon>
-        </a>
-        <a href="https://www.instagram.com/" target="_blank" rel="noopener" aria-label="Instagram">
-          <ion-icon name="logo-instagram"></ion-icon>
-        </a>
-        <a href="https://twitter.com/" target="_blank" rel="noopener" aria-label="Twitter">
-          <ion-icon name="logo-twitter"></ion-icon>
-        </a>
-      </div>
-      <div>© <span id="y"></span> Devin Som. All rights reserved.</div>
-    </footer>
-
-    <!-- GSAP (if you animate overlays/text) -->
+    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
 
-    <!-- Main JS -->
+    <!-- MAIN -->
     <script src="assets/js/main.js"></script>
 
-    <!-- Ionicons -->
+    <!-- ICONS -->
     <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
-    <script>
-      document.getElementById('y').textContent = new Date().getFullYear();
-    </script>
   </body>
 </html>
+
