@@ -1,706 +1,166 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <!-- Favicons -->
-  <link rel="shortcut icon" href="./assets/img/favicon.ico" type="image/x-icon">
-  <link rel="icon" href="./assets/img/favicon.ico" type="image/x-icon">
-
-  <!-- SEO -->
-  <meta name="description"
-    content="Devin Som — IT student at George Mason University focused on cloud computing (AWS) and modern web development. Check out projects, skills, and ways to connect." />
-  <meta name="keywords"
-    content="Devin Som, George Mason University, GMU, IT student, Cloud, AWS, Cloud Analyst, Web Developer, React, Next.js, JavaScript, HTML, CSS, Lambda, DynamoDB, Portfolio" />
-  <meta name="author" content="Devin Som">
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="Devin Som" />
-  <meta property="og:url" content="#" />
-  <meta property="og:description"
-    content="IT @ GMU • Cloud & Web Dev • Hands-on projects with AWS and JavaScript." />
-  <meta property="og:image:secure_url" content="./assets/img/icon.png" />
-  <meta property="og:image" content="./assets/img/icon.png" />
-  <meta property="profile:username" content="DevinSom" />
-
-  <!-- Twitter -->
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Devin Som" />
-  <meta name="twitter:image" content="./assets/img/icon.png" />
-  <meta name="twitter:url" content="#" />
-  <meta name="theme-color" content="#7d6bd6">
-
-  <link rel="canonical" href="#" />
-
-  <!-- Icons / CSS -->
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-  <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="style.css" />
-  <link rel="preconnect" href="#" />
-  <title>Devin Som</title>
-
-  <!-- Font Awesome (skill icons) -->
-  <script src="https://kit.fontawesome.com/4bf48f78b4.js" crossorigin="anonymous"></script>
-
-  <!-- (Optional) Google tag - remove if not using GA) -->
-  <!--
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-XXXXXXX');
-  </script>
-  -->
-</head>
-
-<body>
-  <!-- Header -->
-  <header class="header" id="header">
-    <nav class="nav container">
-      <a href="#" class="nav_logo">Devin</a>
-
-      <div class="nav_menu" id="nav-menu">
-        <ul class="nav_list grid">
-          <li class="nav_item">
-            <a href="#home" class="nav_link active-link">
-              <i class="uil uil-estate nav_icon"></i> Home
-            </a>
-          </li>
-          <li class="nav_item">
-            <a href="#about" class="nav_link">
-              <i class="uil uil-user nav_icon"></i> About
-            </a>
-          </li>
-          <li class="nav_item">
-            <a href="#skills" class="nav_link">
-              <i class="uil uil-file-alt nav_icon"></i> Skills
-            </a>
-          </li>
-          <li class="nav_item">
-            <a href="#qualification" class="nav_link">
-              <i class="uil uil-graduation-cap nav_icon"></i> Qualifications
-            </a>
-          </li>
-          <li class="nav_item">
-            <a href="#projects" class="nav_link">
-              <i class="uil uil-scenery nav_icon"></i> Projects
-            </a>
-          </li>
-          <li class="nav_item">
-            <a href="#contact" class="nav_link">
-              <i class="uil uil-message nav-icon nav_icon"></i> Contact Me
-            </a>
-          </li>
-        </ul>
-        <i class="uil uil-times nav_close" id="nav-close"></i>
-      </div>
-
-      <div class="nav_btns">
-        <!-- Change Theme -->
-        <i class="uil uil-moon change-theme" id="theme-button"></i>
-
-        <div class="nav_toggle" id="nav-toggle">
-          <i class="uil uil-apps"></i>
-        </div>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Main -->
-  <main class="main">
-    <!-- Home -->
-    <section class="home section" id="home">
-      <div class="home_container container grid">
-        <div class="home_content grid">
-          <div class="home_social">
-            <a href="https://www.linkedin.com/in/devin-som-53064621a/" class="home_social-icon" target="_blank" rel="noopener">
-              <i class="uil uil-linkedin-alt"></i>
-            </a>
-
-            <a href="https://github.com/DevinCSom" class="home_social-icon" target="_blank" rel="noopener">
-              <i class="uil uil-github-alt"></i>
-            </a>
-
-            <a href="mailto:devinsom07@gmail.com" class="home_social-icon" aria-label="Email Devin">
-              <i class="uil uil-envelope"></i>
-            </a>
-          </div>
-
-          <div class="home_img">
-            <svg class="home_blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg"
-              xmlns:xlink="http://www.w3.org/1999/xlink" data-tilt>
-              <mask id="mask0" mask-type="alpha">
-                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
-                    130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
-                    97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
-                    0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-              </mask>
-              <g mask="url(#mask0)">
-                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
-                    165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
-                    129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
-                    -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z" />
-                <image class="home_blob-img" x="12" y="8" href="./assets/img/icon.png" />
-              </g>
-            </svg>
-          </div>
-
-          <div class="home_data">
-            <h1 class="home_title">Hi, I'm Devin</h1>
-            <h3 class="home_subtitle">I am <span class="type"></span> Developer</h3>
-
-            <p class="home_description">
-              IT student @ George Mason University. I build practical cloud + web projects (AWS, HTML/CSS/JS, React).
-            </p>
-            <a href="#contact" class="button button--flex">
-              Contact Me
-              <i class="uil uil-message"></i>
-            </a>
-          </div>
-        </div>
-
-        <div class="home_scroll">
-          <a href="#about" class="home_scroll-button button--flex">
-            <i class="uil uil-mouse-alt home_scroll-mouse"></i>
-            <span class="home_scroll-name">Scroll Down</span>
-            <i class="uil uil-arrow-down home_scroll-arrow"></i>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section class="about section" id="about">
-      <h2 class="section_title">About Me</h2>
-      <span class="section_subtitle">My introduction</span>
-      <div class="about_container container grid">
-        <img src="./assets/img/about.png" alt="headshot image" class="about_img" data-tilt />
-        <div class="about_data">
-          <p class="about_description">
-            Hey there! 👋 I'm Devin—an IT student focused on cloud computing and web development.
-            I love building hands-on projects like AWS Lambda automations and clean, responsive websites.
-          </p>
-          <div class="about_button">
-            <a download="" href="./Devin_Som_Resume.pdf" class="button button--flex" target="_blank" rel="noopener">
-              Resume<i class="uil uil-file-download-alt button_icon"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Skills -->
-    <section class="skills section" id="skills">
-      <h1 class="section_title">Skills</h1>
-      <span class="section_subtitle">My Technical Skills</span>
-      <div class="skills_container container grid">
-        <!-- Skill Set 1 -->
-        <div class="skill skills_content skills_open">
-          <div class="skills_header">
-            <i class="uil uil-arrow skills_icon"></i>
-
-            <div>
-              <h1 class="skills_title">Languages</h1>
-              <span class="skills_subtitle">Languages that I use</span>
-            </div>
-
-            <i class="uil uil-angle-down skills_arrow"></i>
-          </div>
-
-          <div class="skills_list grid">
-            <div class="skills_data">
-              <div class="skills_titles">
-                <span class="single_skill_icon">
-                  <i class="fab fa-python"></i>
-                </span>
-                <h3 class="skills_name">Python</h3>
-              </div>
-              <div class="skills_bar"></div>
-            </div>
-
-            <div class="skills_data">
-              <div class="skills_titles">
-                <span class="single_skill_icon">
-                  <i class="fab fa-js-square"></i>
-                </span>
-                <h3 class="skills_name">JavaScript</h3>
-              </div>
-              <div class="skills_bar"></div>
-            </div>
-
-            <div class="skills_data">
-              <div class="skills_titles">
-                <span class="single_skill_icon">
-                  <i class="fab fa-java"></i>
-                </span>
-                <h3 class="skills_name">Java</h3>
-              </div>
-              <div class="skills_bar"></div>
-            </div>
-
-            <div class="skills_data">
-              <div class="skills_titles">
-                <span class="single_skill_icon">
-                  <i class="uil uil-brackets-curly"></i>
-                </span>
-                <h3 class="skills_name">Bash</h3>
-              </div>
-              <div class="skills_bar"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Skill Set 2 -->
-        <div class="skill skills_content">
-          <div class="skills_header">
-            <i class="uil uil-brackets-curly skills_icon"></i>
-
-            <div>
-              <h1 class="skills_title">Libraries & Frameworks</h1>
-              <span class="skills_subtitle">What I prefer to work with</span>
-            </div>
-
-            <i class="uil uil-angle-down skills_arrow"></i>
-          </div>
-
-          <div class="skills_list grid">
-            <div class="skills_data">
-              <div class="skills_titles">
-                <span class="single_skill_icon">
-                  <i class="fab fa-react"></i>
-                </span>
-                <h3 class="skills_name">React</h3>
-              </div>
-              <div class="skills_bar"></div>
-            </div>
-
-            <div class="skills_data">
-              <div class="skills_titles">
-                <span class="single_skill_icon external-logo">
-                  <img src="./assets/img/next-js.svg" alt="next-logo">
-                </span>
-                <h3 class="skills_name">Next.js</h3>
-              </div>
-              <div class="skills_bar"></div>
-            </div>
-
-            <div class="skills_data">
-              <div class="skills_titles">
-                <span class="single_skill_icon external-logo">
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 54 33">
-                    <g clip-path="url(#prefix__clip0)">
-                      <path fill="#6E57E0" fill-rule="evenodd"
-                        d="M27 0c-7.2 0-11.7 3.6-13.5 10.8 2.7-3.6 5.85-4.95 9.45-4.05 2.054.513 3.522 2.004 5.147 3.653C30.744 13.09 33.808 16.2 40.5 16.2c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C36.756 3.11 33.692 0 27 0zM13.5 16.2C6.3 16.2 1.8 19.8 0 27c2.7-3.6 5.85-4.95 9.45-4.05 2.054.514 3.522 2.004 5.147 3.653C17.244 29.29 20.308 32.4 27 32.4c7.2 0 11.7-3.6 13.5-10.8-2.7 3.6-5.85 4.95-9.45 4.05-2.054-.513-3.522-2.004-5.147-3.653C23.256 19.31 20.192 16.2 13.5 16.2z"
-                        clip-rule="evenodd" />
-                    </g>
-                    <defs>
-                      <clipPath id="prefix__clip0">
-                        <path fill="#fff" d="M0 0h54v32.4H0z" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </span>
-                <h3 class="skills_name">Tailwind CSS</h3>
-              </div>
-              <div class="skills_bar"></div>
-            </div>
-
-            <div class="skills_data">
-              <div class="skills_titles">
-                <span class="single_skill_icon">
-                  <i class="fab fa-node-js"></i>
-                </span>
-                <h3 class="skills_name">Node.js</h3>
-              </div>
-              <div class="skills_bar"></div>
-            </div>
-
-            <div class="skills_data">
-              <div class="skills_titles">
-                <span class="single_skill_icon external-logo" style="max-width: 1.33rem;">
-                  <img src="./assets/img/MongoDB.svg" alt="mongo-db-logo">
-                </span>
-                <h3 class="skills_name">MongoDB</h3>
-              </div>
-              <div class="skills_bar"></div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Skill Set 3 -->
-        <div class="skill skills_content">
-          <div class="skills_header">
-            <i class="uil uil-wrench skills_icon"></i>
-
-            <div>
-              <h1 class="skills_title">Tools</h1>
-              <span class="skills_subtitle">Daily drivers</span>
-            </div>
-
-            <i class="uil uil-angle-down skills_arrow"></i>
-          </div>
-
-          <div class="skills_list grid">
-            <div class="skills_data">
-              <div class="skills_titles">
-                <span class="single_skill_icon external-logo">
-                  <img src="./assets/img/aws.svg" alt="aws icon">
-                </span>
-                <h3 class="skills_name">AWS (S3, Lambda, CloudWatch, DynamoDB)</h3>
-              </div>
-              <div class="skills_bar"></div>
-            </div>
-
-            <div class="skills_data">
-              <div class="skills_titles">
-                <span class="single_skill_icon">
-                  <i class="fab fa-git-alt"></i>
-                </span>
-                <h3 class="skills_name">Git & GitHub</h3>
-              </div>
-              <div class="skills_bar"></div>
-            </div>
-
-            <div class="skills_data">
-              <div class="skills_titles">
-                <span class="single_skill_icon">
-                  <i class="uil uil-database"></i>
-                </span>
-                <h3 class="skills_name">SQL / Excel</h3>
-              </div>
-              <div class="skills_bar"></div>
-            </div>
-
-            <div class="skills_data">
-              <div class="skills_titles">
-                <span class="single_skill_icon external-logo">
-                  <img src="./assets/img/vercel.svg" alt="vercel icon">
-                </span>
-                <h3 class="skills_name">Vercel / Deployments</h3>
-              </div>
-              <div class="skills_bar"></div>
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- Qualifications -->
-    <section class="qualification section" id="qualification">
-      <h2 class="section_title">Qualifications</h2>
-      <span class="section_subtitle">My Educational Qualification & Work Experience</span>
-
-      <div class="qualification_container container">
-        <div class="qualification_tabs">
-          <div class="qualification_button button-flex" id="educationheader">
-            <i class="uil uil-graduation-cap qualification_icon"></i>Education
-          </div>
-
-          <div class="qualification_button button-flex" id="workheader">
-            <i class="uil uil-briefcase-alt qualification_icon"></i>Work / Certs
-          </div>
-        </div>
-
-        <div class="qualification_sections">
-          <!-- Educational Qualification -->
-          <div class="qualification_content qualification_active" data-content id="education">
-            <div class="qualification_data">
-              <div>
-                <h3 class="qualification_title">B.S. Information Technology</h3>
-                <span class="qualification_subtitle"><a href="https://www.gmu.edu/" target="_blank" rel="noopener">George Mason University</a></span>
-                <div class="qualification_calendar">
-                  <i class="uil uil-calendar-alt"></i>
-                  2024 - Present
-                </div>
-              </div>
-
-              <div>
-                <span class="qualification_circle"></span>
-                <span class="qualification_line"></span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Work / Certs -->
-          <div class="qualification_content qualification-inactive" data-content id="work">
-            <div class="qualification_data">
-              <div>
-                <h3 class="qualification_title">AWS Academy Graduate — Cloud Developing</h3>
-                <span class="qualification_subtitle">AWS Academy</span>
-                <div class="qualification_calendar">
-                  <i class="uil uil-calendar-alt"></i>
-                  2024
-                </div>
-              </div>
-
-              <div>
-                <span class="qualification_circle"></span>
-                <span class="qualification_line"></span>
-              </div>
-            </div>
-
-            <div class="qualification_data">
-              <div></div>
-
-              <div>
-                <span class="qualification_circle"></span>
-                <span class="qualification_line"></span>
-              </div>
-
-              <div>
-                <h3 class="qualification_title">AWS Cloud Practitioner (in progress)</h3>
-                <span class="qualification_subtitle">Self-study</span>
-                <div class="qualification_calendar">
-                  <i class="uil uil-calendar-alt"></i>
-                  2025
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-    </section>
-
-    <!-- Portfolio -->
-    <section class="portfolio section" id="projects">
-      <h2 class="section_title">Projects</h2>
-      <span class="section_subtitle">Most recent work</span>
-
-      <div class="portfolio_container container swiper-container swiper mySwiper">
-        <div class="swiper-wrapper">
-
-          <!-- Project 1: Website Development -->
-          <div class="portfolio_content grid swiper-slide">
-            <img src="./assets/img/project-web.webp" alt="Website project" class="portfolio_img">
-
-            <div class="portfolio_data">
-              <h3 class="portfolio_title">
-                Website Development
-              </h3>
-              <p class="portfolio_description">
-                Built and debugged a responsive site using HTML, CSS, and JavaScript. Deployed on GitHub Pages.
-              </p>
-              <a href="https://mason.gmu.edu/~dsom/Project%205/index.html" class="button button-flex button-small portfolio_button"
-                target="_blank" rel="noopener">
-                Check out
-                <i class="uil uil-arrow-right button_icon"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 2: Cloud Automation -->
-          <div class="portfolio_content grid swiper-slide">
-            <img src="./assets/img/project-aws.webp" alt="AWS automation" class="portfolio_img">
-
-            <div class="portfolio_data">
-              <h3 class="portfolio_title">
-                Cloud Automation for Cost Savings
-              </h3>
-              <p class="portfolio_description">
-                Serverless workflow using Lambda + CloudWatch + EventBridge to find idle resources and reduce cost.
-              </p>
-              <a href="https://github.com/DevinCSom/DevinSom-CloudAutomationCostSavings" class="button button-flex button-small portfolio_button"
-                target="_blank" rel="noopener">
-                Check out
-                <i class="uil uil-arrow-right button_icon"></i>
-              </a>
-            </div>
-          </div>
-
-          <!-- Project 3: Portfolio Website -->
-          <div class="portfolio_content grid swiper-slide">
-            <img src="./assets/img/portfolio-preview.gif" alt="Portfolio site" class="portfolio_img">
-
-            <div class="portfolio_data">
-              <h3 class="portfolio_title">
-                Personal Portfolio Website
-              </h3>
-              <p class="portfolio_description">
-                Clean, minimal portfolio built with HTML, CSS, and JS to showcase skills and projects.
-              </p>
-              <a href="#" class="button button-flex button-small portfolio_button" target="_blank" rel="noopener">
-                Check out
-                <i class="uil uil-arrow-right button_icon"></i>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-        <!-- Arrows -->
-        <div class="swiper-button-next">
-          <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
-        </div>
-        <div class="swiper-button-prev">
-          <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
-        </div>
-        <!-- Pagination -->
-        <div class="swiper-pagination"></div>
-      </div>
-    </section>
-
-    <!-- Contact Me -->
-    <section class="contact section" id="contact">
-      <h1 class="section_title">Contact Me</h1>
-      <span class="section_subtitle">
-        Want to connect? My inbox is always open!
-      </span>
-
-      <div class="contact_container container grid">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Devin Som — Portfolio</title>
+
+    <!-- Main stylesheet (rename to match your file if needed) -->
+    <link rel="stylesheet" href="assets/css/styles.css" />
+
+    <!-- Meta basics -->
+    <meta name="description" content="Devin Som — IT student at GMU focused on cloud computing, AWS, and web projects." />
+    <meta name="theme-color" content="#0b2f2f" />
+  </head>
+  <body>
+    <!-- OVERLAY (for intro animation) -->
+    <div class="overlay first"></div>
+    <div class="overlay second"></div>
+    <div class="overlay third"></div>
+
+    <!-- HEADER -->
+    <header class="l-header">
+      <nav class="nav bd-grid">
         <div>
-          <div class="contact_info">
-            <i class="uil uil-envelope-alt contact_icon"></i>
-            <div>
-              <h3 class="contact_title">Email</h3>
-              <span class="contact_subtitle">devinsom07@gmail.com</span>
-            </div>
-          </div>
-
-          <a href="https://www.linkedin.com/in/devin-som-53064621a/" target="_blank" rel="noopener">
-            <div class="contact_info">
-              <i class="uil uil-linkedin-alt contact_icon"></i>
-              <div>
-                <h3 class="contact_title">LinkedIn</h3>
-                <span class="contact_subtitle">/in/devin-som-53064621a/</span>
-              </div>
-            </div>
-          </a>
-
-          <a href="https://github.com/DevinCSom" target="_blank" rel="noopener">
-            <div class="contact_info">
-              <i class="uil uil-github-alt contact_icon"></i>
-              <div>
-                <h3 class="contact_title">GitHub</h3>
-                <span class="contact_subtitle">github.com/DevinCSom</span>
-              </div>
-            </div>
-          </a>
-
-          <a href="https://maps.app.goo.gl/xxxxxxxxxxxx" target="_blank" rel="noopener">
-            <div class="contact_info">
-              <i class="uil uil-location-point contact_icon"></i>
-              <div>
-                <h3 class="contact_title">Location</h3>
-                <span class="contact_subtitle">Fairfax, VA (DMV area)</span>
-              </div>
-            </div>
-          </a>
+          <a href="#" class="nav__logo">Devin</a>
         </div>
 
-        <form action="https://formspree.io/f/xyyozeaq" class="contact_form grid" id="contact-form" method="POST">
-          <div id="alert" class="alert_style"></div>
-          <div class="contact_inputs grid">
-            <div class="contact_content">
-              <label class="contact_label">Name</label>
-              <input type="text" name="name" class="contact_input" id="name" required>
-            </div>
-            <div class="contact_content">
-              <label for="email" class="contact_label">Email</label>
-              <input type="email" name="email" class="contact_input" id="email" required>
-            </div>
-          </div>
-          <div class="contact_content">
-            <label for="subject" class="contact_label">Subject</label>
-            <input type="text" name="subject" class="contact_input" id="subject" required>
-          </div>
-          <div class="contact_content">
-            <label for="message" class="contact_label">Message</label>
-            <textarea name="message" id="" cols="0" rows="7" class="contact_input message" id="message"
-              style="resize: vertical;" required></textarea>
-          </div>
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list">
+            <li class="nav__item"><a href="#" class="nav__link">Home</a></li>
+            <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#projects" class="nav__link">Projects</a></li>
+            <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
+            <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
+          </ul>
+        </div>
 
-          <div>
-            <button type="submit" class="button button-flex">
-              Send Message
-              <i class="uil uil-message button_icon"></i>
-            </button>
+        <div class="nav__toggle" id="nav-toggle">
+          <ion-icon name="menu"></ion-icon>
+        </div>
+      </nav>
+    </header>
+
+    <!-- MAIN -->
+    <main class="l-main bd-grid">
+      <!-- HERO -->
+      <section class="home" id="home">
+        <div class="home__information">
+          <span class="home__pressent anime-text">Hello, my name is</span>
+          <h1 class="home__title anime-text">Devin Som</h1>
+          <span class="home__skill anime-text">Cloud & Web Developer</span>
+
+          <div class="home__actions">
+            <a href="Devin_Som_Resume.pdf" class="home__button anime-text" target="_blank" rel="noopener">
+              DOWNLOAD CV
+            </a>
           </div>
+        </div>
+
+        <div class="home__img">
+          <!-- Put your headshot at assets/img/me.jpg -->
+          <img src="assets/img/me.jpg" alt="Devin Som" />
+        </div>
+
+        <div class="home__social">
+          <a href="https://www.linkedin.com/in/devin-som-53064621a/" target="_blank" rel="noopener" aria-label="LinkedIn">
+            <ion-icon name="logo-linkedin" class="home__social-icon"></ion-icon>
+          </a>
+          <a href="https://github.com/DevinCSom" target="_blank" rel="noopener" aria-label="GitHub">
+            <ion-icon name="logo-github" class="home__social-icon"></ion-icon>
+          </a>
+          <a href="mailto:devinsom07@gmail.com" aria-label="Email">
+            <ion-icon name="mail" class="home__social-icon"></ion-icon>
+          </a>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section class="section" id="about">
+        <h2 class="section__title">About</h2>
+        <p class="section__text">
+          I'm an IT student at George Mason University focused on cloud computing (AWS) and practical web projects.
+          I enjoy building small products end-to-end—front end, serverless back end, and automation to keep costs down.
+        </p>
+      </section>
+
+      <!-- PROJECTS -->
+      <section class="section" id="projects">
+        <h2 class="section__title">Projects</h2>
+
+        <div class="cards">
+          <article class="card">
+            <h3>Website Development</h3>
+            <p>Debugged and supported a site using HTML, CSS, and JavaScript. Deployed via GitHub Pages.</p>
+            <div class="links">
+              <a href="https://devincsom.github.io" target="_blank" rel="noopener">View Project →</a>
+              <a href="https://github.com/DevinCSom" target="_blank" rel="noopener">Repo →</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Cloud Automation for Cost Savings</h3>
+            <p>Serverless workflow using Lambda + CloudWatch + EventBridge to detect idle resources and reduce cost.</p>
+            <div class="links">
+              <a href="https://github.com/DevinCSom" target="_blank" rel="noopener">View Repo →</a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- SKILLS -->
+      <section class="section" id="skills">
+        <h2 class="section__title">Skills</h2>
+        <div class="grid-2d">
+          <div class="note">
+            <h4>Languages</h4>
+            <ul class="list">
+              <li>Java</li>
+              <li>Python</li>
+              <li>JavaScript</li>
+            </ul>
+          </div>
+          <div class="note">
+            <h4>Cloud & Tools</h4>
+            <ul class="list">
+              <li>AWS (Lambda, API Gateway, DynamoDB, S3, CloudWatch)</li>
+              <li>Git & GitHub</li>
+              <li>HTML / CSS</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section class="section" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <form class="feedback" action="https://formspree.io/f/xyyozeaq" method="POST">
+          <input type="text" name="name" placeholder="Your name" required />
+          <input type="email" name="email" placeholder="Your email" required />
+          <textarea name="message" placeholder="Your message" required></textarea>
+          <button type="submit">Send Message</button>
         </form>
+      </section>
+    </main>
 
-      </div>
-    </section>
-  </main>
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      © <span id="y"></span> Devin Som. All rights reserved.
+    </footer>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="footer_bg">
-      <div class="footer_container container grid">
-        <div>
-          <h1 class="footer_title">Devin Som</h1>
-          <span class="footer_subtitle">Cloud & Web Development</span>
-        </div>
+    <!-- GSAP (for overlay / text animations, if your main.js uses it) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
 
-        <ul class="footer_links">
-          <li>
-            <a href="#about" class="footer_link">About</a>
-          </li>
-          <li>
-            <a href="#projects" class="footer_link">Projects</a>
-          </li>
-          <li>
-            <a href="#contact" class="footer_link">Contact Me</a>
-          </li>
-        </ul>
+    <!-- Your main JS (handles menu toggle + animations) -->
+    <script src="assets/js/main.js"></script>
 
-        <div class="footer_socials">
-          <a href="https://www.linkedin.com/in/devin-som-53064621a/" target="_blank" class="footer_social" rel="noopener">
-            <i class="uil uil-linkedin-alt"></i>
-          </a>
-          <a href="https://github.com/DevinCSom" target="_blank" class="footer_social" rel="noopener">
-            <i class="uil uil-github-alt"></i>
-          </a>
-          <a href="mailto:devinsom07@gmail.com" class="footer_social">
-            <i class="uil uil-envelope"></i>
-          </a>
-        </div>
-      </div>
+    <!-- Icons -->
+    <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
 
-      <p class="footer_copy">&#169; <span id="year"></span> Devin Som. All rights reserved</p>
-    </div>
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" class="scrollup" id="scroll-up">
-    <i class="uil uil-arrow-up scrollup_icon"></i>
-  </a>
-
-  <!-- JQuery -->
-  <script src="./assets/js/jquery.min.js"></script>
-
-  <!-- Swiper JS -->
-  <script src="./assets/js/swiper-bundle.min.js"></script>
-
-  <!-- Typed JS -->
-  <script src="./assets/js/typed.js"></script>
-
-  <!-- Tilt JS  -->
-  <script src="./assets/js/tilt.jquery.min.js"></script>
-
-  <!-- Main JS -->
-  <script src="./assets/js/main.js"></script>
-
-  <!-- Small helpers -->
-  <script>
-    // current year in footer
-    document.getElementById('year').textContent = new Date().getFullYear();
-
-    // typed headline (if typed.js is present)
-    if (window.Typed) {
-      new Typed('.type', {
-        strings: ['a Cloud', 'a Web', 'a Problem-Solving'],
-        typeSpeed: 60,
-        backSpeed: 35,
-        backDelay: 1500,
-        loop: true
-      });
-    }
-  </script>
-</body>
-
+    <script>
+      // simple current year for footer
+      document.getElementById('y').textContent = new Date().getFullYear();
+    </script>
+  </body>
 </html>
+
