@@ -1053,3 +1053,81 @@ button {
 .home_img { display: grid; place-items: center; }
 
 /* (your existing @media ... should come after this) */
+
+/* === Global dark (black) theme overrides === */
+:root{
+  --bg:#000000;
+  --ink:#e9e9ee;          /* main text */
+  --muted:#a7afbf;        /* secondary text */
+  --surface:#0a0a0a;      /* cards/sections */
+  --surface-2:#0f0f10;    /* alt surface */
+  --accent:#7d6bd6;       /* your purple accent */
+  --ring:rgba(49,226,209,.25);
+}
+
+/* Page background + default text */
+html, body{
+  background:#000 !important;
+  color:var(--ink);
+}
+
+/* Kill any old light gradients you had on body */
+body{
+  background:#000 !important;
+}
+
+/* Header bar on black */
+.site-header{
+  background:rgba(0,0,0,.6) !important;
+  border-top:1px solid rgba(255,255,255,.06);
+  border-bottom:1px solid rgba(255,255,255,.06);
+  backdrop-filter: blur(10px);
+}
+
+/* Sections & containers */
+.container,
+.section,
+.section_alt{
+  background:transparent !important;
+  color:var(--ink);
+}
+
+/* Cards / project tiles */
+.card{
+  background:var(--surface) !important;
+  border:1px solid rgba(255,255,255,.06);
+  box-shadow:0 10px 28px rgba(0,0,0,.28);
+}
+
+/* About/skills “note” box, if you use it */
+.note{
+  background:var(--surface-2) !important;
+  border:1px solid rgba(255,255,255,.06);
+}
+
+/* Form inputs */
+input, textarea{
+  background:#0b0b0c !important;
+  color:var(--ink);
+  border:1px solid rgba(255,255,255,.12);
+}
+input::placeholder, textarea::placeholder{ color:#9aa3b2; }
+
+/* Links */
+a{ color:var(--accent); }
+a:hover{ opacity:.9; }
+
+/* Buttons */
+.button, .cta-link{
+  background:var(--accent);
+  color:#fff !important;
+  border:1px solid rgba(255,255,255,.14);
+  box-shadow:0 10px 24px var(--ring);
+}
+
+/* Headshot keeps its look on black */
+.home_blob-img{
+  background:transparent !important;
+  border:0;
+  box-shadow:0 18px 48px rgba(0,0,0,.55);
+}
