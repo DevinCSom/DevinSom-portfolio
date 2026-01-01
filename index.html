@@ -4,140 +4,142 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Devin Som — Portfolio</title>
-
   <meta name="description" content="Devin Som — IT student at GMU focused on cloud computing and web development. AWS + modern front-end projects." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer"/>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Header / Nav -->
-  <header class="header">
-    <div class="container nav">
-      <a class="brand" href="#home">Devin.</a>
-      <nav>
-        <ul class="nav-list">
-          <li><a class="nav-link active" href="#home">Home</a></li>
-          <li><a class="nav-link" href="#education">Education</a></li>
-          <li><a class="nav-link" href="#certs">Certifications</a></li>
-          <li><a class="nav-link" href="#projects">Projects</a></li>
-          <li><a class="nav-link" href="#about">About</a></li>
-          <li><a class="nav-link" href="#contact">Contact</a></li>
-        </ul>
+  <!-- Top Bar -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="#home" class="brand">{ Devin }</a>
+
+      <nav class="main-nav" id="nav">
+        <a class="nav-link active" href="#home">Home</a>
+        <a class="nav-link" href="#skills">Skills &amp; Experience</a>
+        <a class="nav-link" href="#education">Education</a>
+        <a class="nav-link" href="#projects">Projects</a>
+        <a class="nav-link" href="#open">Open Source</a>
+        <a class="nav-link" href="#extra">Extra Curricular</a>
+        <a class="nav-link" href="#contact">Contact Me</a>
       </nav>
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </header>
 
   <main>
-    <!-- Hero -->
-    <section id="home" class="section hero">
+    <!-- HERO -->
+    <section id="home" class="hero">
       <div class="container hero-grid">
-        <div class="hero-text">
-          <h1 class="title">Hi, I’m <span class="accent">Devin Som</span></h1>
-          <h3 class="subtitle">IT Student • Cloud &amp; Web</h3>
-          <p class="lead">
-            I’m an Information Technology student at George Mason University focused on cloud computing and web development.
-            I enjoy building practical projects with AWS (Lambda, API Gateway, DynamoDB, S3, CloudFront) and modern front-end tools.
-            I’m currently sharpening my skills through hands-on labs, self-made projects, and coursework.
+        <div class="hero-left">
+          <p class="eyebrow">Hi, there!</p>
+          <h1 class="hero-title">I am <span class="name">Devin Som</span></h1>
+          <p class="hero-sub">
+            Student web-developer from Virginia who’s either busy improving his craft or building the next practical idea.
           </p>
 
-          <div class="cta">
-            <!-- Update path if your PDF lives elsewhere -->
-            <a class="btn primary" href="./Devin_Som_Resume.pdf" target="_blank" rel="noopener">
-              <i class="fa-solid fa-file-arrow-down"></i> Resume (PDF)
+          <div class="hero-actions">
+            <a class="circle-cta" href="#contact" aria-label="Let's Connect">
+              <span>Let’s<br>Connect</span>
             </a>
-            <a class="btn" href="#contact"><i class="fa-solid fa-paper-plane"></i> Contact Me</a>
-          </div>
-
-          <div class="socials">
-            <a href="mailto:devinsom07@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
-            <a href="https://www.linkedin.com/in/devinsom" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
-            <a href="https://github.com/DevinCSom" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            <div class="links">
+              <a class="btn" href="./Devin_Som_Resume.pdf" target="_blank" rel="noopener">
+                <i class="fa-solid fa-file-arrow-down"></i> Resume
+              </a>
+              <a class="icon" href="mailto:devinsom07@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+              <a class="icon" href="https://www.linkedin.com/in/devinsom" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+              <a class="icon" href="https://github.com/DevinCSom" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
+            </div>
           </div>
         </div>
 
-        <div class="hero-photo">
-          <!-- Put your image at repo root as me.jpg (or change src) -->
-          <div class="avatar">
-            <img src="./me.jpg" alt="Devin Som headshot" loading="eager" />
+        <div class="hero-right">
+          <!-- Use your headshot (me.jpg) or keep the SVG illustration -->
+          <div class="illus">
+            <!-- If you prefer your photo, replace the SVG below with:
+            <img src="./me.jpg" alt="Devin Som headshot">
+            -->
+            <svg viewBox="0 0 420 420" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <defs>
+                <radialGradient id="g" cx="30%" cy="30%">
+                  <stop offset="0%" stop-color="#17e2a5"/>
+                  <stop offset="100%" stop-color="#0b2531"/>
+                </radialGradient>
+              </defs>
+              <circle cx="210" cy="210" r="200" fill="url(#g)"/>
+              <g fill="#0ff" opacity=".85">
+                <rect x="125" y="145" width="170" height="14" rx="7"/>
+                <rect x="125" y="175" width="120" height="10" rx="5" opacity=".7"/>
+                <rect x="125" y="195" width="150" height="10" rx="5" opacity=".7"/>
+                <rect x="125" y="215" width="138" height="10" rx="5" opacity=".7"/>
+                <rect x="125" y="265" width="110" height="10" rx="5" opacity=".7"/>
+              </g>
+            </svg>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Education -->
+    <!-- SKILLS & EXPERIENCE -->
+    <section id="skills" class="section">
+      <div class="container">
+        <h2 class="section-title">Skills &amp; Experience</h2>
+        <div class="cards three">
+          <article class="card">
+            <h3>Frontend</h3>
+            <p>HTML, CSS, JS, responsive layouts, accessibility, clean UI patterns.</p>
+          </article>
+          <article class="card">
+            <h3>Cloud (AWS)</h3>
+            <p>Lambda, API Gateway, DynamoDB, S3, CloudFront — serverless patterns.</p>
+          </article>
+          <article class="card">
+            <h3>Tooling</h3>
+            <p>Git/GitHub, CLI, basic CI, Netlify/Pages deploys, debugging.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION -->
     <section id="education" class="section">
       <div class="container">
         <h2 class="section-title">Education</h2>
-        <p class="section-sub">Academic background &amp; core coursework</p>
-
         <div class="card">
-          <div class="card-header">
-            <h3>George Mason University (GMU)</h3>
-            <span class="tag">B.S. — Information Technology</span>
-          </div>
-          <div class="two-col">
-            <ul>
-              <li>Cloud Computing (AWS), Systems Development on AWS</li>
-              <li>Data Communications &amp; Networking</li>
-            </ul>
-            <ul>
-              <li>Discrete Structures</li>
-              <li>Object-Oriented Programming (Java), Server-Side Web Development</li>
-            </ul>
-          </div>
+          <h3>George Mason University (GMU)</h3>
+          <p class="muted">B.S. — Information Technology</p>
+          <ul class="bullets">
+            <li>Cloud Computing (AWS) • Systems Development on AWS</li>
+            <li>Data Communications &amp; Networking • Discrete Structures</li>
+            <li>Object-Oriented Programming (Java) • Server-Side Web Dev</li>
+          </ul>
         </div>
       </div>
     </section>
 
-    <!-- Certifications -->
-    <section id="certs" class="section">
-      <div class="container">
-        <h2 class="section-title">Certifications</h2>
-        <p class="section-sub">Completed &amp; in-progress</p>
-
-        <div class="grid two">
-          <div class="card cert">
-            <div class="icon"><i class="fa-solid fa-certificate"></i></div>
-            <h3>AWS Academy Graduate — Cloud Developing Training Badge</h3>
-            <p class="muted">AWS Academy</p>
-            <span class="pill success">Earned</span>
-          </div>
-
-          <div class="card cert">
-            <div class="icon"><i class="fa-solid fa-graduation-cap"></i></div>
-            <h3>AWS Certified Cloud Practitioner</h3>
-            <p class="muted">Certification Status</p>
-            <span class="pill warn">In Progress</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Projects -->
+    <!-- PROJECTS -->
     <section id="projects" class="section">
       <div class="container">
         <h2 class="section-title">Projects</h2>
-        <p class="section-sub">A few recent things</p>
-
-        <div class="grid two">
-          <article class="card project">
+        <div class="cards two">
+          <article class="card">
             <h3>Portfolio Website</h3>
-            <p class="muted">Built with vanilla HTML/CSS + a touch of JS for smooth scrolling and interactivity.</p>
-            <a class="link" href="https://github.com/DevinCSom/DevinSom-portfolio" target="_blank" rel="noopener">
+            <p>Built with vanilla HTML/CSS + a touch of JS for smooth scrolling & interactivity.</p>
+            <a class="text-link" href="https://github.com/DevinCSom/DevinSom-portfolio" target="_blank" rel="noopener">
               <i class="fa-brands fa-github"></i> Code
             </a>
           </article>
-
-          <article class="card project">
+          <article class="card">
             <h3>AWS Serverless Demo</h3>
-            <p class="muted">API Gateway + Lambda + DynamoDB with S3 static hosting and CloudFront distribution.</p>
-            <a class="link" href="https://github.com/DevinCSom" target="_blank" rel="noopener">
+            <p>API Gateway + Lambda + DynamoDB with S3 static hosting and CloudFront distribution.</p>
+            <a class="text-link" href="https://github.com/DevinCSom" target="_blank" rel="noopener">
               <i class="fa-brands fa-github"></i> Code
             </a>
           </article>
@@ -145,74 +147,84 @@
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="section">
+    <!-- OPEN SOURCE -->
+    <section id="open" class="section">
       <div class="container">
-        <h2 class="section-title">About</h2>
-        <p class="section-sub">My introduction</p>
-
+        <h2 class="section-title">Open Source</h2>
         <div class="card">
-          <p class="muted">
-            I'm an IT student at George Mason University passionate about cloud computing and modern web development.
-            I like turning ideas into working products, learning by doing, and keeping my UI simple, fast, and accessible.
-            I'm exploring more AWS serverless patterns and sharpening my JavaScript/TypeScript skills.
-          </p>
+          <p>Contributing notes and small utilities as I learn. See my GitHub profile.</p>
+          <a class="text-link" href="https://github.com/DevinCSom" target="_blank" rel="noopener">
+            <i class="fa-brands fa-github"></i> @DevinCSom
+          </a>
         </div>
       </div>
     </section>
 
-    <!-- Contact -->
+    <!-- EXTRA CURRICULAR -->
+    <section id="extra" class="section">
+      <div class="container">
+        <h2 class="section-title">Extra Curricular</h2>
+        <div class="cards two">
+          <article class="card">
+            <h3>AWS Academy Graduate — Cloud Developing Training Badge</h3>
+            <p class="badge earned">Earned</p>
+          </article>
+          <article class="card">
+            <h3>AWS Certified Cloud Practitioner</h3>
+            <p class="badge progress">In Progress</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
     <section id="contact" class="section">
       <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-sub">Want to connect? My inbox is open.</p>
-
-        <div class="grid three">
-          <a class="card action" href="mailto:devinsom07@gmail.com">
-            <h3><i class="fa-solid fa-envelope-open-text"></i> Email</h3>
+        <h2 class="section-title">Contact Me</h2>
+        <div class="cards three">
+          <a class="card card-link" href="mailto:devinsom07@gmail.com">
+            <h3><i class="fa-solid fa-envelope"></i> Email</h3>
             <p class="muted">devinsom07@gmail.com</p>
           </a>
-
-          <a class="card action" href="https://www.linkedin.com/in/devinsom" target="_blank" rel="noopener">
+          <a class="card card-link" href="https://www.linkedin.com/in/devinsom" target="_blank" rel="noopener">
             <h3><i class="fa-brands fa-linkedin"></i> LinkedIn</h3>
             <p class="muted">/in/devinsom</p>
           </a>
-
-          <a class="card action" href="https://github.com/DevinCSom" target="_blank" rel="noopener">
+          <a class="card card-link" href="https://github.com/DevinCSom" target="_blank" rel="noopener">
             <h3><i class="fa-brands fa-github"></i> GitHub</h3>
             <p class="muted">@DevinCSom</p>
           </a>
         </div>
 
-        <div class="below">
-          <a class="btn ghost" href="./Devin_Som_Resume.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> Resume (PDF)</a>
+        <div class="resume-cta">
+          <a class="btn outline" href="./Devin_Som_Resume.pdf" target="_blank" rel="noopener">
+            <i class="fa-solid fa-file-lines"></i> Resume (PDF)
+          </a>
         </div>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
-    <div class="container">
-      © <span id="year"></span> Devin Som. All rights reserved.
-    </div>
+  <footer class="site-footer">
+    <div class="container">© <span id="year"></span> Devin Som. All rights reserved.</div>
   </footer>
 
   <script>
     // Mobile menu
     const ham = document.getElementById('hamburger');
-    const list = document.querySelector('.nav-list');
-    ham.addEventListener('click', () => list.classList.toggle('open'));
+    const nav = document.getElementById('nav');
+    ham.addEventListener('click', () => nav.classList.toggle('open'));
 
     // Active link on scroll
-    const sections = [...document.querySelectorAll('section[id]')];
     const links = [...document.querySelectorAll('.nav-link')];
-    const onScroll = () => {
+    const sections = [...document.querySelectorAll('section[id]')];
+    const setActive = () => {
       const y = window.scrollY + 120;
-      let current = sections[0].id;
-      sections.forEach(s => { if (y >= s.offsetTop) current = s.id; });
-      links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#'+current));
+      let curr = 'home';
+      sections.forEach(s => { if (y >= s.offsetTop) curr = s.id; });
+      links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#'+curr));
     };
-    onScroll(); window.addEventListener('scroll', onScroll);
+    setActive(); window.addEventListener('scroll', setActive);
 
     // Year
     document.getElementById('year').textContent = new Date().getFullYear();
