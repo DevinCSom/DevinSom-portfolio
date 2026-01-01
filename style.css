@@ -1191,3 +1191,4 @@ header {
     grid-template-columns: repeat(2, 1fr);
   }
 }
+.qualification__data:last-child .qualification__line { display: none; }
