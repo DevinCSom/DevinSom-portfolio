@@ -4,258 +4,298 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Devin Som — Portfolio</title>
-
-  <!-- Icons (safe CDN) -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
-  <!-- Styles -->
-  <link rel="stylesheet" href="style.css" />
+  <meta name="description" content="Devin Som — IT student focused on cloud computing and web development. Projects with AWS (Lambda, API Gateway, DynamoDB, S3, CloudFront) and modern front-end tools." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-omW2mYt3u7t4m3jS+0m6O0vVt3zv2l8n6wF4c5Z8mXvQ+3dXo5Lk7cWz5m5wq3m2KQ1m3Jxg3bJ3d7v3Hh0Ymw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    :root{
+      --bg:#0f1418;
+      --panel:#11181f;
+      --card:#121c25;
+      --muted:#94a3b8;
+      --text:#e6edf3;
+      --accent:#2dd4bf; /* teal */
+      --accent-2:#60a5fa; /* blue */
+      --border:#22303c;
+      --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:16px;
+      --max:1100px;
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial,sans-serif;
+      color:var(--text);
+      background:linear-gradient(#0f1418,#0d1318);
+    }
+    a{color:inherit;text-decoration:none}
+    .container{max-width:var(--max);margin-inline:auto;padding:0 24px}
+    /* Header */
+    .site-header{
+      position:sticky;top:0;z-index:50;
+      background:rgba(15,20,24,.7);backdrop-filter:blur(10px);
+      border-bottom:1px solid var(--border);
+    }
+    .nav{display:flex;align-items:center;justify-content:space-between;height:64px}
+    .brand{font-weight:800;font-size:24px;letter-spacing:.5px}
+    .nav ul{display:flex;gap:28px;list-style:none;margin:0;padding:0}
+    .nav a{color:var(--muted);font-weight:600}
+    .nav a:hover,.nav a.active{color:var(--accent)}
+    /* Sections */
+    .section{padding:80px 0;border-top:1px solid var(--border)}
+    .section:first-of-type{border-top:none;padding-top:56px}
+    .section h2{font-size:32px;margin:0 0 8px}
+    .section p.lead{color:var(--muted);margin:0 0 32px}
+    /* Hero */
+    .hero{display:grid;grid-template-columns:1.2fr .8fr;gap:48px;align-items:center}
+    .title{font-size:56px;line-height:1.05;margin:0 0 8px}
+    .subtitle{font-size:22px;margin:0 0 20px;color:var(--accent-2);font-weight:800}
+    .desc{color:var(--muted);max-width:60ch;margin:0 0 28px}
+    .cta{display:flex;gap:14px;flex-wrap:wrap}
+    .btn{
+      display:inline-flex;align-items:center;gap:10px;
+      padding:12px 18px;border-radius:12px;border:1px solid var(--border);
+      background:transparent;color:var(--text);font-weight:700;
+    }
+    .btn.primary{background:var(--accent-2);border-color:transparent;color:#071018}
+    .btn i{font-size:16px}
+    .socials{display:flex;gap:10px;margin-top:14px}
+    .socials a{
+      width:38px;height:38px;display:grid;place-items:center;border-radius:10px;
+      background:var(--panel);border:1px solid var(--border);color:var(--muted)
+    }
+    .socials a:hover{color:var(--accent);border-color:var(--accent)}
+    .me-wrap{
+      display:grid;place-items:center;
+    }
+    .me{
+      width:285px;height:285px;border-radius:50%;
+      background:var(--card);border:2px solid #1f2a35;
+      box-shadow:var(--shadow), inset 0 0 0 4px #0b1015;
+      overflow:hidden;
+    }
+    .me img{width:100%;height:100%;object-fit:cover;display:block}
+    /* Cards grid */
+    .grid{display:grid;gap:22px}
+    .grid.two{grid-template-columns:repeat(2,minmax(0,1fr))}
+    .grid.three{grid-template-columns:repeat(3,minmax(0,1fr))}
+    @media (max-width:900px){
+      .hero{grid-template-columns:1fr;gap:28px}
+      .title{font-size:42px}
+      .grid.two,.grid.three{grid-template-columns:1fr}
+      .me{width:240px;height:240px}
+      .nav ul{gap:18px}
+    }
+    .card{
+      background:var(--panel);
+      border:1px solid var(--border);
+      border-radius:var(--radius);
+      padding:20px;
+      box-shadow:var(--shadow);
+    }
+    .card h3{margin:0 0 6px;font-size:18px}
+    .muted{color:var(--muted)}
+    .pill{
+      display:inline-block;padding:6px 10px;border-radius:999px;
+      font-size:12px;font-weight:700;border:1px solid var(--border);background:#0c151d;color:#7ee787
+    }
+    .pill.warn{color:#facc15}
+    /* Projects */
+    .project h3{margin-bottom:8px}
+    .project a{color:var(--accent)}
+    /* Footer */
+    footer{border-top:1px solid var(--border);padding:36px 0;color:var(--muted)}
+  </style>
 </head>
 <body>
 
-  <!-- ===== Header / Navbar ===== -->
-  <header class="site-header" id="top">
-    <div class="container nav-wrap">
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container nav">
       <a href="#home" class="brand">Devin.</a>
-
-      <nav class="nav" id="nav">
-        <a class="nav-link active" href="#home">Home</a>
-        <a class="nav-link" href="#education">Education</a>
-        <a class="nav-link" href="#certifications>Certifications</a>
-        <a class="nav-link" href="#projects">Projects</a>
-        <a class="nav-link" href="#about">About</a>
-        <a class="nav-link" href="#contacts">Contacts</a>
+      <nav>
+        <ul>
+          <li><a class="active" href="#home">Home</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#certs">Certifications</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#contact">Contacts</a></li>
+        </ul>
       </nav>
-
-      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
     </div>
   </header>
 
-  <!-- ===== Hero / Home ===== -->
-  <section class="section hero" id="home">
-    <div class="container hero-grid">
-      <div class="hero-text">
-        <h1>Hi, I'm <span class="accent">Devin Som</span></h1>
-        <h3 class="subtitle">IT Student • Cloud & Web</h3>
-        <p class="lead">
-          I'm an Information Technology student at George Mason University focused on cloud computing and web development.
+  <!-- Hero -->
+  <section id="home" class="section">
+    <div class="container hero">
+      <div>
+        <h1 class="title">Hi, I'm <span style="color:var(--accent)">Devin Som</span></h1>
+        <h3 class="subtitle">IT Student • Cloud &amp; Web</h3>
+        <p class="desc">
+          I’m an Information Technology student at George Mason University focused on cloud computing and web development.
           I enjoy building practical projects with AWS (Lambda, API Gateway, DynamoDB, S3, CloudFront) and modern front-end tools.
-          I'm growing through hands-on labs, self-made projects, and coursework—while building a portfolio that shows clean design,
-          solid fundamentals, and real-world problem solving.
+          I’m currently sharpening my skills through hands-on labs, self-made projects, and coursework—while building a portfolio
+          that shows clean design, solid fundamentals, and real-world problem solving.
         </p>
 
-        <div class="cta-row">
-          <a class="btn btn-primary" href="./assets/assets/Devin_Som_Resume.pdf" target="_blank" rel="noopener">
-            <i class="fa-solid fa-file-arrow-down"></i> Resume
+        <div class="cta">
+          <a class="btn primary" href="./Devin_Som_Resume.pdf" target="_blank" rel="noopener">
+            <i class="fa-solid fa-file-arrow-down"></i> Resume (PDF)
           </a>
-          <a class="btn btn-outline" href="#contacts">
+          <a class="btn" href="#contact">
             <i class="fa-solid fa-paper-plane"></i> Contact Me
           </a>
         </div>
 
         <div class="socials">
-          <a href="https://www.linkedin.com/in/devinsom/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
-          <a href="https://github.com/DevinCSom" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
-          <a href="mailto:devinsom07@gmail.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="mailto:devinsom07@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+          <a href="https://www.linkedin.com/in/devinsom" target="_blank" rel="noopener" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://github.com/DevinCSom" target="_blank" rel="noopener" title="GitHub"><i class="fa-brands fa-github"></i></a>
         </div>
       </div>
 
-      <!-- ===== Education ===== -->
-<section class="section" id="education">
-  <div class="container">
-    <h2 class="section-title">Education</h2>
-    <p class="section-subtitle">Academic background & core coursework</p>
-
-    <div class="edu-timeline">
-      <article class="edu-item">
-        <header>
-          <h3>George Mason University (GMU)</h3>
-          <span class="edu-meta">B.S. — Information Technology</span>
-        </header>
-        <p class="edu-desc">
-          Focus areas: Cloud computing, systems development, networking, and security. Building hands-on
-          projects across AWS and modern web stacks.
-        </p>
-        <ul class="edu-list">
-          <li>Cloud Computing (AWS) • Systems Development on AWS</li>
-          <li>Data Communications & Networking • Discrete Structures</li>
-          <li>Object-Oriented Programming • Server-Side Web Development</li>
-        </ul>
-      </article>
-    </div>
-  </div>
-</section>
-
-<!-- ===== Certifications ===== -->
-<section class="section" id="certifications">
-  <div class="container">
-    <h2 class="section-title">Certifications</h2>
-    <p class="section-subtitle">Completed & in-progress</p>
-
-    <div class="cert-grid">
-      <div class="cert-card">
-        <h3>AWS Cloud Practitioner</h3>
-        <p class="cert-issuer">AWS Academy</p>
-        <span class="tag tag-done">Earned</span>
-      </div>
-
-      <div class="cert-card">
-        <h3>AWS Academy Cloud Developing Training Badge</h3>
-        <p class="cert-issuer">AWS Academy</p>
-        <span class="tag tag-done">Earned</span>
-      </div>
-    </section>
-
-
-      <div class="hero-photo">
-        <!-- put your image at ./assets/me.jpg -->
-        <img src="./assets/me.jpg" alt="Devin Som headshot" />
+      <div class="me-wrap">
+        <div class="me">
+          <!-- Place your headshot at repo root as me.jpg -->
+          <img src="./me.jpg" alt="Devin Som headshot" loading="eager" />
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Service ===== -->
-  <section class="section" id="service">
+  <!-- Education -->
+  <section id="education" class="section">
     <div class="container">
-      <h2 class="section-title">Service</h2>
-      <p class="section-subtitle">What I can help with</p>
+      <h2>Education</h2>
+      <p class="lead">Academic background &amp; core coursework</p>
 
-      <div class="cards">
-        <article class="card">
-          <i class="fa-solid fa-code"></i>
-          <h3>Frontend Websites</h3>
-          <p>Clean, responsive sites with semantic HTML, modern CSS, and accessible components.</p>
-        </article>
-
-        <article class="card">
-          <i class="fa-solid fa-cloud"></i>
-          <h3>AWS Cloud Projects</h3>
-          <p>Serverless backends with Lambda, API Gateway, DynamoDB, S3, and CloudFront.</p>
-        </article>
-
-        <article class="card">
-          <i class="fa-solid fa-bolt"></i>
-          <h3>Automation</h3>
-          <p>Small scripts and integrations to streamline tasks and connect services.</p>
-        </article>
+      <div class="card">
+        <h3 style="margin:0 0 2px">George Mason University (GMU)</h3>
+        <p class="muted" style="margin:0 0 14px">B.S. — Information Technology</p>
+        <div class="grid two">
+          <ul class="muted" style="margin:0;padding-left:18px">
+            <li>Cloud Computing (AWS) • Systems Development on AWS</li>
+            <li>Data Communications &amp; Networking • Discrete Structures</li>
+          </ul>
+          <ul class="muted" style="margin:0;padding-left:18px">
+            <li>Object-Oriented Programming (Java)</li>
+            <li>Server-Side Web Development</li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== Projects ===== -->
-  <section class="section alt" id="projects">
+  <!-- Certifications -->
+  <section id="certs" class="section">
     <div class="container">
-      <h2 class="section-title">Projects</h2>
-      <p class="section-subtitle">A few recent things</p>
+      <h2>Certifications</h2>
+      <p class="lead">Completed &amp; in-progress</p>
 
-      <div class="grid-2">
-        <article class="project">
+      <div class="grid two">
+        <div class="card">
+          <h3>AWS Academy Graduate — Cloud Developing Training Badge</h3>
+          <p class="muted">AWS Academy</p>
+          <span class="pill">Earned</span>
+        </div>
+
+        <div class="card">
+          <h3>AWS Certified Cloud Practitioner</h3>
+          <p class="muted">Certification Status</p>
+          <span class="pill warn">In Progress</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section">
+    <div class="container">
+      <h2>Projects</h2>
+      <p class="lead">A few recent things</p>
+
+      <div class="grid two">
+        <div class="card project">
           <h3>Portfolio Website</h3>
-          <p>Built from scratch with vanilla HTML/CSS and a pinch of JS for interactivity and smooth scrolling.</p>
-          <div class="proj-links">
-            <a class="link" href="https://github.com/DevinCSom" target="_blank" rel="noopener">
-              <i class="fa-brands fa-github"></i> Code
-            </a>
-          </div>
-        </article>
+          <p class="muted">Built from scratch with vanilla HTML/CSS and a pinch of JS for interactivity and smooth scrolling.</p>
+          <p><a href="https://github.com/DevinCSom/DevinSom-portfolio" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a></p>
+        </div>
 
-        <article class="project">
+        <div class="card project">
           <h3>AWS Serverless Demo</h3>
-          <p>API Gateway + Lambda + DynamoDB with S3 static hosting and CloudFront distribution.</p>
-          <div class="proj-links">
-            <a class="link" href="https://github.com/DevinCSom" target="_blank" rel="noopener">
-              <i class="fa-brands fa-github"></i> Code
-            </a>
-          </div>
-        </article>
+          <p class="muted">API Gateway + Lambda + DynamoDB with S3 static hosting and CloudFront distribution.</p>
+          <p><a href="https://github.com/DevinCSom" target="_blank" rel="noopener"><i class="fa-brands fa-github"></i> Code</a></p>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ===== About ===== -->
-  <section class="section" id="about">
-    <div class="container narrow">
-      <h2 class="section-title">About</h2>
-      <p class="section-subtitle">My introduction</p>
-
-      <p class="about-copy">
-        I’m an IT student at George Mason University passionate about cloud computing and modern web development.
-        I like turning ideas into working products, learning by doing, and keeping my UI simple, fast, and accessible.
-        I’m currently exploring more AWS serverless patterns and sharpening my JavaScript/TypeScript skills.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== Contacts ===== -->
-  <section class="section alt" id="contacts">
+  <!-- About -->
+  <section id="about" class="section">
     <div class="container">
-      <h2 class="section-title">Contact</h2>
-      <p class="section-subtitle">Want to connect? My inbox is open.</p>
-
-      <div class="contact-grid">
-        <div class="contact-item">
-          <i class="fa-solid fa-envelope"></i>
-          <div>
-            <h4>Email</h4>
-            <a href="mailto:devinsom07@gmail.com">devinsom07@gmail.com</a>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <i class="fa-brands fa-linkedin"></i>
-          <div>
-            <h4>LinkedIn</h4>
-            <a href="https://www.linkedin.com/in/devinsom/" target="_blank" rel="noopener">/in/devinsom</a>
-          </div>
-        </div>
-
-        <div class="contact-item">
-          <i class="fa-brands fa-github"></i>
-          <div>
-            <h4>GitHub</h4>
-            <a href="https://github.com/DevinCSom" target="_blank" rel="noopener">@DevinCSom</a>
-          </div>
-        </div>
+      <h2>About</h2>
+      <p class="lead">My introduction</p>
+      <div class="card">
+        <p class="muted" style="margin:0">
+          I'm an IT student at George Mason University passionate about cloud computing and modern web development.
+          I like turning ideas into working products, learning by doing, and keeping my UI simple, fast, and accessible.
+          I'm currently exploring more AWS serverless patterns and sharpening my JavaScript/TypeScript skills.
+        </p>
       </div>
     </div>
   </section>
 
-  <!-- ===== Footer ===== -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <span>© <span id="year"></span> Devin Som. All rights reserved.</span>
-      <a class="link" href="./assets/assets/Devin_Som_Resume.pdf" target="_blank" rel="noopener">
-        <i class="fa-solid fa-file"></i> Resume (PDF)
-      </a>
+  <!-- Contact -->
+  <section id="contact" class="section">
+    <div class="container">
+      <h2>Contact</h2>
+      <p class="lead">Want to connect? My inbox is open.</p>
+
+      <div class="grid three">
+        <a class="card" href="mailto:devinsom07@gmail.com">
+          <h3><i class="fa-solid fa-envelope-open-text"></i> Email</h3>
+          <p class="muted">devinsom07@gmail.com</p>
+        </a>
+
+        <a class="card" href="https://www.linkedin.com/in/devinsom" target="_blank" rel="noopener">
+          <h3><i class="fa-brands fa-linkedin"></i> LinkedIn</h3>
+          <p class="muted">/in/devinsom</p>
+        </a>
+
+        <a class="card" href="https://github.com/DevinCSom" target="_blank" rel="noopener">
+          <h3><i class="fa-brands fa-github"></i> GitHub</h3>
+          <p class="muted">@DevinCSom</p>
+        </a>
+      </div>
+
+      <div style="margin-top:18px">
+        <a class="btn" href="./Devin_Som_Resume.pdf" target="_blank" rel="noopener"><i class="fa-solid fa-file-lines"></i> Resume (PDF)</a>
+      </div>
     </div>
+  </section>
+
+  <footer>
+    <div class="container">© <span id="y"></span> Devin Som. All rights reserved.</div>
   </footer>
 
-  <!-- ===== Tiny JS for UX (kept inside index.html) ===== -->
   <script>
-    // mobile menu toggle
-    const burger = document.getElementById('hamburger');
-    const nav = document.getElementById('nav');
-    burger.addEventListener('click', () => {
-      nav.classList.toggle('open');
-      burger.classList.toggle('open');
-    });
-
     // active link on scroll
-    const links = document.querySelectorAll('.nav-link');
-    const sections = [...links].map(a => document.querySelector(a.getAttribute('href')));
-    const setActive = () => {
-      let idx = sections.findIndex(s => s.getBoundingClientRect().top - 120 > 0) - 1;
-      if (idx < 0) idx = sections.length - 1;
-      links.forEach(l => l.classList.remove('active'));
-      links[idx]?.classList.add('active');
+    const sections=[...document.querySelectorAll("section[id]")];
+    const links=[...document.querySelectorAll("header nav a")];
+    const setActive=()=> {
+      const y=window.scrollY+120;
+      let current=sections[0].id;
+      sections.forEach(s=>{ if(y>=s.offsetTop) current=s.id; });
+      links.forEach(a=>{
+        a.classList.toggle("active", a.getAttribute("href")==="#"+current);
+      });
     };
-    document.addEventListener('scroll', setActive);
-    window.addEventListener('load', () => {
-      document.getElementById('year').textContent = new Date().getFullYear();
-      setActive();
-    });
+    setActive(); window.addEventListener("scroll", setActive);
+    document.getElementById("y").textContent=new Date().getFullYear();
   </script>
 </body>
 </html>
