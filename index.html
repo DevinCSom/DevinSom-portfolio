@@ -163,39 +163,37 @@
 
     <!-- Contact -->
     <section id="contact" class="section">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-subtitle">Want to connect? My inbox is open.</p>
+  <div class="container">
+    <h2 class="section-title">Contact</h2>
+    <p class="section-subtitle">Want to connect? My inbox is open.</p>
 
-       <a class="contact-card"
-   href="https://mail.google.com/mail/?view=cm&to=devinsom07@gmail.com"
-   target="_blank" rel="noopener">
-  <span class="contact-icon"><i class="uil uil-envelope"></i></span>
-  <div>
-    <h4>Email</h4>
-    <p>devinsom07@gmail.com</p>
-  </div>
-</a>
+    <form id="contact-form" class="contact-form" autocomplete="on">
+      <div class="grid-2">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input id="name" name="name" type="text" required placeholder="Your name" />
+        </div>
 
-
-          <a class="contact-card" href="https://www.linkedin.com/in/devin-som-53064621a/" target="_blank" rel="noopener">
-            <span class="contact-icon"><i class="uil uil-linkedin"></i></span>
-            <div>
-              <h4>LinkedIn</h4>
-              <p>/in/devinsom</p>
-            </div>
-          </a>
-
-          <a class="contact-card" href="https://github.com/DevinCSom" target="_blank" rel="noopener">
-            <span class="contact-icon"><i class="uil uil-github"></i></span>
-            <div>
-              <h4>GitHub</h4>
-              <p>@DevinCSom</p>
-            </div>
-          </a>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input id="email" name="email" type="email" required placeholder="you@example.com" />
         </div>
       </div>
-    </section>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required placeholder="How can I help?"></textarea>
+      </div>
+
+      <button id="contact-submit" type="submit" class="btn solid">
+        <i class="uil uil-telegram-alt"></i> Send
+      </button>
+
+      <p id="contact-status" class="form-status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
   </main>
 
   <!-- Footer -->
@@ -210,6 +208,63 @@
       </div>
     </div>
   </footer>
+
+  <!-- Contact form JS (paste right after </footer>) -->
+<script>
+  // Use your full stage URL (no trailing slash)
+  const API_BASE = "https://9qi9mbdms6.execute-api.us-east-1.amazonaws.com/dev";
+
+  const form      = document.getElementById('contact-form');
+  const statusEl  = document.getElementById('contact-status');
+  const submitBtn = document.getElementById('contact-submit');
+
+  async function submitContact(e) {
+    e.preventDefault();
+
+    const name    = document.getElementById('name').value.trim();
+    const email   = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
+
+    if (!name || !email || !message) {
+      statusEl.textContent = 'Please fill out all fields.';
+      statusEl.className = 'form-status error';
+      return;
+    }
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="uil uil-telegram-alt"></i> Sending…';
+    statusEl.textContent = '';
+    statusEl.className = 'form-status';
+
+    try {
+      // If your Lambda is mounted at a different path than /contact, change it here
+      const res = await fetch(`${API_BASE}/contact`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, message })
+      });
+
+      if (!res.ok) {
+        const text = await res.text().catch(()=>'');
+        throw new Error(text || `Request failed: ${res.status}`);
+      }
+
+      form.reset();
+      statusEl.textContent = 'Thanks! Your message was sent.';
+      statusEl.className = 'form-status success';
+    } catch (err) {
+      statusEl.textContent = 'Could not send message. Check API path/CORS in API Gateway.';
+      statusEl.className = 'form-status error';
+      console.error(err);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = '<i class="uil uil-telegram-alt"></i> Send';
+    }
+  }
+
+  if (form) form.addEventListener('submit', submitContact);
+</script>
+
   <!-- AWS API status check -->
 <script>
   // Use your full stage URL (from API Gateway "Invoke URL")
