@@ -1,196 +1,538 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Devin Som</title>
-  <meta name="description" content="Devin Som — IT Student (Cloud & Web). Portfolio, projects, and contact." />
-  <link rel="preconnect" href="https://unicons.iconscout.com" />
-  <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
-  <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="brand">Devin.</a>
-      <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#service">Service</a>
-        <a href="#projects">Projects</a>
-        <a href="#about">About</a>
-        <a href="#contact">Contacts</a>
-      </nav>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Portfolio website of Devin Som — GMU IT student focused on cloud computing and modern web development. Projects, skills, and contact info."
+    />
+    <title>Devin Som - Portfolio</title>
+
+    <!--==================== OPEN GRAPH META TAGS ===================== -->
+    <meta property="og:title" content="Devin Som - Portfolio" />
+    <meta property="og:image" content="/assets/img/PwaImages/ios/512.png" />
+    <meta
+      property="og:description"
+      content="Portfolio website of Devin Som — GMU IT student focused on cloud computing and modern web development."
+    />
+
+    <!--==================== TWITTER META TAGS ===================== -->
+    <meta name="twitter:title" content="Devin Som - Portfolio" />
+    <meta
+      name="twitter:description"
+      content="Portfolio website of Devin Som — GMU IT student focused on cloud computing and modern web development."
+    />
+    <meta name="twitter:image" content="/assets/img/PwaImages/ios/512.png" />
+
+    <!--==================== UNICONS ====================-->
+    <link
+      rel="stylesheet"
+      href="https://unicons.iconscout.com/release/v4.0.0/css/line.css"
+    />
+
+    <!-- ====================PWA================== -->
+    <link rel="manifest" href="manifest.json" />
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="/assets/img/PwaImages/ios/32.png" />
+    <link rel="apple-touch-icon" href="/assets/img/PwaImages/ios/72.png" />
+    <link rel="apple-touch-icon" href="/assets/img/PwaImages/ios/100.png" />
+    <link rel="apple-touch-icon" href="/assets/img/PwaImages/ios/128.png" />
+    <link rel="apple-touch-icon" href="/assets/img/PwaImages/ios/144.png" />
+    <link rel="apple-touch-icon" href="/assets/img/PwaImages/ios/152.png" />
+    <link rel="apple-touch-icon" href="/assets/img/PwaImages/ios/192.png" />
+    <link rel="apple-touch-icon" href="/assets/img/PwaImages/ios/256.png" />
+    <link rel="apple-touch-icon" href="/assets/img/PwaImages/ios/512.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#6E57E0" />
+    <meta name="theme-color" content="#6E57E0" />
+
+    <!-- ============FAVICONS============== -->
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/assets/img/favicons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/assets//img/favicons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/assets/img/favicons/favicon-16x16.png"
+    />
+    <link
+      rel="icon"
+      type="image/x-icon"
+      href="/assets/img/favicons/favicon.ico"
+    />
+
+    <!--==================== SWIPER CSS ====================-->
+    <link rel="stylesheet" href="/assets/css/swiper-bundle.min.css" />
+
+    <!--==================== CSS ====================-->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <!-- ===================== LOADER ==================== -->
+    <div id="loading">
+      <div class="loader"><span><</span><span>/></span></div>
     </div>
-  </header>
 
-  <main>
-    <!-- Hero -->
-    <section id="home" class="section hero">
-      <div class="container hero-grid">
-        <div class="hero-left">
-          <p class="kicker">IT Student • Cloud & Web</p>
-          <h1 class="hero-title">Hi, I'm <span class="accent">Devin Som</span></h1>
-          <p class="hero-body">
-            I'm an Information Technology student at George Mason University focused on cloud computing and web
-            development. I enjoy building practical projects with AWS (Lambda, API Gateway, DynamoDB, S3, CloudFront)
-            and modern front-end tools. I’m growing through hands-on labs, self-made projects, and coursework—building a
-            portfolio that shows clean design, solid fundamentals, and real-world problem solving.
-          </p>
+    <!--==================== HEADER ====================-->
+    <header class="header" id="header">
+      <nav class="nav container">
+        <a href="#" class="nav__logo noSelect">Devin Som</a>
 
-          <div class="hero-ctas">
-            <a class="btn solid" href="assets/pdf/Devin_Som_Resume.pdf" target="_blank" rel="noopener">
-              <i class="uil uil-file-alt"></i> Resume
-            </a>
-            <a class="btn outline" href="#contact">
-              <i class="uil uil-message"></i> Contact Me
+        <div class="nav__menu" id="nav-menu">
+          <ul class="nav__list grid">
+            <li class="nav__item">
+              <a href="#home" class="nav__link noSelect active-link">
+                <i class="uil uil-estate nav__icon"></i> Home
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#about" class="nav__link noSelect">
+                <i class="uil uil-user nav__icon"></i> About
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#certification" class="nav__link noSelect">
+                <i class="uil uil-award nav__icon"></i> Certification
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#portfolio" class="nav__link noSelect">
+                <i class="uil uil-scenery nav__icon"></i> Projects
+              </a>
+            </li>
+
+            <li class="nav__item">
+              <a href="#contact" class="nav__link noSelect">
+                <i class="uil uil-message nav__icon"></i> Contact Me
+              </a>
+            </li>
+          </ul>
+          <i class="uil uil-times nav__close noSelect" id="nav-close"></i>
+        </div>
+
+        <div class="nav__btns">
+          <!-- theme change button -->
+          <i class="uil uil-moon change-theme" id="theme-button"></i>
+
+          <div class="nav__toggle noSelect" id="nav-toggle">
+            <i class="uil uil-apps"></i>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <!--==================== MAIN ====================-->
+    <main class="main">
+      <!--==================== HOME ====================-->
+      <section class="home section" id="home">
+        <div class="home__container container grid">
+          <div class="home__content grid">
+            <div class="home__social">
+              <a
+                href="https://www.linkedin.com/in/devinsom"
+                target="_blank"
+                class="home__social-icon"
+              >
+                <i class="uil uil-linkedin-alt"></i>
+              </a>
+              <a
+                href="https://github.com/DevinCSom"
+                target="_blank"
+                class="home__social-icon"
+              >
+                <i class="uil uil-github-alt"></i>
+              </a>
+              <a
+                href="mailto:devinsom07@gmail.com"
+                target="_blank"
+                class="home__social-icon"
+                title="Email"
+              >
+                <i class="uil uil-envelope-alt"></i>
+              </a>
+            </div>
+
+            <div class="home__img">
+              <svg
+                class="home__blob"
+                viewBox="0 0 200 187"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <mask id="mask0" mask-type="alpha">
+                  <path
+                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+                  />
+                </mask>
+                <g mask="url(#mask0)">
+                  <path
+                    d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"
+                  />
+                  <image
+                    class="home__blob-img"
+                    x="-20"
+                    xlink:href="assets/img/hacker-profile.png"
+                  ></image>
+                </g>
+              </svg>
+            </div>
+
+            <div class="home__data">
+              <h1 class="home__title">Hi, I am Devin</h1>
+              <h3 class="home__subtitle">IT Student • Cloud & Web</h3>
+              <p class="home__description">
+                George Mason University (GMU) student focused on AWS (Lambda,
+                API Gateway, DynamoDB, S3, CloudFront) and clean, accessible
+                front-end UIs. Building hands-on labs and self-made projects.
+              </p>
+              <a href="#contact" class="button button--flex">
+                Contact Me<i class="uil uil-message button__icon"></i>
+              </a>
+            </div>
+          </div>
+          <div class="home__scroll">
+            <a href="#about" class="home__scroll-button button--flex">
+              <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+              <span class="home__scroll-name">Scroll Down</span>
+              <i class="uil uil-arrow-down home__scroll-arrow"></i>
             </a>
           </div>
+        </div>
+      </section>
 
-          <div class="hero-social">
-            <a href="https://www.linkedin.com/in/devinsom" aria-label="LinkedIn" target="_blank" rel="noopener">
+      <!--==================== ABOUT (moved up) ====================-->
+      <section class="about section" id="about">
+        <h2 class="section__title">About</h2>
+        <span class="section__subtitle">My introduction</span>
+
+        <div class="about__container container grid">
+          <img src="assets/img/mt-fuji.jpg" alt="" class="about__image" />
+
+          <div class="about__data">
+            <p class="about__description">
+              I'm an Information Technology student at George Mason University,
+              passionate about cloud computing and modern web development. I like
+              turning ideas into working products, learning by doing, and keeping
+              my UI simple, fast, and accessible. Currently exploring more AWS
+              serverless patterns and sharpening my JavaScript/TypeScript skills.
+            </p>
+            <div class="about__buttons">
+              <a
+                download=""
+                href="assets/pdf/Devin_Som_Resume.pdf"
+                class="button button--flex"
+              >
+                Download Resume<i class="uil uil-download-alt button__icon"></i
+              ></a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!--==================== CERTIFICATION (renamed from Service) ====================-->
+      <section class="services section" id="certification">
+        <h2 class="section__title">Certification</h2>
+        <span class="section__subtitle">What I’ve earned or am pursuing</span>
+
+        <div class="services__container container grid">
+          <!-- AWS Academy Graduate -->
+          <div class="services__content">
+            <div>
+              <i class="uil uil-award services__icon"></i>
+              <h3 class="services__title">AWS Academy Graduate</h3>
+              <p class="services__subtitle">Cloud Developing • 2024</p>
+            </div>
+
+            <span
+              class="button button--flex button--small button--link services__button"
+            >
+              Details
+              <i class="uil uil-arrow-right button__icon"></i>
+            </span>
+
+            <div class="services__modal">
+              <div class="services__modal-content">
+                <h4 class="services__modal-title">
+                  AWS Academy Graduate<br />Cloud Developing
+                </h4>
+                <i class="uil uil-times services__modal-close"></i>
+                <ul class="services__modal-services grid">
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>Completed AWS Academy Cloud Developing in 2024</p>
+                  </li>
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>Hands-on with Lambda, API Gateway, DynamoDB, S3, CloudFront</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <!-- AWS Cloud Practitioner (In Progress) -->
+          <div class="services__content">
+            <div>
+              <i class="uil uil-books services__icon"></i>
+              <h3 class="services__title">AWS Cloud Practitioner</h3>
+              <p class="services__subtitle">In Progress • 2024 — Present</p>
+            </div>
+
+            <span
+              class="button button--flex button--small button--link services__button"
+            >
+              Details
+              <i class="uil uil-arrow-right button__icon"></i>
+            </span>
+
+            <div class="services__modal">
+              <div class="services__modal-content">
+                <h4 class="services__modal-title">
+                  AWS Cloud Practitioner<br />In Progress
+                </h4>
+                <i class="uil uil-times services__modal-close"></i>
+                <ul class="services__modal-services grid">
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>Studying core AWS services, billing, security, architecture</p>
+                  </li>
+                  <li class="services__modal-service">
+                    <i class="uil uil-check-circle services__modal-icon"></i>
+                    <p>Targeting certification to validate AWS fundamentals</p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!--==================== PORTFOLIO ====================-->
+      <section class="portfolio section" id="portfolio">
+        <h2 class="section__title">Projects</h2>
+        <span class="section__subtitle">A few recent things</span>
+
+        <div class="portfolio__container container swiper-container">
+          <div class="swiper-wrapper">
+            <div class="portfolio__content grid swiper-slide">
+              <img src="/assets/img/portfolio/portfolio-preview.gif" alt="" class="portfolio__img" />
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">Portfolio Website</h3>
+                <p class="portfolio__description">
+                  Built with vanilla HTML/CSS/JS and smooth scrolling.
+                </p>
+                <a
+                  href="https://github.com/DevinCSom"
+                  target="_blank"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  Code
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="portfolio__content grid swiper-slide">
+              <img src="/assets/img/portfolio/serverless.png" alt="" class="portfolio__img" />
+              <div class="portfolio__data">
+                <h3 class="portfolio__title">AWS Serverless Demo</h3>
+                <p class="portfolio__description">
+                  API Gateway + Lambda + DynamoDB with S3 & CloudFront.
+                </p>
+                <a
+                  href="https://github.com/DevinCSom"
+                  target="_blank"
+                  class="button button--flex button--small portfolio__button"
+                >
+                  Code
+                  <i class="uil uil-arrow-right button__icon"></i>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-button-next">
+            <i class="uil uil-angle-right-b swiper-portfolio-icon"></i>
+          </div>
+          <div class="swiper-button-prev">
+            <i class="uil uil-angle-left-b swiper-portfolio-icon"></i>
+          </div>
+
+          <div class="swiper-pagination"></div>
+        </div>
+      </section>
+
+      <!--==================== CONTACT ME ====================-->
+      <section class="contact section" id="contact">
+        <h2 class="section__title">Contact</h2>
+        <span class="section__subtitle">Want to connect? My inbox is open.</span>
+
+        <div class="contact__container container grid">
+          <div>
+            <div class="contact__information">
+              <i class="uil uil-phone contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Message</h3>
+                <span class="contact__subtitle">By request</span>
+              </div>
+            </div>
+
+            <div class="contact__information">
+              <i class="uil uil-envelope contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Email</h3>
+                <span class="contact__subtitle">devinsom07@gmail.com</span>
+              </div>
+            </div>
+
+            <div class="contact__information">
+              <i class="uil uil-map-marker contact__icon"></i>
+              <div>
+                <h3 class="contact__title">Location</h3>
+                <span class="contact__subtitle">Bristow, VA</span>
+              </div>
+            </div>
+          </div>
+
+          <form action="" class="contact__form grid">
+            <div class="contact__inputs grid">
+              <div class="contact__content">
+                <label for="" class="contact__label">Name</label>
+                <input type="text" class="contact__input" />
+              </div>
+
+              <div class="contact__content">
+                <label for="" class="contact__label">Email</label>
+                <input type="email" class="contact__input" />
+              </div>
+            </div>
+            <div class="contact__content">
+              <label for="" class="contact__label">Project</label>
+              <input type="text" class="contact__input" />
+            </div>
+            <div class="contact__content">
+              <label for="" class="contact__label">Message</label>
+              <textarea
+                name=""
+                id=""
+                cols="0"
+                rows="7"
+                class="contact__input"
+              ></textarea>
+            </div>
+
+            <div>
+              <a href="mailto:devinsom07@gmail.com" class="button button--flex">
+                Send Message
+                <i class="uil uil-message button__icon"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <!--==================== FOOTER ====================-->
+    <footer class="footer">
+      <div class="footer__bg">
+        <div class="footer__container container grid">
+          <div>
+            <h1 class="footer__title">Devin</h1>
+            <span class="footer__subtitle">IT Student • Cloud & Web</span>
+          </div>
+
+          <ul class="footer__links">
+            <li>
+              <a href="#certification" class="footer__link">Certification</a>
+            </li>
+            <li>
+              <a href="#portfolio" class="footer__link">Projects</a>
+            </li>
+            <li>
+              <a href="#contact" class="footer__link">Contact</a>
+            </li>
+          </ul>
+
+          <div class="footer__socials">
+            <a
+              href="https://www.linkedin.com/in/devinsom"
+              target="_blank"
+              class="footer__social"
+            >
               <i class="uil uil-linkedin-alt"></i>
             </a>
-            <a href="https://github.com/DevinCSom" aria-label="GitHub" target="_blank" rel="noopener">
-              <i class="uil uil-github-alt"></i>
+
+            <a
+              href="https://github.com/DevinCSom"
+              target="_blank"
+              class="footer__social"
+            >
+              <i class="uil uil-github"></i>
             </a>
-            <a href="mailto:devinsom07@gmail.com" aria-label="Email">
-              <i class="uil uil-envelope"></i>
+
+            <a
+              href="mailto:devinsom07@gmail.com"
+              target="_blank"
+              class="footer__social"
+            >
+              <i class="uil uil-envelope-alt"></i>
             </a>
           </div>
         </div>
 
-        <div class="hero-right">
-          <!-- Replace with your headshot -->
-          <img class="avatar" src="assets/img/devin.jpg" alt="Devin Som headshot" />
-        </div>
+        <p class="footer__copy">&#169; Devin Som. All rights reserved.</p>
       </div>
-    </section>
+    </footer>
 
-    <!-- Service -->
-    <section id="service" class="section">
-      <div class="container">
-        <h2 class="section-title">Service</h2>
-        <p class="section-subtitle">What I can help with</p>
+    <!--==================== SCROLL TOP ====================-->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
 
-        <div class="cards">
-          <article class="card">
-            <span class="card-icon"><i class="uil uil-brackets-curly"></i></span>
-            <h3>Frontend Websites</h3>
-            <p>Clean, responsive sites with semantic HTML, modern CSS, and accessible components.</p>
-          </article>
+    <!--==================== SWIPER JS ====================-->
+    <script src="/assets/js/swiper-bundle.min.js"></script>
 
-          <article class="card">
-            <span class="card-icon"><i class="uil uil-cloud"></i></span>
-            <h3>AWS Cloud Projects</h3>
-            <p>Serverless backends with Lambda, API Gateway, DynamoDB, S3, and CloudFront.</p>
-          </article>
+    <!--==================== MAIN JS ====================-->
+    <script src="assets/js/main.js"></script>
 
-          <article class="card">
-            <span class="card-icon"><i class="uil uil-bolt"></i></span>
-            <h3>Automation</h3>
-            <p>Small scripts and integrations to streamline tasks and connect services.</p>
-          </article>
-        </div>
-      </div>
-    </section>
+    <!-- ===================== SHOW/HIDE LOADER ==================== -->
+    <script>
+      window.onload = function () {
+        document.getElementById("loading").style.display = "none";
+      };
+    </script>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-subtitle">A few recent things</p>
-
-        <div class="grid-2">
-          <article class="project">
-            <h3>Portfolio Website</h3>
-            <p>Built from scratch with vanilla HTML/CSS and a pinch of JS for interactivity and smooth scrolling.</p>
-            <a class="link" href="https://github.com/DevinCSom" target="_blank" rel="noopener">
-              Code <i class="uil uil-arrow-right"></i>
-            </a>
-          </article>
-
-          <article class="project">
-            <h3>AWS Serverless Demo</h3>
-            <p>API Gateway + Lambda + DynamoDB with S3 static hosting and a CloudFront distribution.</p>
-            <a class="link" href="https://github.com/DevinCSom" target="_blank" rel="noopener">
-              Code <i class="uil uil-arrow-right"></i>
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">About</h2>
-        <p class="section-subtitle">My introduction</p>
-
-        <p class="about-copy">
-          I’m an IT student at George Mason University passionate about cloud computing and modern web development.
-          I like turning ideas into working products, learning by doing, and keeping my UI simple, fast, and accessible.
-          I’m currently exploring more AWS serverless patterns and sharpening my JavaScript/TypeScript skills.
-        </p>
-      </div>
-    </section>
-
-    <!-- Contact -->
-    <section id="contact" class="section">
-      <div class="container">
-        <h2 class="section-title">Contact</h2>
-        <p class="section-subtitle">Want to connect? My inbox is open.</p>
-
-        <div class="contact-cards">
-          <a class="contact-card" href="mailto:devinsom07@gmail.com">
-            <span class="contact-icon"><i class="uil uil-envelope"></i></span>
-            <div>
-              <h4>Email</h4>
-              <p>devinsom07@gmail.com</p>
-            </div>
-          </a>
-
-          <a class="contact-card" href="https://www.linkedin.com/in/devinsom" target="_blank" rel="noopener">
-            <span class="contact-icon"><i class="uil uil-linkedin"></i></span>
-            <div>
-              <h4>LinkedIn</h4>
-              <p>/in/devinsom</p>
-            </div>
-          </a>
-
-          <a class="contact-card" href="https://github.com/DevinCSom" target="_blank" rel="noopener">
-            <span class="contact-icon"><i class="uil uil-github"></i></span>
-            <div>
-              <h4>GitHub</h4>
-              <p>@DevinCSom</p>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© Devin Som</p>
-      <div class="footer-links">
-        <a href="#service">Service</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contacts</a>
-      </div>
-    </div>
-  </footer>
-
-  <!-- Smooth anchor scroll (tiny, no framework) -->
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click',e=>{
-        const id=a.getAttribute('href');
-        if(id.length>1){ e.preventDefault(); document.querySelector(id).scrollIntoView({behavior:'smooth'}); }
-      });
-    });
-  </script>
-</body>
+    <!-- =====================REGISTER SERVICE WORKER================ -->
+    <script>
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", function () {
+          navigator.serviceWorker
+            .register("/serviceWorker.js")
+            .then((res) => console.log("service worker registered"))
+            .catch((err) => console.log("service worker not registered", err));
+        });
+      }
+    </script>
+  </body>
 </html>
 
