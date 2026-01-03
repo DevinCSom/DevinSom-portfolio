@@ -16,9 +16,9 @@
       <a href="#" class="brand">Devin.</a>
       <nav class="nav">
         <a href="#home">Home</a>
-        <a href="#service">Service</a>
-        <a href="#projects">Projects</a>
         <a href="#about">About</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#projects">Projects</a>
         <a href="#contact">Contacts</a>
       </nav>
     </div>
@@ -32,14 +32,15 @@
           <p class="kicker">IT Student • Cloud & Web</p>
           <h1 class="hero-title">Hi, I'm <span class="accent">Devin Som</span></h1>
           <p class="hero-body">
-            I'm an Information Technology student at George Mason University focused on cloud computing and web
-            development. I enjoy building practical projects with AWS (Lambda, API Gateway, DynamoDB, S3, CloudFront)
-            and modern front-end tools. I’m growing through hands-on labs, self-made projects, and coursework—building a
-            portfolio that shows clean design, solid fundamentals, and real-world problem solving.
+            I'm an Information Technology student at George Mason University focused on cloud computing and web development.
+            I enjoy building practical projects with AWS (Lambda, API Gateway, DynamoDB, S3, CloudFront) and modern front-end
+            tools. I'm growing through hands-on labs, self-made projects, and coursework—building a portfolio that shows clean
+            design, solid fundamentals, and real-world problem solving.
           </p>
 
           <div class="hero-ctas">
-            <a class="btn solid" href="assets/pdf/Devin_Som_Resume.pdf" target="_blank" rel="noopener">
+            <!-- Ensure this file exists at ./assets/pdf/Devin_Som_Resume.pdf -->
+            <a class="btn solid" href="./assets/pdf/Devin_Som_Resume.pdf" target="_blank" rel="noopener">
               <i class="uil uil-file-alt"></i> Resume
             </a>
             <a class="btn outline" href="#contact">
@@ -48,7 +49,7 @@
           </div>
 
           <div class="hero-social">
-            <a href="https://www.linkedin.com/in/devinsom" aria-label="LinkedIn" target="_blank" rel="noopener">
+            <a href="https://www.linkedin.com/in/devinsom/" aria-label="LinkedIn" target="_blank" rel="noopener">
               <i class="uil uil-linkedin-alt"></i>
             </a>
             <a href="https://github.com/DevinCSom" aria-label="GitHub" target="_blank" rel="noopener">
@@ -61,35 +62,43 @@
         </div>
 
         <div class="hero-right">
-          <!-- Replace with your headshot -->
+          <!-- Replace with your headshot (keep path accurate) -->
           <img class="avatar" src="assets/img/devin.jpg" alt="Devin Som headshot" />
         </div>
       </div>
     </section>
 
-    <!-- Service -->
-    <section id="service" class="section">
+    <!-- About (moved up to replace old Service position) -->
+    <section id="about" class="section">
       <div class="container">
-        <h2 class="section-title">Service</h2>
-        <p class="section-subtitle">What I can help with</p>
+        <h2 class="section-title">About</h2>
+        <p class="section-subtitle">My introduction</p>
+
+        <p class="about-copy">
+          I’m an IT student at George Mason University passionate about cloud computing and modern web development.
+          I like turning ideas into working products, learning by doing, and keeping my UI simple, fast, and accessible.
+          I’m currently exploring more AWS serverless patterns and sharpening my JavaScript/TypeScript skills.
+        </p>
+      </div>
+    </section>
+
+    <!-- Certifications (renamed from Service, keeps same card layout) -->
+    <section id="certifications" class="section">
+      <div class="container">
+        <h2 class="section-title">Certifications</h2>
+        <p class="section-subtitle">What I’ve earned / pursuing</p>
 
         <div class="cards">
           <article class="card">
-            <span class="card-icon"><i class="uil uil-brackets-curly"></i></span>
-            <h3>Frontend Websites</h3>
-            <p>Clean, responsive sites with semantic HTML, modern CSS, and accessible components.</p>
+            <span class="card-icon"><i class="uil uil-award"></i></span>
+            <h3>AWS Academy Graduate</h3>
+            <p>Cloud Developing — Badge Earned (2024)</p>
           </article>
 
           <article class="card">
             <span class="card-icon"><i class="uil uil-cloud"></i></span>
-            <h3>AWS Cloud Projects</h3>
-            <p>Serverless backends with Lambda, API Gateway, DynamoDB, S3, and CloudFront.</p>
-          </article>
-
-          <article class="card">
-            <span class="card-icon"><i class="uil uil-bolt"></i></span>
-            <h3>Automation</h3>
-            <p>Small scripts and integrations to streamline tasks and connect services.</p>
+            <h3>AWS Cloud Practitioner</h3>
+            <p>In Progress (2024 — Present)</p>
           </article>
         </div>
       </div>
@@ -121,20 +130,6 @@
       </div>
     </section>
 
-    <!-- About -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">About</h2>
-        <p class="section-subtitle">My introduction</p>
-
-        <p class="about-copy">
-          I’m an IT student at George Mason University passionate about cloud computing and modern web development.
-          I like turning ideas into working products, learning by doing, and keeping my UI simple, fast, and accessible.
-          I’m currently exploring more AWS serverless patterns and sharpening my JavaScript/TypeScript skills.
-        </p>
-      </div>
-    </section>
-
     <!-- Contact -->
     <section id="contact" class="section">
       <div class="container">
@@ -150,7 +145,7 @@
             </div>
           </a>
 
-          <a class="contact-card" href="https://www.linkedin.com/in/devinsom" target="_blank" rel="noopener">
+          <a class="contact-card" href="https://www.linkedin.com/in/devinsom/" target="_blank" rel="noopener">
             <span class="contact-icon"><i class="uil uil-linkedin"></i></span>
             <div>
               <h4>LinkedIn</h4>
@@ -175,17 +170,18 @@
     <div class="container footer-inner">
       <p>© Devin Som</p>
       <div class="footer-links">
-        <a href="#service">Service</a>
+        <a href="#about">About</a>
+        <a href="#certifications">Certifications</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contacts</a>
       </div>
     </div>
   </footer>
 
-  <!-- Smooth anchor scroll (tiny, no framework) -->
+  <!-- Smooth anchor scroll (tiny) -->
   <script>
     document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click',e=>{
+      a.addEventListener('click', e=>{
         const id=a.getAttribute('href');
         if(id.length>1){ e.preventDefault(); document.querySelector(id).scrollIntoView({behavior:'smooth'}); }
       });
