@@ -132,6 +132,35 @@
       </div>
     </section>
 
+  <!-- AWS Backend powering my website -->
+<article class="project">
+  <h3>Website Backend (AWS Serverless)</h3>
+  <p>
+    Serverless backend that powers my portfolio site using Amazon API Gateway
+    → Lambda functions → DynamoDB, with S3 for assets and a CloudFront
+    distribution. Includes CORS, environment variables, and staged deployments.
+  </p>
+
+  <!-- Live API (API Gateway Invoke URL or custom domain) -->
+  <a class="link" href="https://9qi9mbdms6.execute-api.us-east-1.amazonaws.com/dev" target="_blank" rel="noopener">
+    Live API <i class="uil uil-arrow-right"></i>
+  </a>
+
+  <!-- Link to the website that consumes this backend -->
+  <a class="link" href="https://devinscom.github.io/DevinSom-portfolio/" target="_blank" rel="noopener">
+    Website <i class="uil uil-arrow-right"></i>
+  </a>
+
+  <!-- Optional: API docs (Swagger/OpenAPI on S3/CloudFront or Postman docs) -->
+  <!--
+  <a class="link" href="https://d123abcd.cloudfront.net/docs" target="_blank" rel="noopener">
+    Docs <i class="uil uil-arrow-right"></i>
+  </a>
+  -->
+</article>
+
+
+
     <!-- Contact -->
     <section id="contact" class="section">
       <div class="container">
@@ -181,6 +210,38 @@
       </div>
     </div>
   </footer>
+  <!-- AWS API status check -->
+<script>
+  // Use your full stage URL (from API Gateway "Invoke URL")
+  const API_BASE = "https://9qi9mbdms6.execute-api.us-east-1.amazonaws.com/dev";
+
+  async function testApi() {
+    try {
+      const res = await fetch(`${API_BASE}/ping`, {
+        method: "GET",
+        headers: { "Content-Type": "application/json" }
+      });
+
+      const el = document.getElementById("api-status");
+      if (el) {
+        if (res.ok) {
+          const data = await res.json().catch(() => ({}));
+          el.textContent = "API online ✅";
+          el.title = JSON.stringify(data);
+        } else {
+          el.textContent = `API error (${res.status}) ⚠️`;
+        }
+      }
+    } catch (err) {
+      const el = document.getElementById("api-status");
+      if (el) el.textContent = "API unreachable ❌";
+      console.error("API error:", err);
+    }
+  }
+
+  testApi();
+</script>
+
 
   <!-- Smooth anchor scroll (tiny) -->
   <script>
