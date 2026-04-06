@@ -17,7 +17,7 @@
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<!-- HEADER -->
 <header class="site-header">
   <div class="container header-inner">
     <a href="#" class="brand">Devin</a>
@@ -32,10 +32,9 @@
   </div>
 </header>
 
-<!-- ================= MAIN ================= -->
 <main>
 
-<!-- ================= HERO ================= -->
+<!-- HERO -->
 <section id="home" class="section hero reveal">
   <div class="container hero-grid">
 
@@ -48,16 +47,16 @@
 
       <p class="hero-body">
         I'm an Information Technology student at George Mason University focused on cloud computing and web development.
-        I enjoy building practical projects with AWS (Lambda, API Gateway, DynamoDB, S3, CloudFront) and modern front-end tools.
+        I enjoy building practical projects with AWS and modern front-end tools.
       </p>
 
       <div class="hero-ctas">
         <a class="btn solid" href="./assets/Devin_Som_Resume.pdf" target="_blank">
-          <i class="uil uil-file-alt"></i> Resume
+          Resume
         </a>
 
         <a class="btn outline" href="#contact">
-          <i class="uil uil-message"></i> Contact Me
+          Contact Me
         </a>
       </div>
 
@@ -83,7 +82,7 @@
   </div>
 </section>
 
-<!-- ================= ABOUT ================= -->
+<!-- ABOUT -->
 <section id="about" class="section reveal">
   <div class="container">
     <h2 class="section-title">About</h2>
@@ -91,26 +90,23 @@
 
     <p>
       I’m an IT student passionate about cloud computing and modern web development.
-      I enjoy building real-world projects and continuously improving my JavaScript and AWS skills.
+      I enjoy building real-world projects and improving my skills.
     </p>
   </div>
 </section>
 
-<!-- ================= CERTIFICATIONS ================= -->
+<!-- CERTIFICATIONS -->
 <section id="certifications" class="section reveal">
   <div class="container">
     <h2 class="section-title">Certifications</h2>
-    <p class="section-subtitle">What I’ve earned / pursuing</p>
 
     <div class="cards">
       <article class="card">
-        <span class="card-icon"><i class="uil uil-award"></i></span>
         <h3>AWS Academy Graduate</h3>
-        <p>Cloud Developing — Badge Earned (2024)</p>
+        <p>Cloud Developing — 2024</p>
       </article>
 
       <article class="card">
-        <span class="card-icon"><i class="uil uil-cloud"></i></span>
         <h3>AWS Cloud Practitioner</h3>
         <p>In Progress</p>
       </article>
@@ -118,37 +114,34 @@
   </div>
 </section>
 
-<!-- ================= PROJECTS ================= -->
+<!-- PROJECTS -->
 <section id="projects" class="section reveal">
   <div class="container">
     <h2 class="section-title">Projects</h2>
-    <p class="section-subtitle">A few recent things</p>
 
     <div class="grid-3">
-
       <article class="project">
         <h3>Portfolio Website</h3>
-        <p>Built with HTML, CSS, and JavaScript.</p>
+        <p>Built with HTML, CSS, JS.</p>
         <a class="link" href="https://github.com/DevinCSom" target="_blank">Code →</a>
       </article>
 
       <article class="project">
         <h3>AWS Serverless Demo</h3>
-        <p>Lambda + API Gateway + DynamoDB backend.</p>
+        <p>Lambda + API Gateway backend.</p>
         <a class="link" href="https://github.com/DevinCSom" target="_blank">Code →</a>
       </article>
 
       <article class="project">
-        <h3>Website Backend (AWS)</h3>
+        <h3>Website Backend</h3>
         <p>Serverless backend powering this site.</p>
         <a class="link" href="https://devinscom.github.io/DevinSom-portfolio/" target="_blank">Live →</a>
       </article>
-
     </div>
   </div>
 </section>
 
-<!-- ================= CONTACT ================= -->
+<!-- CONTACT -->
 <section id="contact" class="section reveal">
   <div class="container">
     <h2 class="section-title">Contact</h2>
@@ -166,38 +159,49 @@
 
 </main>
 
-<!-- ================= FOOTER ================= -->
+<!-- FOOTER -->
 <footer class="site-footer">
   <div class="container footer-inner">
     <p>© Devin Som</p>
   </div>
 </footer>
 
-<!-- ================= JAVASCRIPT ================= -->
+<!-- SCRIPT -->
 <script>
-
 const API_BASE = "https://9qi9mbdms6.execute-api.us-east-1.amazonaws.com/dev";
 
 // CONTACT FORM
-document.getElementById('contact-form')?.addEventListener('submit', async (e)=>{
-  e.preventDefault();
+const form = document.getElementById('contact-form');
+const statusEl = document.getElementById('contact-status');
+const submitBtn = document.getElementById('contact-submit');
 
-  const name = name.value.trim();
-  const email = email.value.trim();
-  const message = message.value.trim();
+if (form) {
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-  try {
-    await fetch(`${API_BASE}/contact`, {
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({name,email,message})
-    });
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const message = document.getElementById('message').value.trim();
 
-    contact-status.textContent = "Message sent!";
-  } catch {
-    contact-status.textContent = "Error sending.";
-  }
-});
+    submitBtn.disabled = true;
+
+    try {
+      await fetch(`${API_BASE}/contact`, {
+        method:'POST',
+        headers:{'Content-Type':'application/json'},
+        body:JSON.stringify({name,email,message})
+      });
+
+      form.reset();
+      statusEl.textContent = "Message sent!";
+
+    } catch {
+      statusEl.textContent = "Error sending.";
+    }
+
+    submitBtn.disabled = false;
+  });
+}
 
 // SMOOTH SCROLL
 document.querySelectorAll('a[href^="#"]').forEach(a=>{
@@ -223,9 +227,7 @@ function revealOnScroll(){
 
 window.addEventListener('scroll', revealOnScroll);
 revealOnScroll();
-
 </script>
 
 </body>
 </html>
-
