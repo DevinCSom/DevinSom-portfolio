@@ -4,309 +4,228 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>Devin Som</title>
+
   <meta name="description" content="Devin Som — IT Student (Cloud & Web). Portfolio, projects, and contact." />
+
+  <!-- Icons -->
   <link rel="preconnect" href="https://unicons.iconscout.com" />
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
-  <!-- Header -->
-  <header class="site-header">
-    <div class="container header-inner">
-      <a href="#" class="brand">Devin</a>
-      <nav class="nav">
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contacts</a>
-      </nav>
+
+<!-- ================= HEADER ================= -->
+<header class="site-header">
+  <div class="container header-inner">
+    <a href="#" class="brand">Devin</a>
+
+    <nav class="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contacts</a>
+    </nav>
+  </div>
+</header>
+
+<!-- ================= MAIN ================= -->
+<main>
+
+<!-- ================= HERO ================= -->
+<section id="home" class="section hero reveal">
+  <div class="container hero-grid">
+
+    <div class="hero-left">
+      <p class="kicker">IT Student • Cloud Computing</p>
+
+      <h1 class="hero-title">
+        Hi, I'm <span class="accent">Devin Som</span>
+      </h1>
+
+      <p class="hero-body">
+        I'm an Information Technology student at George Mason University focused on cloud computing and web development.
+        I enjoy building practical projects with AWS (Lambda, API Gateway, DynamoDB, S3, CloudFront) and modern front-end tools.
+      </p>
+
+      <div class="hero-ctas">
+        <a class="btn solid" href="./assets/Devin_Som_Resume.pdf" target="_blank">
+          <i class="uil uil-file-alt"></i> Resume
+        </a>
+
+        <a class="btn outline" href="#contact">
+          <i class="uil uil-message"></i> Contact Me
+        </a>
+      </div>
+
+      <div class="hero-social">
+        <a href="https://www.linkedin.com/in/devin-som-53064621a/" target="_blank">
+          <i class="uil uil-linkedin-alt"></i>
+        </a>
+
+        <a href="https://github.com/DevinCSom" target="_blank">
+          <i class="uil uil-github-alt"></i>
+        </a>
+
+        <a href="mailto:devinsom07@gmail.com">
+          <i class="uil uil-envelope"></i>
+        </a>
+      </div>
     </div>
-  </header>
 
-  <main>
-    <!-- Hero -->
-    <section id="home" class="section hero">
-      <div class="container hero-grid">
-        <div class="hero-left">
-          <p class="kicker">IT Student • Cloud Computing</p>
-          <h1 class="hero-title">Hi, I'm <span class="accent">Devin Som</span></h1>
-          <p class="hero-body">
-            I'm an Information Technology student at George Mason University focused on cloud computing and web development.
-            I enjoy building practical projects with AWS (Lambda, API Gateway, DynamoDB, S3, CloudFront) and modern front-end
-            tools. I'm growing through hands-on labs, self-made projects, and coursework—building a portfolio that shows clean
-            design, solid fundamentals, and real-world problem solving.
-          </p>
+    <div class="hero-right">
+      <img class="avatar" src="assets/me.jpg" alt="Devin Som" />
+    </div>
 
-          <div class="hero-ctas">
-            <!-- Ensure this file exists at ./assets/pdf/Devin_Som_Resume.pdf -->
-            <a class="btn solid" href="./assets/Devin_Som_Resume.pdf" target="_blank" rel="noopener">
-              <i class="uil uil-file-alt"></i> Resume
-            </a>
-            <a class="btn outline" href="#contact">
-              <i class="uil uil-message"></i> Contact Me
-            </a>
-          </div>
+  </div>
+</section>
 
-          <div class="hero-social">
-            <a href="https://www.linkedin.com/in/devin-som-53064621a/" aria-label="LinkedIn" target="_blank" rel="noopener">
-              <i class="uil uil-linkedin-alt"></i>
-            </a>
-            <a href="https://github.com/DevinCSom" aria-label="GitHub" target="_blank" rel="noopener">
-              <i class="uil uil-github-alt"></i>
-            </a>
-           <a href="https://mail.google.com/mail/?view=cm&fs=1&to=devinsom07@gmail.com"
-               aria-label="Email" target="_blank" rel="noopener">
-                <i class="uil uil-envelope"></i>
-              </a>
+<!-- ================= ABOUT ================= -->
+<section id="about" class="section reveal">
+  <div class="container">
+    <h2 class="section-title">About</h2>
+    <p class="section-subtitle">My introduction</p>
 
-          </div>
-        </div>
+    <p>
+      I’m an IT student passionate about cloud computing and modern web development.
+      I enjoy building real-world projects and continuously improving my JavaScript and AWS skills.
+    </p>
+  </div>
+</section>
 
-        <div class="hero-right">
-          <!-- Replace with your headshot (keep path accurate) -->
-          <img class="avatar" src="assets/me.jpg" alt="Devin Som headshot" />
-        </div>
-      </div>
-    </section>
+<!-- ================= CERTIFICATIONS ================= -->
+<section id="certifications" class="section reveal">
+  <div class="container">
+    <h2 class="section-title">Certifications</h2>
+    <p class="section-subtitle">What I’ve earned / pursuing</p>
 
-    <!-- About (moved up to replace old Service position) -->
-    <section id="about" class="section">
-      <div class="container">
-        <h2 class="section-title">About</h2>
-        <p class="section-subtitle">My introduction</p>
+    <div class="cards">
+      <article class="card">
+        <span class="card-icon"><i class="uil uil-award"></i></span>
+        <h3>AWS Academy Graduate</h3>
+        <p>Cloud Developing — Badge Earned (2024)</p>
+      </article>
 
-        <p class="about-copy">
-          I’m an IT student at George Mason University passionate about cloud computing and modern web development.
-          I like turning ideas into working products, learning by doing, and keeping my UI simple, fast, and accessible.
-          I’m currently exploring more AWS serverless patterns and sharpening my JavaScript/TypeScript skills.
-        </p>
-      </div>
-    </section>
+      <article class="card">
+        <span class="card-icon"><i class="uil uil-cloud"></i></span>
+        <h3>AWS Cloud Practitioner</h3>
+        <p>In Progress</p>
+      </article>
+    </div>
+  </div>
+</section>
 
-    <!-- Certifications (renamed from Service, keeps same card layout) -->
-    <section id="certifications" class="section">
-      <div class="container">
-        <h2 class="section-title">Certifications</h2>
-        <p class="section-subtitle">What I’ve earned / pursuing</p>
+<!-- ================= PROJECTS ================= -->
+<section id="projects" class="section reveal">
+  <div class="container">
+    <h2 class="section-title">Projects</h2>
+    <p class="section-subtitle">A few recent things</p>
 
-        <div class="cards">
-          <article class="card">
-            <span class="card-icon"><i class="uil uil-award"></i></span>
-            <h3>AWS Academy Graduate</h3>
-            <p>Cloud Developing — Badge Earned (2024)</p>
-          </article>
+    <div class="grid-3">
 
-          <article class="card">
-            <span class="card-icon"><i class="uil uil-cloud"></i></span>
-            <h3>AWS Cloud Practitioner</h3>
-            <p>In Progress (2024 — Present)</p>
-          </article>
-        </div>
-      </div>
-    </section>
+      <article class="project">
+        <h3>Portfolio Website</h3>
+        <p>Built with HTML, CSS, and JavaScript.</p>
+        <a class="link" href="https://github.com/DevinCSom" target="_blank">Code →</a>
+      </article>
 
-    <!-- Projects -->
-    <section id="projects" class="section">
-      <div class="container">
-        <h2 class="section-title">Projects</h2>
-        <p class="section-subtitle">A few recent things</p>
+      <article class="project">
+        <h3>AWS Serverless Demo</h3>
+        <p>Lambda + API Gateway + DynamoDB backend.</p>
+        <a class="link" href="https://github.com/DevinCSom" target="_blank">Code →</a>
+      </article>
 
-        <div class="grid-2">
-          <article class="project">
-            <h3>Portfolio Website</h3>
-            <p>Built from scratch with vanilla HTML/CSS and a pinch of JS for interactivity and smooth scrolling.</p>
-            <a class="link" href="https://github.com/DevinCSom" target="_blank" rel="noopener">
-              Code <i class="uil uil-arrow-right"></i>
-            </a>
-          </article>
+      <article class="project">
+        <h3>Website Backend (AWS)</h3>
+        <p>Serverless backend powering this site.</p>
+        <a class="link" href="https://devinscom.github.io/DevinSom-portfolio/" target="_blank">Live →</a>
+      </article>
 
-          <article class="project">
-            <h3>AWS Serverless Demo</h3>
-            <p>API Gateway + Lambda + DynamoDB with S3 static hosting and a CloudFront distribution.</p>
-            <a class="link" href="https://github.com/DevinCSom" target="_blank" rel="noopener">
-              Code <i class="uil uil-arrow-right"></i>
-            </a>
-          </article>
-        </div>
-      </div>
-    </section>
+    </div>
+  </div>
+</section>
 
-  <!-- AWS Backend powering my website -->
-<article class="project">
-  <h3>Website Backend (AWS Serverless)</h3>
-  <p>
-    Serverless backend that powers my portfolio site using Amazon API Gateway
-    → Lambda functions → DynamoDB, with S3 for assets and a CloudFront
-    distribution. Includes CORS, environment variables, and staged deployments.
-  </p>
-
-  <!-- Live API (API Gateway Invoke URL or custom domain) -->
-  <a class="link" href="https://9qi9mbdms6.execute-api.us-east-1.amazonaws.com/dev" target="_blank" rel="noopener">
-    Live API <i class="uil uil-arrow-right"></i>
-  </a>
-
-  <!-- Link to the website that consumes this backend -->
-  <a class="link" href="https://devinscom.github.io/DevinSom-portfolio/" target="_blank" rel="noopener">
-    Website <i class="uil uil-arrow-right"></i>
-  </a>
-
-  <!-- Optional: API docs (Swagger/OpenAPI on S3/CloudFront or Postman docs) -->
-  <!--
-  <a class="link" href="https://d123abcd.cloudfront.net/docs" target="_blank" rel="noopener">
-    Docs <i class="uil uil-arrow-right"></i>
-  </a>
-  -->
-</article>
-
-
-
-    <!-- Contact -->
-    <section id="contact" class="section">
+<!-- ================= CONTACT ================= -->
+<section id="contact" class="section reveal">
   <div class="container">
     <h2 class="section-title">Contact</h2>
-    <p class="section-subtitle">Want to connect? My inbox is open.</p>
 
-    <form id="contact-form" class="contact-form" autocomplete="on">
-      <div class="grid-2">
-        <div class="form-group">
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required placeholder="Your name" />
-        </div>
+    <form id="contact-form">
+      <input id="name" placeholder="Name" required />
+      <input id="email" type="email" placeholder="Email" required />
+      <textarea id="message" placeholder="Message" required></textarea>
 
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required placeholder="you@example.com" />
-        </div>
-      </div>
-
-      <div class="form-group">
-        <label for="message">Message</label>
-        <textarea id="message" name="message" rows="6" required placeholder="How can I help?"></textarea>
-      </div>
-
-      <button id="contact-submit" type="submit" class="btn solid">
-        <i class="uil uil-telegram-alt"></i> Send
-      </button>
-
-      <p id="contact-status" class="form-status" aria-live="polite"></p>
+      <button id="contact-submit" class="btn solid">Send</button>
+      <p id="contact-status"></p>
     </form>
   </div>
 </section>
 
-  </main>
+</main>
 
-  <!-- Footer -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-      <p>© Devin Som</p>
-      <div class="footer-links">
-        <a href="#about">About</a>
-        <a href="#certifications">Certifications</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contacts</a>
-      </div>
-    </div>
-  </footer>
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+    <p>© Devin Som</p>
+  </div>
+</footer>
 
-  <!-- Contact form JS (paste right after </footer>) -->
+<!-- ================= JAVASCRIPT ================= -->
 <script>
-  // Use your full stage URL (no trailing slash)
-  const API_BASE = "https://9qi9mbdms6.execute-api.us-east-1.amazonaws.com/dev";
 
-  const form      = document.getElementById('contact-form');
-  const statusEl  = document.getElementById('contact-status');
-  const submitBtn = document.getElementById('contact-submit');
+const API_BASE = "https://9qi9mbdms6.execute-api.us-east-1.amazonaws.com/dev";
 
-  async function submitContact(e) {
-    e.preventDefault();
+// CONTACT FORM
+document.getElementById('contact-form')?.addEventListener('submit', async (e)=>{
+  e.preventDefault();
 
-    const name    = document.getElementById('name').value.trim();
-    const email   = document.getElementById('email').value.trim();
-    const message = document.getElementById('message').value.trim();
+  const name = name.value.trim();
+  const email = email.value.trim();
+  const message = message.value.trim();
 
-    if (!name || !email || !message) {
-      statusEl.textContent = 'Please fill out all fields.';
-      statusEl.className = 'form-status error';
-      return;
-    }
-
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="uil uil-telegram-alt"></i> Sending…';
-    statusEl.textContent = '';
-    statusEl.className = 'form-status';
-
-    try {
-      // If your Lambda is mounted at a different path than /contact, change it here
-      const res = await fetch(`${API_BASE}/contact`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ name, email, message })
-      });
-
-      if (!res.ok) {
-        const text = await res.text().catch(()=>'');
-        throw new Error(text || `Request failed: ${res.status}`);
-      }
-
-      form.reset();
-      statusEl.textContent = 'Thanks! Your message was sent.';
-      statusEl.className = 'form-status success';
-    } catch (err) {
-      statusEl.textContent = 'Could not send message. Check API path/CORS in API Gateway.';
-      statusEl.className = 'form-status error';
-      console.error(err);
-    } finally {
-      submitBtn.disabled = false;
-      submitBtn.innerHTML = '<i class="uil uil-telegram-alt"></i> Send';
-    }
-  }
-
-  if (form) form.addEventListener('submit', submitContact);
-</script>
-
-  <!-- AWS API status check -->
-<script>
-  // Use your full stage URL (from API Gateway "Invoke URL")
-  const API_BASE = "https://9qi9mbdms6.execute-api.us-east-1.amazonaws.com/dev";
-
-  async function testApi() {
-    try {
-      const res = await fetch(`${API_BASE}/ping`, {
-        method: "GET",
-        headers: { "Content-Type": "application/json" }
-      });
-
-      const el = document.getElementById("api-status");
-      if (el) {
-        if (res.ok) {
-          const data = await res.json().catch(() => ({}));
-          el.textContent = "API online ✅";
-          el.title = JSON.stringify(data);
-        } else {
-          el.textContent = `API error (${res.status}) ⚠️`;
-        }
-      }
-    } catch (err) {
-      const el = document.getElementById("api-status");
-      if (el) el.textContent = "API unreachable ❌";
-      console.error("API error:", err);
-    }
-  }
-
-  testApi();
-</script>
-
-
-  <!-- Smooth anchor scroll (tiny) -->
-  <script>
-    document.querySelectorAll('a[href^="#"]').forEach(a=>{
-      a.addEventListener('click', e=>{
-        const id=a.getAttribute('href');
-        if(id.length>1){ e.preventDefault(); document.querySelector(id).scrollIntoView({behavior:'smooth'}); }
-      });
+  try {
+    await fetch(`${API_BASE}/contact`, {
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({name,email,message})
     });
-  </script>
+
+    contact-status.textContent = "Message sent!";
+  } catch {
+    contact-status.textContent = "Error sending.";
+  }
+});
+
+// SMOOTH SCROLL
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click', e=>{
+    const id=a.getAttribute('href');
+    if(id.length>1){
+      e.preventDefault();
+      document.querySelector(id).scrollIntoView({behavior:'smooth'});
+    }
+  });
+});
+
+// SCROLL ANIMATION
+const reveals = document.querySelectorAll('.reveal');
+
+function revealOnScroll(){
+  reveals.forEach(el=>{
+    if(el.getBoundingClientRect().top < window.innerHeight - 100){
+      el.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', revealOnScroll);
+revealOnScroll();
+
+</script>
+
 </body>
 </html>
 
